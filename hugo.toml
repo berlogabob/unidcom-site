@@ -1,0 +1,50 @@
+baseURL = "https://berlogabob.github.io/unidcom-site/"
+languageCode = "en-gb"
+title = "UNIDCOM/IADE"
+theme = "unidcom"
+enableRobotsTXT = true
+
+# Slugs come from data/generated/*.json, so let Hugo trust them verbatim.
+disablePathToLower = false
+removePathAccents = true
+
+[pagination]
+  pagerSize = 24
+
+[params]
+  description = "UNIDCOM/IADE — Unidade de Investigação em Design e Comunicação. Research unit in design and communication."
+  email = "unidcom@iade.pt"
+  address = "Av. D. Carlos I, 4, 1200-649 Lisboa, Portugal"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]
+  # Entity relationships live in the generated JSON, not in taxonomies.
+  # Only editorial content is tagged.
+  tag = "tags"
+
+[[menu.main]]
+  name = "Research"
+  url = "/research/"
+  weight = 10
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 20
+[[menu.main]]
+  name = "People"
+  url = "/people/"
+  weight = 30
+[[menu.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 40
+[[menu.main]]
+  name = "Events"
+  url = "/events/"
+  weight = 50
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 60
