@@ -144,25 +144,46 @@ git add -A && git commit -m "Sync content from Supabase" && git push
 > *"Not everything belongs in a database. The address is editorial content, so it lives in
 > the site's own repository — versioned, reviewable, with a history."*
 
-Two files, same text in both. **Paste your new address into each.**
+Two files. Open them in the editor so the change is *visible* — this is the demo where your
+audience can see plain text becoming a website.
 
-**`hugo.toml`** — line 17, drives the footer on every page:
+### `hugo.toml`, line 17 — drives the footer on every page
+
+Replace:
 
 ```toml
-  address = "PASTE THE NEW ADDRESS HERE"
+  address = "Av. D. Carlos I, 4, 1200-649 Lisboa, Portugal"
 ```
 
-**`content/contact.md`** — lines 7–9, the Contact page:
+with:
+
+```toml
+  address = "Rua Adão Manuel Ramos Barata 3, Moscavide, 1886-502 Lisboa"
+```
+
+### `content/contact.md`, lines 6–9 — the Contact page
+
+Replace:
 
 ```markdown
-UNIDCOM/IADE
-PASTE STREET LINE HERE
-PASTE POSTCODE AND CITY HERE
+UNIDCOM/IADE  
+Av. D. Carlos I, 4  
+1200-649 Lisboa  
 Portugal
 ```
 
-> Keep the two trailing spaces at the end of each address line in `contact.md` — that is what
-> makes Markdown render them as separate lines rather than one run-on paragraph.
+with:
+
+```markdown
+UNIDCOM/IADE  
+Rua Adão Manuel Ramos Barata 3  
+Moscavide  
+1886-502 Lisboa  
+Portugal
+```
+
+> **Keep the two trailing spaces** at the end of every line except the last. That is what makes
+> Markdown render them as separate lines instead of one run-on paragraph.
 
 Then:
 
@@ -173,6 +194,32 @@ git add -A && git commit -m "Update the campus address" && git push
 ```
 
 **Expect:** `BUILD-OK`, then a deploy starting in the Actions tab.
+
+Worth mentioning while it builds: the address also goes into the page's structured data, so
+search engines and maps pick up the move without anyone editing them separately.
+
+**If you'd rather not hand-edit on stage**, this does both files in one paste:
+
+```sh
+cd ~/Documents/GitHub/unidcom-site
+python3 - <<'EOF'
+import pathlib
+p = pathlib.Path('hugo.toml')
+p.write_text(p.read_text(encoding='utf-8').replace(
+    'Av. D. Carlos I, 4, 1200-649 Lisboa, Portugal',
+    'Rua Adão Manuel Ramos Barata 3, Moscavide, 1886-502 Lisboa'), encoding='utf-8')
+p = pathlib.Path('content/contact.md')
+p.write_text(p.read_text(encoding='utf-8').replace(
+    "Av. D. Carlos I, 4  \n1200-649 Lisboa  \nPortugal",
+    "Rua Adão Manuel Ramos Barata 3  \nMoscavide  \n1886-502 Lisboa  \nPortugal"), encoding='utf-8')
+print("address updated")
+EOF
+hugo --gc --quiet && echo BUILD-OK
+git add -A && git commit -m "Update the campus address" && git push
+```
+
+Both paths are rehearsed — the accented `ã` renders correctly in the footer, on the Contact
+page and in the structured data.
 
 ---
 
