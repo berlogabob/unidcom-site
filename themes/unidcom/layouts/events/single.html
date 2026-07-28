@@ -5,6 +5,15 @@
   {{- $registration := "" -}}
   {{- with .Params.registration_url }}{{ $registration = "Register" }}{{ end -}}
   <article>
+    {{- with .Params.image }}
+      {{- with resources.Get . }}
+        {{- with .Resize "1600x webp" }}
+          <div class="event-hero">
+            <img src="{{ .RelPermalink }}" alt="{{ $.Title }} event artwork" width="{{ .Width }}" height="{{ .Height }}" decoding="async">
+          </div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
     <header class="page-head">
       <p class="eyebrow{{ if $upcoming }} status--live{{ end }}">{{ if $upcoming }}Upcoming event{{ else }}Past event{{ end }}</p>
       <h1>{{ .Title }}</h1>

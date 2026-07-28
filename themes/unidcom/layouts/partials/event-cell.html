@@ -1,6 +1,15 @@
 {{- $event := .event -}}
 <article class="cell event-cell">
   <a href="{{ $event.RelPermalink }}">
+    {{- with $event.Params.image }}
+      {{- with resources.Get . }}
+        {{- with .Fill "640x640 Center webp" }}
+          <div class="cell-media">
+            <img src="{{ .RelPermalink }}" alt="{{ $event.Title }} event artwork" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async">
+          </div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
     <p class="eyebrow{{ if .upcoming }} status--live{{ end }}">{{ if .upcoming }}Upcoming{{ else }}Past event{{ end }}</p>
     <p class="meta"><time datetime="{{ $event.Date.Format "2006-01-02" }}">{{ $event.Date.Format "2 January 2006" }}</time>{{ with $event.Params.event_type }} · {{ . }}{{ end }}</p>
     <h3 class="cell-title">{{ $event.Title }}</h3>

@@ -28,7 +28,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Auxiliar no IADE – Universidade Europeia - em unidades curriculares das áreas de Matemática e Análise de Dados. Doutorada em Engenharia Química pelo Instituto Superior Técnico (IST), Mestre em Ciência e Engenharia de Superfícies e Interfaces pela Faculdade de Ciências da Universidade de Lisboa e licenciada em Engenharia Química pelo IST.\n\nDesde 2019, membro da Direção e responsável pelo núcleo de Investigação e Desenvolvimento da Florescer - Associação de Educação Global, que desenvolve e implementa projetos de inovação social em educação. Tem 5 patentes registadas, publicou 2 capítulos de livros e mais de 60 artigos em jornais internacionais referenciados. É membro do conselho editorial das revistas International Scholarly Research Notices e Frontiers in Chemistry. Os seus interesses de investigação atuais envolvem a aplicação de métodos quantitativos no domínio das ciências sociais.",
     "ciencia_id": null,
     "id": "93d7f7b7-9a99-5350-b0d4-c67e387d7104",
     "integration_year": null,
@@ -36,7 +36,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/93d7f7b7-9a99-5350-b0d4-c67e387d7104.png",
     "preferred_name": "Alexandra Fidalgo",
     "projects": [],
     "publications": [],
@@ -285,7 +285,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Associada e Coordenadora Científica da área de Design do IADE, Faculdade de Design, Tecnologia e Comunicação. Doutorada em Belas-Artes (2015, Bolsa FCT), mestre em Teorias da Arte (2005) e licenciada em Design de Comunicação (2002) pela Faculdade de Belas-Artes da Universidade de Lisboa. É investigadora integrada na UNIDCOM/IADE e membro do Conselho Científico e do Conselho Pedagógico da Universidade Europeia.",
     "ciencia_id": "7513-57C4-7CBC",
     "id": "140fddb1-e267-5760-ae73-7fe89f0b5ec9",
     "integration_year": 2025,
@@ -299,7 +299,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0003-4566-6263",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/140fddb1-e267-5760-ae73-7fe89f0b5ec9.png",
     "preferred_name": "Ana Marques",
     "projects": [],
     "publications": [],
@@ -337,7 +337,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Doutorado em Informática pela Universidade Nova de Lisboa, onde também obteve os graus de Licenciado e Mestre.\n\nÉ professor auxiliar no IADE, onde é coordenador científico da Licenciatura em Engenharia Informática e da Licenciatura em Informática de Gestão.\n\nAs suas áreas de investigação são arquitetura de sistemas, sistemas de informação geográfica, e aprendizagem automática.",
     "ciencia_id": null,
     "id": "8f9a84b5-52ad-5e10-842f-e8b1a0d363a2",
     "integration_year": null,
@@ -351,7 +351,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/8f9a84b5-52ad-5e10-842f-e8b1a0d363a2.png",
     "preferred_name": "André Sabino",
     "projects": [
       {
@@ -429,7 +429,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Anna Carolina Boechat possui um Doutoramento em Ciências da Comunicação com especialização em Comunicação Estratégica pela Universidade Nova de Lisboa e mais de 10 anos de experiência corporativa, onde sempre desempenhou funções relevantes nas áreas de Comunicação e Marketing, tendo passado por empresas de notoriedade nacional e internacional.",
     "ciencia_id": null,
     "id": "83fa8e5b-0be0-5a3f-9b0d-a96deca2dab6",
     "integration_year": 2025,
@@ -437,7 +437,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/83fa8e5b-0be0-5a3f-9b0d-a96deca2dab6.png",
     "preferred_name": "Anna Boechat",
     "projects": [],
     "publications": [
@@ -803,7 +803,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Designer há mais de duas décadas, possui doutoramento em Design (IADE) e mestrado em Design e Cultura Visual (IADE), bem como um Diploma de Estudos Avançados em Media Digitais (FCT‑UNL). \n\nDocente no Ensino Superior desde 2006, integra o corpo docente do IADE desde 2009. Ao longo deste percurso, lecionou diversas unidades curriculares, entre as quais: Design de Interação, Web Design e UX, Design de Interfaces, UX Design, Avaliação de Usabilidade e UX, Lean UX, entre outras. \n\nDesde 2011, tem coordenado vários programas de pós-graduação no IADE, sendo atualmente responsável pelas pós-graduações em Web UX/UI; Web FrontEnd; Inteligência Artificial para o Design; e Inteligência Artificial e Machine Learning - em regime presencial e online, tendo assumido recentemente a direção da Formação Executiva presencial no IADE. \n\nParalelamente ao percurso académico, tem vindo a colaborar com diversas empresas e organizações de múltiplos setores enquanto designer, formador e consultor. É ainda investigador na UNIDCOM/IADE, desenvolvendo trabalho nas áreas dos media digitais interativos e design de curricula para a formação executiva.",
     "ciencia_id": null,
     "id": "ffc035dd-bda6-5b1b-98de-a0ae61c27873",
     "integration_year": null,
@@ -811,7 +811,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/ffc035dd-bda6-5b1b-98de-a0ae61c27873.png",
     "preferred_name": "Bruno Nobre",
     "projects": [],
     "publications": [],
@@ -826,7 +826,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Assistente e Doutoranda em Design no IADE, Mestre em Design e Cultura Visual (M-DCV/IADE) e bacharel em Design pela PUC-Rio, onde é pesquisadora colaboradora do Laboratório Interdisciplinar de Design Educação/LIDE PUC-Rio. Tem experiência em design e comunicação, com ênfase na cultura visual, construção de identidade cultural, design gráfico e identidade visual, bem como nas áreas de design interdisciplinar, design em parceria e design e educação, com artigos publicados sobre os temas.",
     "ciencia_id": null,
     "id": "a563e41f-a230-535b-9d0b-96bc53c9ed9d",
     "integration_year": null,
@@ -840,7 +840,7 @@
     "membership_type": null,
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/a563e41f-a230-535b-9d0b-96bc53c9ed9d.png",
     "preferred_name": "Camila Jordão",
     "projects": [],
     "publications": [],
@@ -957,7 +957,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Carolina Tamen é uma designer interdisciplinar, com foco em branding, comunicação, e publicidade. Conta com uma licenciatura no IADE em Design Global, um mestrado em Design e Publicidade, um curso técnico em Web Design da Lisbon School of Design, e atualmente está no Doutoramento em Design no IADE.\n\nAtualmente pratica funções como designer junior na With-Company, onde o seu foco é o branding. Conta ainda com a participação em inúmeros projetos e desafios criativos lançados pelo IADE. Tem o objetivo de ligar o mundo profissional ao mundo académico, de forma a que estes se possam alimentar um ao outro.",
     "ciencia_id": null,
     "id": "bcd30aec-ddfb-5b1d-b2a9-ab338feaf508",
     "integration_year": null,
@@ -965,7 +965,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": "Design",
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/bcd30aec-ddfb-5b1d-b2a9-ab338feaf508.png",
     "preferred_name": "Carolina Tamen",
     "projects": [],
     "publications": [],
@@ -1060,7 +1060,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Célia Reis é doutorada em Ciências da Comunicação e mestre em Marketing pelo ISCTE. Possui o título de especialista em Marketing e Publicidade pelo Instituto Politécnico de Leiria e conta com mais de 20 anos de experiência em funções de relevo nas áreas da Comunicação e do Marketing em empresas nacionais e multinacionais. É investigadora integrada do CiTUR e tem como áreas de interesse de investigação a Inteligência Artificial, Literacia dos Novos Média, Inclusão Digital, Estudos de Internet, Marketing Digital aplicado ao Turismo, Sociologia Digital, Comunicação organizacional; e Inovação e Empreendedorismo. O seu trabalho científico tem sido apresentado em congressos e publicado em capítulos de livro e artigos em revistas científicas.",
     "ciencia_id": null,
     "id": "4f09781a-c469-5368-91aa-50c6b0ec0648",
     "integration_year": 2026,
@@ -1068,7 +1068,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/4f09781a-c469-5368-91aa-50c6b0ec0648.png",
     "preferred_name": "Celia Reis",
     "projects": [],
     "publications": [],
@@ -1083,7 +1083,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "É um apaixonado por videojogos, com uma sólida formação académica e experiência prática no campo da Engenharia Informática e Desenvolvimento de Videojogos.\n\nPossui um Mestrado Integrado em Engenharia Informática pela Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa (FCT-UNL), e atualmente está a concluir o seu doutoramento em Desenvolvimento de Videojogos no IADE no âmbito da inteligência artificial.\n\nAtravés da paixão e dedicação ao universo dos videojogos, além da habilidade técnica, tornou-se num desenvolvedor de videojogos independente e autónomo, criando assim a Nero Games.\n\nOs seus projetos destacam-se pela inovação e criatividade recorrendo a motores de jogos como o Unity e Unreal Engine, para proporcionar experiências imersivas e envolventes aos jogadores.",
     "ciencia_id": null,
     "id": "5d37744b-d5ee-507e-a341-bfbd063c5137",
     "integration_year": null,
@@ -1091,7 +1091,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": "Digital Game Development",
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/5d37744b-d5ee-507e-a341-bfbd063c5137.png",
     "preferred_name": "César Nero",
     "projects": [],
     "publications": [],
@@ -1157,7 +1157,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "É Licenciada e doutorada em Engenharia Informática e de Computadores pelo Instituto Superior Técnico da Universidade de Lisboa, nasceu em Lisboa em 1980. Durante a licenciatura especializou-se em Inteligência Artificial e Vídeo Jogos. O PhD focou-se na aplicação de jogos sérios na educação formal de médicos e enfermeiros.\n\nRealizou um pós-doutoramento na Faculdade de Ciências Sociais e Humanas focado na documentação de projetos artísticos na dança contemporânea onde explorou o uso de sistemas de captura de movimento em 3D (Kinect) e também em 2D (vídeo), com o objetivo de desenvolver novas representações e visualizações do movimento em forma digital.\n\nPosteriormente realizou um pós-doutoramento na Faculdade de Ciências onde treinou e desenvolveu algoritmos de deep learning para o reconhecimento de emoções em imagens.\n\nAtualmente é professora e coordenadora da licenciatura de desenvolvimento de jogos no IADE - Creative University.",
     "ciencia_id": null,
     "id": "5dfec6b0-8876-5378-adbc-86c62ec0cfa6",
     "integration_year": 2025,
@@ -1171,7 +1171,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/5dfec6b0-8876-5378-adbc-86c62ec0cfa6.png",
     "preferred_name": "Cláudia Sevivas",
     "projects": [],
     "publications": [],
@@ -1226,7 +1226,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Maria Cristina Pinheiro é Doutorada em Design pela Faculdade de Arquitetura da Universidade de Lisboa, Mestre em Cor na Arquitetura pela mesma Universidade e Licenciada em Design Visual pelo IADE, onde é docente desde 1979. Investigadora e membro da UNIDCOM IADE, foi também investigadora no CIAUD da FAUL. Coordenou o Mestrado em Design & Publicidade, foi membro de Conselho Científico do IADE-U e do Conselho Pedagógico da UE. Membro das Comissões Científica e Organizadora das Conferências Internacionais AIC LISBOA 2018 e CIPED 6- Congresso Internacional de Pesquisa em Design, na Gulbenkian. Membro do Comité Científico das Conferências Senses and Sensibility, das DDC IADE, das Conferências EIMAD do IPCB e da Comissão Científica da Revista EDUCAÇÃO GRÁFICA da Faculdade de Arquitetura, Artes e Comunicação da UNESP. Membro do Comité Científico da 13 CdC 2017 (XIII Conferenza del Colore), Nápoles, 2017 e da XIV Conferenza del Colore, Firenze, 2018. Com interesses de investigação e publicações nas áreas do Design de Comunicação, Gráfico, Tipografia, Cor, Visão da Cor, Envelhecimento da Visão, Sustentabilidade e Design Inclusivo. Membro fundador da Associação Portuguesa da Cor, foi ainda membro da IACC NA- International Association of Color Consultant North America.",
     "ciencia_id": null,
     "id": "861c8bb0-d188-59fc-9737-013de7acd59f",
     "integration_year": null,
@@ -1234,7 +1234,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/861c8bb0-d188-59fc-9737-013de7acd59f.png",
     "preferred_name": "Cristina Pinheiro",
     "projects": [],
     "publications": [],
@@ -1363,7 +1363,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Davide M. Parrilli é doutorando, investigador e professor convidado. Davide tem formação jurídica e na área de gestão (LLM cum laude na Tilburg University, NL; DES cum laude na ICHEC Brussels Management School, Bruxelas, BE) e trabalhou como advogado e consultor de privacidade em Bruxelas (BE) por 10 anos. Desde 2020 Davide é doutorando e investigador no UNIDCOM/IADE com um projeto sobre design, privacidade e ética. O escopo de seu projeto de doutoramento é propor um framework ético para a privacidade no design de serviços. Davide também ensina ética para alunos de licenciatura e mestrado. Seus interesses de pesquisa envolvem o impacto da ética aplicada no design de jogos e de serviços baseados em IA.",
     "ciencia_id": null,
     "id": "84ac8ef0-97cb-5b68-8353-42590562744f",
     "integration_year": null,
@@ -1371,7 +1371,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/84ac8ef0-97cb-5b68-8353-42590562744f.png",
     "preferred_name": "Davide Parrilli",
     "projects": [],
     "publications": [],
@@ -1518,7 +1518,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Élmano Ricarte é investigador do Instituto de Comunicação da NOVA, onde está a realizar o seu pós-doutoramento em ciências da comunicação, e professor auxiliar na Universidade Europeia, na Faculdade de Design, Tecnologia e Comunicação. É doutor em ciências da comunicação pela Universidade Católica Portuguesa e mestre pelo Programa de Pós-Graduação de Estudos da Mídia da Universidade Federal do Rio Grande do Norte. Tem duas graduações em comunicação social, com habilitações em jornalismo e rádio e televisão, pela Universidade Federal do Rio Grande do Norte com estágio na Universidade Católica Portuguesa. Tem ainda a formação pedagógica pelo Centro Protocolar de Formação Profissional para Jornalistas. Integra o Grupo de Estudos Boaventura (Universidade Federal do Rio Grande do Norte e Universidade de Coimbra). É membro e diretor de comunicação da Rede de Pesquisadores em Folkcomunicação (Rede Folkcom) e coordenador- -adjunto do Grupo de Trabalho de Jovens Investigadores da Associação Portuguesa de Ciências da Comunicação. ORCID: https://orcid.org/0000-0002-8638-3529",
     "ciencia_id": null,
     "id": "f79dd4e7-87f4-5079-a6c5-c1dc935120f5",
     "integration_year": 2025,
@@ -1526,7 +1526,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/f79dd4e7-87f4-5079-a6c5-c1dc935120f5.png",
     "preferred_name": "Elmano Ricarte",
     "projects": [],
     "publications": [],
@@ -1541,7 +1541,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Catedrática no IADE - Faculdade de Design, Tecnologia e Comunicação da Universidade Europeia, onde leciona desde 1991, Maria Emília Capucho Duarte tem uma licenciatura em Design (1994), com especialização em Design Industrial, pelo IADE, mestrado em Ergonomia em Segurança do Trabalho (2004), um doutoramento em Motricidade Humana com especialização em Ergonomia (2011) pela Universidade Técnica de Lisboa e título de Agregada em Design, pela Universidade Europeia (2022).",
     "ciencia_id": "2813-F4C2-55C7",
     "id": "0c4efe04-afc3-5b79-8edc-6f686fc0dee8",
     "integration_year": 2025,
@@ -1555,7 +1555,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0002-1932-9098",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/0c4efe04-afc3-5b79-8edc-6f686fc0dee8.png",
     "preferred_name": "Emília Duarte",
     "projects": [
       {
@@ -1605,7 +1605,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Eulerson Pedro Ferreira Rodrigues possui um Doutoramento em Media Artes (2023) e um Mestrado em Design e Desenvolvimento de Jogos Digitais (2019) pela Universidade da Beira Interior. Também é licenciado em Tecnologia de Jogos Digitais (2014) pela Universidade FUMEC e tem um Certificado de Pós-graduação em Desenvolvimento para Dispositivos Móveis (2016) pelo Centro Universitário UNA. Atualmente, é Professor Assistente Convidado na Universidade da Beira Interior e Professor Assistente no IADE - Faculdade de Design, Tecnologia e Comunicação, onde coordena o Mestrado em Design e Produção de Jogos.\n\nA sua pesquisa foca-se no design de jogos, especialmente no campo dos videojogos competitivos, explorando como os elementos de design impactam o envolvimento emocional entre os espectadores. Publicou artigos em conferências internacionais e capítulos de livros, com contribuições nas áreas de Game Design e Gamificação.",
     "ciencia_id": null,
     "id": "6fea81a9-6d0e-5a25-96e8-35173de3b607",
     "integration_year": null,
@@ -1613,7 +1613,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/6fea81a9-6d0e-5a25-96e8-35173de3b607.png",
     "preferred_name": "Eulerson Rodrigues",
     "projects": [],
     "publications": [],
@@ -1679,7 +1679,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Possui graduação em Informática pela Universidade do Vale do Rio dos Sinos (Unisinos)(2001), mestrado em Computação Aplicada pela Universidade do Vale do Rio dos Sinos (Unisinos) (2003) e doutoramento em Ciência da Computação pela Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) (2012).\n\nTem formação na área de Computação Gráfica, com especial ênfase na Geração Procedural de Ambientes Virtuais voltados para simulação e para jogos digitais.\n\nAtualmente, é docente no IADE e na Universidade do Vale do Rio dos Sinos (Brasil). Foi coordenador do curso de Jogos Digitais na Unisinos e atuou como pesquisador na área de visualização aplicada.\n\nÉ CEO da DesafioDev, empresa que capacita alunos do ensino secundário na área de Tecnologia da Informação.",
     "ciencia_id": null,
     "id": "7e5a6791-2db4-5fc3-ae34-62749f0269ce",
     "integration_year": null,
@@ -1693,7 +1693,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/7e5a6791-2db4-5fc3-ae34-62749f0269ce.png",
     "preferred_name": "Fernando Marson",
     "projects": [],
     "publications": [],
@@ -1898,7 +1898,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Designer gráfica e editorial, atualmente investiga no mestrado de Design e Cultura Visual do IADE, o movimento Slow Print aliado à produção de livros como objeto. Com um foco na litografia e livros de artista está na EKA- Estonian Academy of Arts com especial foco em Litografia e técnicas de encadernação. É técnica de impressão no departamento de Artes Gráficas do IADE desde 2022, e cofundadora e designer editorial na Sud Sud.",
     "ciencia_id": null,
     "id": "96da1d34-58f6-5fa4-a397-fa904e3de591",
     "integration_year": null,
@@ -1906,7 +1906,7 @@
     "membership_type": null,
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/96da1d34-58f6-5fa4-a397-fa904e3de591.png",
     "preferred_name": "Filipa Oliveira",
     "projects": [
       {
@@ -1921,7 +1921,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Filipe Figueiredo é professor auxiliar no IADE — Universidade Europeia e investigador na UNICOM/IADE e no Centro de Estudos de Teatro (FLUL), onde co-coordena a Linha de Investigação “Teatro e Imagem”. É Mestre em História da Arte (FCHS/UNL), com estudos centrados na obra de Domingos Alvão e na fotografia portuguesa na primeira metade do século XX, e Doutorado em Estudos Artísticos (FLUL, 2016), com uma tese dedicada aos modelos e práticas da fotografia de teatro em Portugal — “O Insustentável Desejo da Memória (1868-1974)” –, sendo bolseiro FCT. Tem colaborado em diversas iniciativas e projetos no cruzamento dos estudos de imagem com os estudos teatrais e performativos e de pesquisa e análise iconográfica, nomeadamente no projeto OPSIS — Base Iconográfica de Teatro em Portugal (2008-10) (CET/FLUL) e é, atualmente, investigador responsável do projeto PERPHOTO — _Performing the gaze. Crossings between photography and theatre in portuguese and international context._ (PTDC/ART-PER/31693/2017). Leccionou em várias escolas de artes visuais (ESTAL, Atelier de Lisboa, Restart, World Academy) e desenvolve trabalho fotográfico relacionado com as artes performativas. Dedica-se aos estudos de Fotografia e de História da Fotografia, da Imagem e Cultura Visual e, em particular, no seu cruzamento com as artes performativas, áreas em que tem assinado várias publicações em revistas e livros e promovido diversa atividade científica. Foi co-curador das exposições “Amélia” (2018) e “José Marques: fotógrafo em cena” (2019) no Teatro Nacional D. Maria II.",
     "ciencia_id": "4919-963C-BC77",
     "id": "14685811-8b1f-5d43-949b-741cba75cc0f",
     "integration_year": 2026,
@@ -1929,7 +1929,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0001-8040-4870",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/14685811-8b1f-5d43-949b-741cba75cc0f.png",
     "preferred_name": "Filipe Figueiredo",
     "projects": [],
     "publications": [],
@@ -1944,7 +1944,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Doutorado em Comunicação Audiovisual e Publicidade, pela Universidade de Extremadura, Espanha. Professor no IADE e colaborador no centro de investigação UNIDCOM. Tem como áreas de interesse as marcas de luxo, o marketing, a publicidade e a sustentabilidade. Desenvolveu funções no setor da perfumaria e cosmética durante mais de duas décadas sendo os últimos dez anos ligados à loja online no setor das marcas de luxo.",
     "ciencia_id": null,
     "id": "a4db8f35-e8b8-5f53-8983-c84d44b3f2a0",
     "integration_year": null,
@@ -1952,7 +1952,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/a4db8f35-e8b8-5f53-8983-c84d44b3f2a0.png",
     "preferred_name": "Filipe Rosário",
     "projects": [],
     "publications": [],
@@ -1990,7 +1990,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Frederico Caetano, doutorado em Sociologia Económica e das Organizações e mestre em Marketing pelo ISEG - Lisbon School of Economics and Management , desempenha atualmente funções como professor auxiliar no IADE Faculdade de Design, Tecnologia e Comunicação da Universidade Europeia. Desempenhou funções diversas em agências de meios multinacionais durante 24 anos nos Grupos Havas e WPP. Tem como áreas de interesse de investigação a Mobilidade, Sustentabilidade, Indústria Automóvel, Inteligência Artificial, Marketing Digital, Branding e Brand Management. O seu trabalho científico tem sido apresentado em conferências e está atualmente dedicado à publicação de capítulos de livro e artigos em revistas.",
     "ciencia_id": null,
     "id": "e3b1174f-52ee-5d86-8e14-27ead37b2aa5",
     "integration_year": null,
@@ -1998,7 +1998,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/e3b1174f-52ee-5d86-8e14-27ead37b2aa5.png",
     "preferred_name": "Frederico Caetano",
     "projects": [],
     "publications": [],
@@ -2013,7 +2013,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Desde de cedo recebeu formação de pintura num Atelier de Pintura. Licenciou-se em Escultura na Faculdade de Belas-Artes da Universidade de Lisboa (FBAUL) na qual, mais tarde, se tornou mestre em Anatomia Artística. Através do programa Erasmus, frequentou a Accademia di Belle Arti di Carrara (Carrara, Itália) onde se especializou no estudo do corpo humano e na técnica de modelação em barro com modelo vivo. É professor de Desenho Anatómico na FBAUL, desde 2019. ​É Professor de Anatomia e Biomecânica no IADE, desde 2023. Encontra-se, atualmente, a concluir o doutoramento em desenho com especialidade em Desenho Anatómico. Além de professor, Frederico é Escultor (Artista Plástico), focando o seu trabalho no estudo do corpo humano.",
     "ciencia_id": null,
     "id": "40c5932a-cb68-5c99-aee2-1d215540b6d5",
     "integration_year": null,
@@ -2021,7 +2021,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/40c5932a-cb68-5c99-aee2-1d215540b6d5.png",
     "preferred_name": "Frederico Elias",
     "projects": [],
     "publications": [],
@@ -2082,7 +2082,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Como designer, guia-se pela capacidade de ouvir, pela dúvida, pela experimentação e pela vontade de desaprender.\n\nAtualmente, como Jr. Art Diretor /Designer na Rasgo Publicidade, desenvolve campanhas criativas para marcas presentes no nosso quotidiano.\n\nTeve também o privilégio de apresentar e partilhar ideias em conferências como o 16th World Congress of the IASS/AIS, a Design Research and Innovation Week, a 12th International Conference Senses & Sensibility — Design and Complexity, o 1.º Seminário Internacional de Estudos da Linguagem Audiovisual e Interfaces, e o 17th International Conference on Design Principles & Practices. Além disso, publicou o seu primeiro artigo na Common Ground Research Networks e foi reconhecido com distinções no Brief.Aberto — Prémios Lusófonos, na EDCOM Creative Competition e na EDCOM Graduation Competition.",
     "ciencia_id": null,
     "id": "cb204c4c-6eb2-5d78-9018-2e9e3c6b2dc6",
     "integration_year": null,
@@ -2090,7 +2090,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/cb204c4c-6eb2-5d78-9018-2e9e3c6b2dc6.png",
     "preferred_name": "Gonçalo Figueiredo",
     "projects": [],
     "publications": [],
@@ -2246,7 +2246,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Helder Barbosa Ferreira é Doutorado em Gestão pela Faculdade de Economia da Universidade do Porto, na especialidade de Marketing e Estratégia. É Mestre em Marketing pela mesma Faculdade e licenciado em Gestão de Empresas pelo Instituto Politécnico de Gestão e Tecnologia. Tem ainda estudos pós-graduados em Direção de Empresas pela AESE. Profissionalmente, o Helder possui mais de 25 anos de experiência na área de Retail. Atualmente é Advisor e Consultor em Retail e Professor universitário em diversas áreas, nomeadamente Marketing, Inovação, Gamification e Retail.",
     "ciencia_id": "4119-E145-4580",
     "id": "5f80dd9b-44bc-5c28-873f-10e75c475c13",
     "integration_year": 2025,
@@ -2260,7 +2260,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0001-9941-6329",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/5f80dd9b-44bc-5c28-873f-10e75c475c13.png",
     "preferred_name": "Hélder Ferreira",
     "projects": [],
     "publications": [],
@@ -2327,7 +2327,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Doutor em Belas-Artes na especialidade de Desenho pela Universidade de Lisboa FBAUL com uma tese que procura aplicar o desenho em realidade virtual na sala de aula de Desenho, Mestre em Desenho pela Universidade de Lisboa FBAUL, Licenciado em Design pelo IADE, membro fundador do colectivo de artistas com foco na animação Estúdio 408. Praticante multidisciplinar do desenho e do design sediado no pensamento estratégico exerce atividade na área da comunicação em todo o seu espectro, fundamentando-o numa forte aproximação conceptual, no desenvolvimento estratégico que se aplica a qualquer forma/ expressão em prol do resultado do projeto e das suas particularidades. Dedica a vida e o trabalho não comercial ao processo criativo aplicado em todas as formas, animação, jogos, desenho, escrita são entre outras algumas das áreas onde pratica a busca pela emoção, inovação, e solução de problemas.\n\nPara mais informações e trabalho artístico/ investigação: [https://duck-cat-sr5l.squarespace.com/](https://duck-cat-sr5l.squarespace.com/)",
     "ciencia_id": null,
     "id": "cc37325a-3d7f-555f-aafb-ea0d43f983ef",
     "integration_year": null,
@@ -2335,7 +2335,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/cc37325a-3d7f-555f-aafb-ea0d43f983ef.png",
     "preferred_name": "Hugo Passarinho",
     "projects": [],
     "publications": [],
@@ -2605,7 +2605,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "É doutorado em Engenharia Informática pela Universidade da Beira Interior. Especialista em Redes Veiculares, Internet das Coisas (IoT) e Realidade Estendida (XR), tem um percurso académico marcado pela investigação aplicada e pela ligação à indústria.\n\nComo investigador integrado na UNIDCOM – IADE, lidera projetos que combinam tecnologia e design, sendo responsável pelo DTN.Lab. No IADE – Universidade Europeia, desempenha funções como Coordenador do Doutoramento em Desenvolvimento de Jogos Digitais e a pós-graduação em Programação Criativa.\n\nCom vasta experiência em ensino superior, gestão académica e inovação pedagógica, destaca-se pelo seu contributo na atualização curricular e no desenvolvimento de infraestruturas laboratoriais para apoio à investigação e desenvolvimento de jogos digitais.\n\nAlém disso, mantém uma forte ligação à indústria onde é CEO e Presidente do Conselho de Administração da Inklusion Entertainment, SA, empresa Portuguesa e especialista no desenvolvimento de soluções tecnológicas.",
     "ciencia_id": "FB1B-67A9-2B3D",
     "id": "b29c5921-4ba7-5c55-9d13-d08073f6a28c",
     "integration_year": 2025,
@@ -2613,7 +2613,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0001-8036-4709",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/b29c5921-4ba7-5c55-9d13-d08073f6a28c.png",
     "preferred_name": "João Dias",
     "projects": [],
     "publications": [
@@ -2647,7 +2647,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "João Flecha é um profissional no campo do Design Gráfico, com uma carreira enraizada desde 1999, e uma paixão profunda pelas artes gráficas e pela educação. Formado em Design Industrial, o seu percurso profissional levou-o, porém, a especializar-se em Design Gráfico. A sua filosofia educativa centra-se na interseção entre criatividade e técnicas artísticas tradicionais, incentivando dinâmicas inovadoras entre os alunos e o mundo das Artes Gráficas. Profissionalmente esteve sempre ligado a ambas as vertentes, design e técnicas de impressão, e sob a tutela do mestre Humberto Marçal, impressor e gravador no Centro Português de Serigrafia, aprofundou o seu conhecimento e prática em gravura, uma experiência que o levou a expandir o seu repertório técnico para incluir a fotogravura, técnica que combina a gravura com a fotografia. Realizou uma especialização em Bergen, Noruega, com o apoio de uma Bolsa de Especialização Profissional em Artes Gráficas pela Fundação Gulbenkian, tendo estudado fotogravura a quatro cores com o mestre David Stordahl.\n\nAtualmente, coordena o departamento de impressão e artes gráficas na Universidade de Design IADE em Lisboa, com o objetivo de implementar e disseminar junto da comunidade académica, técnicas tradicionais de impressão, como a fotogravura, a gravura, a serigrafia e a tipografia entre outros. E em 2022 funda com a Filipa Oliveira o estúdio de design e publicação editorial Sud Sud, em Lisboa.",
     "ciencia_id": null,
     "id": "6df019a5-bb7f-509c-bae5-c0c091725163",
     "integration_year": null,
@@ -2655,7 +2655,7 @@
     "membership_type": null,
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/6df019a5-bb7f-509c-bae5-c0c091725163.png",
     "preferred_name": "João Flecha",
     "projects": [
       {
@@ -2827,7 +2827,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Licenciado em Desenvolvimento de Jogos e Aplicações e Mestre em Computação Criativa e Inteligência Artificial, tem desenvolvido a sua atividade de investigação na utilização de soluções tradicionalmente aplicadas ao desenvolvimento de jogos em áreas ligadas à arte e ao espetáculo. Possui uma pós-graduação em Game Design e leciona temáticas relacionadas com o desenvolvimento de jogos e a criação de aplicações multimédia interativas em diversos cursos de formação e de nível superior. Mais recentemente, tem trabalhado na integração de soluções de aprendizagem automática (Machine Learning) em aplicações de realidade virtual e na criação de experiências imersivas para a educação a nível superior.",
     "ciencia_id": null,
     "id": "ba87b5fb-bc11-5242-8b8b-1cd39360a2fa",
     "integration_year": null,
@@ -2841,7 +2841,7 @@
     "membership_type": "external",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/ba87b5fb-bc11-5242-8b8b-1cd39360a2fa.png",
     "preferred_name": "José Graça",
     "projects": [
       {
@@ -2867,7 +2867,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Licenciado em Ciências Sócio-militares e Engenharia Geográfica, Mestre em Ciências e Engenharia da Terra e, doutorado em Ciências Geofisicas e da GeoInformação pela Faculdade de Ciências da Universidade de Lisboa. Possui diversos cursos na área da Programação, Cartografia e Sistemas de Informação Geográfica. Exerceu a sua actividade profissional como Chefe de Secções, Departamentos e Centros no Instituto Geográfico do Exército, simultâneamente foi Professor na Academia Militar e outras Universidades. Foi representante de Portugal em projectos Internacionais de Cartografia e SIG, MGCP e DGIWG. Actualmente é professor auxiliar da Universidade Europeia.",
     "ciencia_id": null,
     "id": "6c6731dd-babf-526f-a1e5-320f116d6e52",
     "integration_year": null,
@@ -2875,7 +2875,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/6c6731dd-babf-526f-a1e5-320f116d6e52.png",
     "preferred_name": "José Travanca Lopes",
     "projects": [],
     "publications": [],
@@ -2942,7 +2942,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Designer, Professor, Illustrator, Researcher, and Traveller. PhD in Communication Design, specializing in countercultural graphic design. Creative Director of Pro.Vocazione, an Italian independent literary magazine.",
     "ciencia_id": "BB17-BA91-CE64",
     "id": "6c21638f-2b50-5098-a8fe-584935e245ff",
     "integration_year": 2025,
@@ -2950,7 +2950,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0002-5768-9377",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/6c21638f-2b50-5098-a8fe-584935e245ff.png",
     "preferred_name": "Juliana Duque",
     "projects": [],
     "publications": [
@@ -3097,7 +3097,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Criativo multidisciplinar, docente e profissional na área do design, com especialização em comunicação visual e moda. É doutorado em Design pela Faculdade de Arquitetura da Universidade de Lisboa.",
     "ciencia_id": null,
     "id": "851fba71-1e4c-5c9c-a9d4-95a324fc4ae5",
     "integration_year": null,
@@ -3105,7 +3105,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/851fba71-1e4c-5c9c-a9d4-95a324fc4ae5.png",
     "preferred_name": "Luis Ricardo Santos",
     "projects": [],
     "publications": [],
@@ -3149,7 +3149,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Professora Auxiliar no IADE- Faculdade de Design, Tecnologia e Comunicação - Universidade Europeia e investigadora integrada na UNIDCOM onde co-coordena o Madx.Lab. Doutorada em Media Digitais - Criação Audiovisual e Media Interativos pelo programa CoLab da Universidade Nova de Lisboa com a UT Austin – Texas - Radio Television and Film Department. A componente prática da investigação do doutoramento, “Protest Images, Collective Portraits” (2020) inclui um protótipo interativo.  Integrou equipas de projectos de investigação como\"The Photographic Impulse: Measuring the Colonies and the Colonial Bodies” (PTDC/COM-OUT/29608/2017 ) ou europeu, como “African-European Narratives”.\n\nInicia a sua  formação académica em Ciências da Comunicação com especialização em Cinema e Televisão e a sua atividade profissional na Radio Televisão Portuguesa na série “Crónica do Século”. Realiza a primeira série de documentários sobre intercâmbios europeus para a RTP com apoio da UE. Com a LXFilmes, realiza também os seus primeiros filmes, um documentário e uma curta-metragem de ficção que tiveram apoio do Instituto do Cinema, respetivamente, “Um olho para ver, o outro para sentir” (2001) co-realizado com Rita Forjaz, Miguel Coelho e Susana Marques e a curta-metragem de ficção “Naquele Bairro”(2002).\n\nFaz o primeiro curso de Realização de Documentário com os Ateliers Varan, do Programa de Criatividade e Criação Artística da Fundação Calouste Gulbenkian, onde realiza o documentário “Estrela da Tarde” (2004). De seguida inicia uma colaboração com a Fundação Calouste Gulbenkian tendo realizado dois documentários “Na Pele do Urso” (2005), “Espaço de Ensaio” (2006). Nos anos seguintes, desenvolve o documentário “Livros Viajantes” (2009) com o apoio do ICA, da RTP e da Fundação Calouste Gulbenkian sobre bibliotecas itinerantes em Portugal.\n\nRetoma o percurso académico com um Mestrado em Antropologia no ISCTE- variante Identidades e Multiculturalismo, onde realiza “Diário de Turma” (2009), com apoio da Fundação Gulbenkian e da RTP. Alguns destes filmes foram exibidos e premiados em festivais de cinema, entre eles, Les Écrans Documentaires, IndieLisboa, DocLisboa, Texas Film Festival ou Oberhausen Film Festival. Também esteve na génese e coordenação do PANORAMA - Mostra de Documentário Português entre 2006 e 2013, através da AporDoc - Associação Portuguesa pelo Documentário.",
     "ciencia_id": "3319-7960-1378",
     "id": "88bbc3ed-12ef-50fa-997f-86e2c2f49f44",
     "integration_year": 2025,
@@ -3163,7 +3163,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0003-0066-0781",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/88bbc3ed-12ef-50fa-997f-86e2c2f49f44.png",
     "preferred_name": "Madalena Miranda",
     "projects": [
       {
@@ -3240,7 +3240,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Especialista em gestão de moda, sustentabilidade e economia circular, com mais de 15 anos de experiência nos setores de luxo e digital, tendo passado por marcas de referência como a Farfetch e a Max Mara. Conjuga a vertente académica com a consultoria estratégica de moda, nomeadamente na análise de macrotendências, gestão de e-commerce, optimização de custos e formações orientadas para a criatividade e a inovação.",
     "ciencia_id": null,
     "id": "e3a56c21-355f-57e0-be57-ac7198edeecf",
     "integration_year": null,
@@ -3248,7 +3248,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": "Design",
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/e3a56c21-355f-57e0-be57-ac7198edeecf.png",
     "preferred_name": "Maiara Daltoe",
     "projects": [],
     "publications": [],
@@ -3291,7 +3291,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "_(English version)_\n\nMarc Scholten is Associate Professor with Habilitation at Universidade Europeia. He received his PhD in Economic Psychology from Tilburg University (the Netherlands), and his Habilitation in Management from Universidade Nova de Lisboa (Portugal). He investigates human decision making, with a specialization in intertemporal choice, risky choice, and consumer behavior. He brings psychological insights to bear on the formal modeling of choice behavior, thus situating his research in the broader field of Behavioral Economics. A common thread through many (but certainly not all) publications is the view that decision making is best understood as an attribute-wise comparison process, thus challenging the standard view (in finance, economics, marketing, and psychology) that choice results from an alternative-wise valuation process. A general conclusion from his investigations is that the attribute-based view drastically simplifies reduces complexity of formal models of decision making, enhances their scope, and improves their descriptive adequacy, predictive accuracy, and generalizability. Journals featuring his research include the top-ranking journals Psychological Review, Management Science, the Journal of Experimental Psychology: General, and the Journal of Business Research, amidst other high-ranking journals such as Organizational Behavior and Human Decision Making, the Journal of Risk and Uncertainty, the Journal of Experimental Psychology: Learning, Memory, and Cognition, and Cognitive Science. He has been Associate Editor and Member of the Editorial Board of the Journal of Economic Psychology, Member of the Editorial Board of the journal Decision, and invited reviewer for many top- and high-ranking journals. He has also been Principal Investigator or Collaborator in a string of nationally and internationally financed research projects.",
     "ciencia_id": null,
     "id": "7f438147-2d99-5913-a693-9160f583131d",
     "integration_year": 2025,
@@ -3299,7 +3299,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/7f438147-2d99-5913-a693-9160f583131d.png",
     "preferred_name": "Marc Scholten",
     "projects": [],
     "publications": [],
@@ -3428,7 +3428,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Licenciada em Design de Comunicação pela Faculdade de Belas Artes da Universidade do Porto, com Pós-Graduação em Web Design & Development seguida de Mestrado em Design e Publicidade, ambos pelo IADE. A frequentar o Doutoramento em Design, concilia os estudos com uma carreira enquanto designer, na qual desenvolve projetos para áreas como o retalho, marketing e digital. Com mais de sete anos de experiência em design, passando pelas áreas da publicidade, do digital e das redes sociais, tem procurado aliar a componente prática e a experiência que o mercado de trabalho com uma carreira académica. Neste momento, encontra-se a leccionar cadeiras relacionadas com História do Design no IADE, enquanto assume funções enquanto designer e social media Manager numa empresa de tecnologia chinesa.",
     "ciencia_id": null,
     "id": "01685ba2-f12c-57e0-af9b-58236621ef67",
     "integration_year": null,
@@ -3436,7 +3436,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": "Design",
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/01685ba2-f12c-57e0-af9b-58236621ef67.png",
     "preferred_name": "Maria Bernardino",
     "projects": [],
     "publications": [],
@@ -3645,7 +3645,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Licenciado em Engenharia Informática e Mestre em Informática pela Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa, é docente no IADE desde 2016. Em 2008, foi um dos fundadores da SportTools - Technology for Sport, uma empresa tecnológica que desenvolveu sistemas de apoio à formação para vários desportos. A atividade profissional e académica levou a que se especializasse na criação de sistemas de informação para desporto e para a saúde, em particular,  nas áreas da reabilitação neuropsicológica e do desporto de elite. O desenvolvimento de soluções para grandes eventos desportivos  fez despertar a paixão pela comunicação e pela forma como a tecnologia pode revolucionar essa comunicação.\n\nNo IADE, está principalmente ligado ao curso de Creative Tech (Tecnologias Criativas), lecionando também nos cursos de Game Development e de Global Design.\n\nNo tempo que resta, dedica-se à Música e à utilização de novas tecnologias e de novas formas de interação em eventos de arte.",
     "ciencia_id": null,
     "id": "3c39380a-92c0-5604-92f1-e365dc54629f",
     "integration_year": null,
@@ -3653,7 +3653,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": "Digital Game Development",
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/3c39380a-92c0-5604-92f1-e365dc54629f.png",
     "preferred_name": "Miguel Boavida",
     "projects": [],
     "publications": [
@@ -3744,7 +3744,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Doutor em Comunicação pela Universidade de Vigo (Espanha), as suas principais linhas de investigação são Jornalismo Digital, Tecnologia e Design, Visualização de Informação e Comunicação Audiovisual. Trabalha atualmente como Professor Auxiliar no IADE - Universidade Europeia, em unidades curriculares das áreas científicas do Jornalismo, Comunicação Audiovisual e Produção dos Media. Ocupa a posição de coordenador do Mestrado em Comunicação Audiovisual e Multimédia no IADE. É investigador integrado da UNIDCOM/IADE, onde lidera como investigador principal o projeto \"O Desenho de Interação no Jornalismo Digital: guidelines para o desenho de interfaces e estratégias de affordances para os media digitais.\n\nO seu percurso académico é indissociável da sua atuação profissional como jornalista. Em 2014, participou da fundação do jornal Observador, onde trabalhou como Jornalista de Dados e liderou a produção de infografias e conteúdos multimédia. Participou da cobertura noticiosa da atualidade nacional e internacional através de distintos formatos, como artigos, reportagens, live blogs, explicadores e vídeos. Esta experiência permitiu-lhe entender o funcionamento, desafios e limitações dos media contemporâneos. Entre 2016 e 2018, integrou como Jornalista de Dados Sénior e Product Manager a equipa da Frames, uma startup portuguesa que produz e distribui gráficos e infografias para os media portugueses. O trabalho na Frames foi reconhecido pela Global Editors Network com a nomeação a Melhor Startup em Jornalismo Digital, em 2018.\"",
     "ciencia_id": "5D16-9FEF-0A92",
     "id": "cc246d80-10f9-5f3a-bda3-963f560f18d2",
     "integration_year": 2025,
@@ -3752,7 +3752,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0002-6539-6902",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/cc246d80-10f9-5f3a-bda3-963f560f18d2.png",
     "preferred_name": "Milton Cappelletti",
     "projects": [],
     "publications": [],
@@ -3767,7 +3767,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Auxiliar e Coordenadora do Mestrado em Design e Cultura Visual no IADE - Creative University, é doutorada em Design pela Faculdade de Arquitetura da Universidade de Lisboa, Especialista com Provas Públicas em Audiovisuais e Produção dos Media e Licenciada em Design e Tecnologia das Artes Gráficas pelo Instituto Politécnico de Tomar.\n\nCom uma carreira de mais de 25 anos em Design de Comunicação, dedica-se também ao estudo e investigação do processo de design de comunicação para as áreas da cultura.",
     "ciencia_id": null,
     "id": "c4a8b375-a38e-57d6-bd73-ac8206c7bf9a",
     "integration_year": null,
@@ -3775,7 +3775,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/c4a8b375-a38e-57d6-bd73-ac8206c7bf9a.png",
     "preferred_name": "Mónica Lameiro",
     "projects": [],
     "publications": [],
@@ -3869,7 +3869,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Historiador, tem vários livros, e artigos publicados em diversas revistas, catálogos e dicionários, sobre Cultura Visual (Iconografia, História da Arte), Crítica e Teoria da Arte (Sécs. XVIII-XIX), História da Arquitectura e Design Naval. Doutor em História da Arte pela Universidade Católica Portuguesa, e Mestre em História das Ideias Estéticas, pela Universidade Nova de Lisboa. Investigador integrado do Centro de História da Universidade de Lisboa, investigador associado da UNIDCOM/IADE e do CHAM/U.N.L. Fotógrafo, na área das Belas Artes, Património e Arquitectura, tem trabalhado para diversas instituições e editoras, com fotografias publicadas em livros de Arte, revistas de Bens Culturais e Património, catálogos, flyers, cartazes, sites institucionais (Secretariado Nacional dos Bens Culturais da Igreja, Divisão de Documentação Fotográfica do IMC-IP / DGPC, Centro Cultural Patriarcado de Lisboa, Turismo de Portugal, Casa-Museu dos Patudos, Câmara Municipal de Alpiarça, Propagandas Belarte, SA , Revista Invenire, Livros Horizonte, Scribe – Produções Culturais, Alêtheia Editores, etc.). Foi Coordenador da licenciatura em Fotografia e Cultura Visual, no IADE-Universidade Europeia. Na área museológica, foi Director da Galeria Rei D. Luís/Palácio Nacional da Ajuda, Assessor de Direcção do Museu Ricardo do Espírito Santo Silva, Director da Casa-Museu dos Patudos, e Comissário de várias exposições. Foi Comissário de várias exposições como: Da Utilidade do Desenho (Biblioteca Nacional de Lisboa); Giovanni Battista Piranesi (Galeria Rei D. Luís); Joanni V Magnifico - A Pintura em Portugal ao tempo de D. João V -1706-1750 (Galeria Rei D. Luís); Jean Pillement 1728-1808 (Museu da FRESS). Académico da Academia de Marinha - Classe de História Marítima Académico da Academia Nacional de Belas Artes Membro da College Art Association, New York Especializações: História da Arte, Pintura Séculos XVIII-XIX, Arquitectura e Construção Naval,",
     "ciencia_id": null,
     "id": "13a16d70-6c11-5db7-be42-566e4e8c39a8",
     "integration_year": null,
@@ -3877,7 +3877,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/13a16d70-6c11-5db7-be42-566e4e8c39a8.png",
     "preferred_name": "Nuno Saldanha",
     "projects": [],
     "publications": [],
@@ -3961,7 +3961,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Pamela Teubig é professora universitária e investigadora com foco em inovação. Doutorou-se pela University of Western Scotland na área da biologia molecular. Depois de trabalhar na área por alguns anos, ela passou a combinar biologia com física nuclear. O foco mudou para R&D, execução e análise de dados experimentais com o objetivo de desenvolver algoritmos avançados para deteção de radiação. É investigadora responsável do laboratório de desenho de filmes finos do LIP, laboratório do qual é investigadora integrada. No total, tem participado em inúmeras experiências de física nuclear com feixes de iõesa nível nacional e internacional (FAIR, CERN, etc.), sendo autora de mais de 20 artigos científicos com revisão por pares. Com esta bagagem de experiência multidisciplinar na área da ciência e computação, Pamela juntou-se em 2021 ao IADE para contribuir ao ensino da matemática, da física e da ciência dos dados a estudantes das licenciaturas de Desenvolvimento de Jogos e Tecnologia Criativa, áreas nas quais continua a contribuir no ensino destas e outras disciplinas, reforçando a visão pluridisciplinar com a qual o IADE contribui para a sociedade. Atualmente, é coordenadora científica da Licenciatura em Informática de Gestão.",
     "ciencia_id": null,
     "id": "f0853d45-98f3-5142-86ba-2b04c560c3b4",
     "integration_year": 2025,
@@ -3975,7 +3975,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/f0853d45-98f3-5142-86ba-2b04c560c3b4.png",
     "preferred_name": "Pamela Teubig",
     "projects": [
       {
@@ -4004,7 +4004,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/9c98b4d1-34e8-5348-b3b6-629350b0f751.png",
     "preferred_name": "Patrícia Oliveira",
     "projects": [],
     "publications": [],
@@ -4019,7 +4019,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Associada e Coordenadora para os Assuntos Académicos da Faculdade de Design, Tecnologia e Comunicação (IADE) da Universidade Europeia, concluiu o Doutoramento Europeu (2016) em Ciências da Comunicação (financiamento pela Fundação para a Ciência e a Tecnologia) pela Universidade do Minho, com uma tese sobre a receção da atualidade informativa pelos públicos infantojuvenis. A par da atividade de coordenação e de docência, é Investigadora Integrada da UNIDCOM/IADE e Investigadora Colaboradora do CECS/UMinho. Coordena o projeto de I&D MeInWar – Estudo sobre os media e as representações sociais acerca do conflito Russo-Ucraniano, financiado pela Universidade Europeia. Integra, ainda, a equipa de Investigadores do Projeto de I&D YouNCivic – Youth, news and citizenship, financiado pela Fundação para a Ciência e a Tecnologia (PTDC/COM-OUT/0243/2021). Publica em revistas indexadas nacionais e internacionais, e é autora de livros e capítulos de livros na área dos estudos da comunicação e dos media.\n\nÉ membro do Conselho Científico, do Conselho Pedagógico, e da Comissão de Ética da Universidade Europeia.",
     "ciencia_id": null,
     "id": "b14081d9-fa84-5dac-a00b-1991d558aa15",
     "integration_year": 2025,
@@ -4027,7 +4027,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/b14081d9-fa84-5dac-a00b-1991d558aa15.png",
     "preferred_name": "Patrícia Silveira",
     "projects": [],
     "publications": [
@@ -4363,7 +4363,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Pedro Oliveira é doutorado em Design pela FAUL. Professor Auxiliar a tempo integral no IADE/Universidade Europeia desde 2013. Perito avaliador da A3ES. Designer de produto e de interiores. Colaborador em projetos que envolvem design, tecnologia e inovação, investigando maioritariamente temas ligados aos novos materiais e ao design de embalagem.",
     "ciencia_id": null,
     "id": "c0b856e7-b759-57f9-9010-79ba99f7dcb2",
     "integration_year": null,
@@ -4377,7 +4377,7 @@
     "membership_type": null,
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/c0b856e7-b759-57f9-9010-79ba99f7dcb2.png",
     "preferred_name": "Pedro Oliveira",
     "projects": [],
     "publications": [],
@@ -4460,7 +4460,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Doutorada em Design pela Universidade de Aveiro, Raquel Antunes é Diretora do Mestrado em Design Management e docente na Licenciatura em Design do IADE – Faculdade de Design, Tecnologia e Comunicação da Universidade Europeia. É também Professora Adjunta Convidada na ESTG do Politécnico de Leiria.\n\nCom mais de 15 anos de experiência no ensino superior e 10 como designer de produto, a sua carreira destaca-se por combinar a prática profissional com a docência e a investigação. Os seus interesses de investigação incluem Collaborative design, Project-Based Learning, Brand, Product design e Packaging, e estão refletidos na sua participação em diversos grupos de investigação, na publicação de artigos científicos, capítulos de livros, e na sua presença em conferências nacionais e internacionais. Raquel Antunes também orienta dissertações e atua como júri convidada em provas académicas e concursos de design.",
     "ciencia_id": "AE1B-5613-B4EF",
     "id": "84a5aacc-93a1-48b2-93bf-10b25768943a",
     "integration_year": null,
@@ -4468,7 +4468,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0003-4363-3687",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/84a5aacc-93a1-48b2-93bf-10b25768943a.png",
     "preferred_name": "Raquel Antunes",
     "projects": [],
     "publications": [],
@@ -4483,7 +4483,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Raquel Lima é estudante de doutoramento na Faculdade de Belas Artes da Universidade de Barcelona, Design Manager, Estratega e pesquisadora nas áreas do Design Social e System Thinking. Desenvolve trabalhos e pesquisa em áreas de inovação com foco em diversidade e inclusão, culturas regenerativas e modelos colaborativos. Busca conjugar pensamento estratégico com impacto sistêmico em seus projetos. É idealizadora da plataforma experimental Social Ink Lab e co-founder do Estúdio de design estratégico para DEI Dos Cabezas.",
     "ciencia_id": null,
     "id": "42d51369-4104-5412-9c6a-cc4d628460d0",
     "integration_year": null,
@@ -4491,7 +4491,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/42d51369-4104-5412-9c6a-cc4d628460d0.png",
     "preferred_name": "Raquel Lima",
     "projects": [
       {
@@ -4563,7 +4563,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Doutorado em Comunicação e Publicidade pela Universidade de Vigo, atualmente é diretor do IPAM Porto. Foi diretor do programa de Mestrado em Gestão de Marketing do IPAM Porto e professor adjunto da área de Marketing Estratégico. Foi igualmente convidado para vários cursos de pós-graduação e conferências na área de Gestão Estratégica de Marcas.\n\nRicardo Mena é o fundador e diretor de inovação de marca da MM + A Branding, uma empresa portuguesa com mais de 15 anos de experiência no desenvolvimento e gestão de projetos de Branding Estratégico, a partir de um método autodesenvolvido chamado 3´S Brand Three Method. Trabalhou com várias empresas como Associação Empresarial de Portugal, Porto Editora, AXA Seguros, Teixeira & Duarte, Trofa Saúde, Salvador Caetano etc.",
     "ciencia_id": null,
     "id": "3b83e19b-b146-5537-83f2-f841b8b06c87",
     "integration_year": null,
@@ -4571,7 +4571,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/3b83e19b-b146-5537-83f2-f841b8b06c87.png",
     "preferred_name": "Ricardo Mena",
     "projects": [],
     "publications": [],
@@ -4586,7 +4586,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Doutorada na área das Ciências da Comunicação - Doutoramento FCT em Estudos de Comunicação: Tecnologia, Cultura e Sociedade. Doutoramento realizado entre Portugal e Espanha (Barcelona e Madrid). - Mestre em Psicologia Social e das Organizações, pelo ISCTE-IUL. - Licenciada em Psicologia, pelo ISCTE-IUL. - Pós-graduação em Análise de Dados em Ciências Sociais, pelo ISCTE-IUL. - Docência desde o ano letivo de 2012/2013 (unidades curriculares de Competências Transversais: Técnicas de Comunicação; Trabalho em Equipa; Gestão de Conflitos, no ISCTE-IUL). - Docente convidada, desde o ano de 2018, nos cursos de Publicidade e Marketing e de Relações Públicas e Comunicação Empresarial, da Escola Superior de Comunicação Social do Instituto Politécnico de Lisboa. - Passagem pelo Instituto Politécnico de Portalegre, onde teve a oportunidade de ser responsável por algumas unidades curriculares do curso de Comunicação Organizacional. - Atualmente professora Auxiliar no IADE, onde leciona nos cursos de Ciências da Comunicação e de Marketing e Publicidade. - Investigadora Integrada do ICNOVA, da Universidade Nova de Lisboa. - Participação em projetos de investigação na área das Ciências da Comunicação, Sociologia e Psicologia. - Publicação de artigos em revistas nacionais e internacionais da especialidade. - Comunicação em Conferências Nacionais e Internacionais da especialidade. - Colaboração em unidades curriculares de Estatística e de Metodologias de Investigação, na Universidade Nova de Lisboa. - Colaboração com a Universidade Nova de Lisboa, em Escolas de Verão (leciona cursos nas áreas da Comunicação e da Estatística). - Colaboração anual com o Ciência Viva e o CIES-IUL em Comunicação de Ciência para Jovens; - Dá formação na área das Metodologias de Investigação e da Estatística. - Voluntariado em Universidades Sénior (onde leciona a disciplina de Castelhano e de Comunicação e Desenvolvimento Comunitário).",
     "ciencia_id": "F01E-C55A-7DED",
     "id": "aa1be5f9-5248-5c06-8abb-92518a83292c",
     "integration_year": 2025,
@@ -4594,7 +4594,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0003-1626-0926",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/aa1be5f9-5248-5c06-8abb-92518a83292c.png",
     "preferred_name": "Rita Mourão",
     "projects": [],
     "publications": [],
@@ -4697,7 +4697,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0002-1059-977X",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/781eb82a-8824-5dfd-838d-eaaa675bb027.png",
     "preferred_name": "Rodrigo Morais",
     "projects": [
       {
@@ -4800,7 +4800,7 @@
     "membership_type": "integrated",
     "orcid": "0000-0002-5773-6049",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/2c2b853f-64ea-548b-8027-4c7302c219b9.png",
     "preferred_name": "Rui Cruz",
     "projects": [],
     "publications": [
@@ -5029,7 +5029,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Docente de Design e Animação com formação em Design e especialização em linguagens audiovisuais, animação e motion graphics. Durante o mestrado em Design e Cultura Visual desenvolveu uma curta-metragem de animação que combinou animação digital e stop motion utilizando técnicas de serigrafia. Continua também a explorar a criação de flipbooks com serigrafia através de workshops no IADE.\n\nAtualmente  leciona no IADE nas áreas de animação, design e produção audiovisual,  com domínio de diversas ferramentas da Adobe. Paralelamente à docência,  trabalha profissionalmente em ilustração, design, animação e produção e  pós-produção audiovisual para festivais de cinema, projetos de jogos e  vídeos.",
     "ciencia_id": null,
     "id": "98406899-c87c-53ce-9627-e6e3396d5b14",
     "integration_year": null,
@@ -5037,7 +5037,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/98406899-c87c-53ce-9627-e6e3396d5b14.png",
     "preferred_name": "Samuel Rodeia",
     "projects": [],
     "publications": [],
@@ -5169,7 +5169,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Doutorado em Gestão com enfoque em Marketing pelo ISCTE-Instituto Universitário de Lisboa. MBA pela Manchester Business School e Licenciado em Gestão pela Aston University, reconhecimento de especialistas de reconhecida experiência e competência profissional para a área de formação no domínio de Marketing e Publicidade. É docente de Marketing do IADE – Universidade Europeia, autor de várias publicações científicas em revistas indexadas ao Scopus e “peer-reviewed”. Foi Professor convidado na católica-Luanda no programa avançado de Marketing e Direcção Comercial levado a cabo em parceria com a Católica-Lisbon e é administrador da Portmundo - Promoção Cultural e Publicidade. Atualmente é Coordenador das Pós-graduações em Branding (Lisboa, Porto e Online) e da Pós-graduação em Comunicação de Marketing 5.0 (online e presencial).",
     "ciencia_id": null,
     "id": "9c60fd69-b759-5994-a6bb-64c689b5605d",
     "integration_year": null,
@@ -5177,7 +5177,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/9c60fd69-b759-5994-a6bb-64c689b5605d.png",
     "preferred_name": "Sérgio Vinhas da Silva",
     "projects": [],
     "publications": [],
@@ -5250,7 +5250,7 @@
     "status": "a_confirmar"
   },
   {
-    "bio": null,
+    "bio": "Sofia Ponte é doutorada em Arte e Design pela Universidade do Porto. Professora auxiliar no IADE – Universidade Europeia e membro do grupo Unexpected Media Lab do Instituto de Investigação em Design, Media e Cultura (ID+). Mestre em Visual Studies pela School of Architecture and Planning do Massachusetts Institute of Technology (MIT). Em setembro de 2022 o seu trabalho foi capa da revista centenária O Tripeiro. Tem publicado e apresentado o seu trabalho artístico, de curadoria e de investigação em vários contextos nacionais e internacionais. A sua pesquisa incide sobre New Media Arte, Arte Pública, Exposições de Arte, Coleções de Arte, Mulheres nas Artes e Investigação Artística.",
     "ciencia_id": null,
     "id": "206009dd-1ce9-5eaf-a739-a92946fd05ca",
     "integration_year": 2025,
@@ -5264,7 +5264,7 @@
     "membership_type": "integrated",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/206009dd-1ce9-5eaf-a739-a92946fd05ca.png",
     "preferred_name": "Sofia Ponte",
     "projects": [
       {
@@ -5400,7 +5400,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Professora Auxiliar e Coordenadora da Licenciatura em Design Visual (100%online) do IADE – Universidade Europeia. Doutorada em Design pela FAUL – Faculdade de Arquitetura da Universidade de Lisboa, com foco no corpo humano como suporte de comunicação visual, cruzando o Design com áreas como a Sociologia, Antropologia, a Medicina Legal, a Filosofia e a Psicologia. Também concluiu na FAUL o curso de Estudos Avançados em Design e o ano curricular do Mestrado em Design. Frequentou uma Pós-Graduação em Design de Produto na UNEB – Universidade do Estado da Bahia, em São Salvador da Bahia (Brasil) e é Licenciada em Design de Equipamento pela ESAD – Escola Superior de Artes e Design de Matosinhos. Leciona desde 2008 no Instituto Politécnico de Leiria e é investigadora do LiDA – Laboratório de Investigação em Design e Artes pela ESAD Caldas da Rainha/IPLeiria, e no Grupo de Investigação em Design e Ciências Sociais (CIAUD/FAUL).\n\nComo Investigadora em Design, tem vindo a participar em diversas conferências nacionais e internacionais com publicações de artigos e capítulo de livro, bem como em outros formatos de disseminação científica.\n\nTrabalhou como designer durante vários anos, em gabinetes de design e arquitetura, bem como em empresas industriais de diferentes tipologias.",
     "ciencia_id": null,
     "id": "fd9c8667-11a2-549c-9184-f0daa775102d",
     "integration_year": null,
@@ -5408,7 +5408,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/fd9c8667-11a2-549c-9184-f0daa775102d.png",
     "preferred_name": "Susana Cardal",
     "projects": [],
     "publications": [],
@@ -5574,7 +5574,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": null,
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/d67fd014-8929-58bc-b53b-56042de46dd0.png",
     "preferred_name": "Vasco Milne",
     "projects": [],
     "publications": [],
@@ -5589,7 +5589,7 @@
     "status": "active"
   },
   {
-    "bio": null,
+    "bio": "Verónica Silva é uma Designer Mexicana multifacetada com foco em Branding. Formou-se como Designer de Comunicação em Nova Iorque e agora possui um Mestrado pelo IADE em Comunicação Multimídia e Audiovisual. Trabalhou como in-house designer em ambiente corporativo Norte Americano, estando nos últimos 5 anos a colaborar remotamente como freelancer com empresas por todo o mundo, principalmente na Europa e Estados Unidos, além de lecionar no IADE.",
     "ciencia_id": null,
     "id": "8b3c244f-068d-57b2-96bf-514a1968faa1",
     "integration_year": null,
@@ -5597,7 +5597,7 @@
     "membership_type": "collaborator",
     "orcid": null,
     "phd": "Design",
-    "photo_url": null,
+    "photo_url": "https://nmghxkhstlnxypmfmfhk.supabase.co/storage/v1/object/public/people-photos/8b3c244f-068d-57b2-96bf-514a1968faa1.png",
     "preferred_name": "Verónica Silva",
     "projects": [],
     "publications": [
