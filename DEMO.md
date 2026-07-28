@@ -1,0 +1,244 @@
+# Presentation runbook
+
+Three demos showing one pipeline: **ORCID → admin app → database → website.**
+
+| | |
+|---|---|
+| Admin app | https://berlogabob.github.io/Unidcom-IADE/ |
+| Website | https://berlogabob.github.io/unidcom-site/ |
+| Actions | https://github.com/berlogabob/unidcom-site/actions |
+| ORCID | https://orcid.org/0009-0009-8585-0074 |
+
+---
+
+## 60-second pre-flight
+
+Run these before you present. Each should pass without thinking about it.
+
+- [ ] Admin app loads and you are signed in.
+- [ ] Website loads.
+- [ ] Actions tab open in a third browser tab, ready to click.
+- [ ] Terminal open at `~/Documents/GitHub/unidcom-site` — the fallback.
+- [ ] The new campus address is on your clipboard.
+- [ ] Andrey's bio in the admin app is still the **old** text (so tomorrow's change shows).
+- [ ] ORCID biography visibility is **Public** — if it is not, the app cannot read it.
+
+```sh
+# Confirms what the app will see. Should print the OLD bio right now.
+curl -s -H "Accept: application/json" \
+  https://pub.orcid.org/v3.0/0009-0009-8585-0074/person \
+  | python3 -c "import json,sys; print(json.load(sys.stdin)['biography']['content'])"
+```
+
+---
+
+## Running order
+
+Trigger the sync (step 4) **before** the address demo (step 5). The ~2 minutes of sync and
+deploy then elapse while you are talking, instead of in silence.
+
+| # | Step | Where | ~Time |
+|---|---|---|---|
+| 1 | Change the bio on ORCID | orcid.org | 1 min |
+| 2 | Merge the duplicate person | admin app | 1 min |
+| 3 | Pull the bio into the admin app | admin app | 1 min |
+| 4 | **Trigger the sync** | GitHub Actions | click, leave it |
+| 5 | Change the campus address | terminal | 2 min |
+| 6 | Show everything live | website | 1 min |
+
+---
+
+## 1 — Change the bio on ORCID
+
+> *"This is my own ORCID record. I control it — not the university, not an administrator."*
+
+On https://orcid.org, edit **Biography**, paste your new text, save.
+
+Then **verify it has propagated** before touching the admin app. The public API lags the
+ORCID website by a minute or two:
+
+```sh
+curl -s -H "Accept: application/json" \
+  https://pub.orcid.org/v3.0/0009-0009-8585-0074/person \
+  | python3 -c "import json,sys; print(json.load(sys.stdin)['biography']['content'])"
+```
+
+**Expect:** your new text.
+**If it still prints the old text:** wait. Do not click Auto-fill yet — the app reads this
+exact endpoint, so it will see the old text too and tell you there is nothing to update.
+
+---
+
+## 2 — Merge the duplicate person
+
+> *"The database has the same researcher twice. The app finds these itself."*
+
+**Admin → Merge → People**
+
+The candidate group appears automatically — no search needed. The app groups names by token
+containment, and `Sara Gancho` is a subset of `Sara Patrícia Martins Gancho`.
+
+1. Click **Review & merge** on the Sara group.
+2. The **Merge people** matrix opens: one column per record, one row per field.
+3. Pick the **Sara Gancho** column for every field. It is the one with an ORCID, an email,
+   47 publications, and a lab membership. The other row has none of those.
+4. Click through the **Merge records?** confirmation → **Continue**.
+
+**Expect:** a snackbar confirming the merge, and the Sara group disappears from the candidate
+list.
+
+> Worth saying out loud: the matrix is per-field, so a merge can take the best value from each
+> record rather than blindly picking one. That is the point of reviewing rather than
+> auto-merging.
+
+**If it fails:** the backup is at `Unidcom-IADE/scripts/out/` (taken tonight);
+`scripts/restore.py` puts it back. Don't attempt a restore on stage — move on to demo 3.
+
+---
+
+## 3 — Pull the bio into the admin app
+
+> *"I updated my ORCID. I never touched the university's database. Watch."*
+
+**People → Andrey Dyakov → Auto-fill**
+
+(The button is labelled **Auto-fill**, next to *Edit* and *ORCID sync*.)
+
+1. The app fetches your live ORCID record.
+2. A matrix opens: **Current** value versus **ORCID** value, per field. Only fields where
+   ORCID differs are listed — so you should see **Bio**, and nothing else.
+3. Tick the ORCID side for **Bio**. Apply.
+
+**Expect:** the bio on the person page updates to your new text.
+
+**If it says "Already up to date with ORCID":** ORCID has not propagated yet. Go back to the
+curl in step 1. This is the single most likely thing to go wrong — hence the check.
+
+**If it says "No ORCID profile found to pull from":** the biography visibility on orcid.org is
+not Public.
+
+---
+
+## 4 — Trigger the sync
+
+> *"The website is static — it doesn't talk to the database. It's rebuilt from it."*
+
+**Actions → Sync content from Supabase → Run workflow** (leave *preview* ticked) → **Run**.
+
+Leave it running and go straight to step 5. It commits the changed data, which automatically
+triggers the deploy.
+
+**Fallback, if the workflow errors:**
+
+```sh
+cd ~/Documents/GitHub/unidcom-site
+set -a && . ~/Documents/GitHub/Unidcom-IADE/scripts/.env && set +a
+uv run --project scripts scripts/sync.py --preview
+git add -A && git commit -m "Sync content from Supabase" && git push
+```
+
+---
+
+## 5 — Change the campus address
+
+> *"Not everything belongs in a database. The address is editorial content, so it lives in
+> the site's own repository — versioned, reviewable, with a history."*
+
+Two files, same text in both. **Paste your new address into each.**
+
+**`hugo.toml`** — line 17, drives the footer on every page:
+
+```toml
+  address = "PASTE THE NEW ADDRESS HERE"
+```
+
+**`content/contact.md`** — lines 7–9, the Contact page:
+
+```markdown
+UNIDCOM/IADE
+PASTE STREET LINE HERE
+PASTE POSTCODE AND CITY HERE
+Portugal
+```
+
+> Keep the two trailing spaces at the end of each address line in `contact.md` — that is what
+> makes Markdown render them as separate lines rather than one run-on paragraph.
+
+Then:
+
+```sh
+cd ~/Documents/GitHub/unidcom-site
+hugo --gc --quiet && echo BUILD-OK     # catches a typo before it ships
+git add -A && git commit -m "Update the campus address" && git push
+```
+
+**Expect:** `BUILD-OK`, then a deploy starting in the Actions tab.
+
+---
+
+## 6 — Show everything live
+
+Give the deploy a moment, then **hard-reload** (⌘⇧R) — GitHub's CDN will otherwise serve you
+the old page.
+
+| Page | What to point at |
+|---|---|
+| `/people/` | One Sara, not two |
+| `/people/andrey-dyakov/` | The bio you wrote on ORCID |
+| Any page, footer | The new address |
+| `/contact/` | The new address |
+
+> *"One ORCID edit, one merge, one commit — three different paths into the same site, and none
+> of them needed a web developer."*
+
+**If a page still looks stale:** open it in a private window. That bypasses the cache without
+you having to explain what a CDN is.
+
+---
+
+## Questions you are likely to get
+
+**Why do most people have no photo?**
+51 of 184 came across from the old WordPress site. The rest were never on it — there is no
+source for them. They get added through the admin app.
+
+**What is the "Preview — work in progress" banner?**
+The site is generated from data that is still being curated, so it carries the banner and is
+deliberately excluded from search engines until the content is approved.
+
+**Is the old site still running?**
+Yes. This replaces it when the content is signed off. Old URLs already redirect — the
+researcher pages, the agenda, vision and mission, and ethics.
+
+**Where does the publication list come from?**
+The same database. The site shows journal articles and books; the database also holds internal
+reporting records — thesis juries, management activity — which are deliberately never
+published.
+
+---
+
+## Reset after rehearsing
+
+So the change is actually visible tomorrow:
+
+1. In the admin app, set Andrey's bio back to the old text.
+2. On orcid.org, set the biography back to the old text.
+3. Re-run the sync so the site matches.
+
+**Do not complete the Sara merge while rehearsing** — a merge cannot be undone from the UI, and
+you would arrive tomorrow with nothing to show.
+
+The database has exactly **two** duplicate pairs:
+
+| Pair | Use it for |
+|---|---|
+| `Paulo Bago D’Uva` ↔ `Paulo Uva` | **rehearsal** — merge this one for real tonight |
+| `Sara Gancho` ↔ `Sara Patrícia Martins Gancho` | **the demo** — leave untouched |
+
+Rehearsing on Paulo exercises the identical code path and fixes a genuine duplicate, so the
+practice run does real work. For Paulo, keep **`Paulo Uva`** — it has the email
+(`paulo.b.uva@gmail.com`) and the lab membership; `Paulo Bago D’Uva` has neither, nor any
+publications.
+
+After merging Paulo, only the Sara group remains in the candidate list — which makes
+tomorrow's screen cleaner, with exactly one thing on it.
