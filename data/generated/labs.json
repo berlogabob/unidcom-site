@@ -1,0 +1,291 @@
+[
+  {
+    "code": "BiD",
+    "id": "bcbfc5d1-27b7-55e8-883a-1daeed083486",
+    "members": [
+      {
+        "name": "Ana Marques",
+        "slug": "ana-marques"
+      },
+      {
+        "name": "Diamantino Abreu",
+        "slug": "diamantino-abreu"
+      },
+      {
+        "name": "Dilay Kocogullari",
+        "slug": "dilay-kocogullari"
+      },
+      {
+        "name": "Eduardo Gonçalves",
+        "slug": "eduardo-goncalves"
+      },
+      {
+        "name": "Filipa Alves",
+        "slug": "filipa-alves"
+      },
+      {
+        "name": "Paulo Uva",
+        "slug": "paulo-uva"
+      },
+      {
+        "name": "Pedro Oliveira",
+        "slug": "pedro-oliveira"
+      },
+      {
+        "name": "Vasco Milne",
+        "slug": "vasco-milne"
+      }
+    ],
+    "name": "BiD: Bio-Inspired Design Lab",
+    "objectives": [],
+    "overview": "The Bio-Inspired Design Lab aims to bring together an interdisciplinary team working at the intersection of biological sciences, design, art, and technology, fostering the application of biological concepts, processes, structures, and materials in the development of sustainable and regenerative artefacts and systems that operatein synergy with the environment. Its main concern is the generation and dissemination of knowledge in the areas of nature inspired/based design, biodesign, sustainability and related areas, through research, education and action activities, as well as the promotion of the transfer of knowledge and results to the relevant players in society. The BID.Lab is also be open to the wider community, welcoming the collaboration of diﬀerent stakeholders, namely, but not only, companies and brands, research institutes, local communities, independent designers and artists, and environmental associations.",
+    "projects": [
+      {
+        "slug": "bio-inspired-approaches-to-computational-design-morphogenesis",
+        "title": "Bio-Inspired approaches to computational design (morphogenesis)"
+      },
+      {
+        "slug": "invasifi-invasive-alien-species-as-feedstocks-for-sustainable-biomaterial-innova",
+        "title": "INVASIFI: Invasive Alien Species as Feedstocks for Sustainable Biomaterial Innovation"
+      },
+      {
+        "slug": "mycelium-based-packaging-sustainable-material-design-management-framework",
+        "title": "Mycelium-Based Packaging (sustainable material + design management framework)"
+      },
+      {
+        "slug": "natural-pigments-in-graphic-design-and-visual-arts-applications-of-plant-piugmen",
+        "title": "Natural pigments in graphic design and visual arts: applications of plant piugments in screen printing"
+      },
+      {
+        "slug": "re-connect-nature-inspired-speculative-design",
+        "title": "Re-connect: nature-inspired speculative design"
+      },
+      {
+        "slug": "the-hunting-maritime-museum-of-sesimbra-four-parallel-exhibitions",
+        "title": "The Hunting: Maritime Museum of Sesimbra) — four parallel exhibitions"
+      },
+      {
+        "slug": "through-the-looking-glass-a-dive-into-the-microcosmos",
+        "title": "Through the Looking Glass: A dive into the microcosmos"
+      },
+      {
+        "slug": "unidcom-outputs-biodesign-guidebook-edited-book",
+        "title": "UNIDCOM | Outputs | BioDesign Guidebook (edited book)"
+      }
+    ],
+    "slug": "bid"
+  },
+  {
+    "code": "DFH",
+    "id": "f478cd46-8a5a-5a03-91b7-dc09c29fe4aa",
+    "members": [
+      {
+        "name": "António Gorgel",
+        "slug": "antonio-gorgel"
+      },
+      {
+        "name": "Camila Jordão",
+        "slug": "camila-jordao"
+      },
+      {
+        "name": "Nuno Simões",
+        "slug": "nuno-simoes"
+      },
+      {
+        "name": "Rodrigo Morais",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "name": "DFH: Design for Humanity Lab",
+    "objectives": [],
+    "overview": "The DFH.Lab envisions design as a transformative practice for social well-being and collective flourishing. Grounded in ethics, inclusion, and conviviality, it advances a vision of design that restores the human dimension to systemic challenges, bridging policy, culture, and lived experience.",
+    "projects": [
+      {
+        "slug": "icdc-international-creative-design-challenge",
+        "title": "ICDC: International Creative Design Challenge"
+      },
+      {
+        "slug": "labideas-impact-driven-education-for-action-and-sustainability",
+        "title": "LabIDEAS: Impact-Driven Education for Action and Sustainability"
+      },
+      {
+        "slug": "push-project-ubiquitous-success-for-humanity",
+        "title": "PUSH: Project – Ubiquitous Success for Humanity"
+      }
+    ],
+    "slug": "dfh"
+  },
+  {
+    "code": "DTN",
+    "id": "47c7eb81-e902-524e-99eb-1256e072d83b",
+    "members": [
+      {
+        "name": "André Sabino",
+        "slug": "andre-sabino"
+      },
+      {
+        "name": "Cláudia Sevivas",
+        "slug": "claudia-sevivas"
+      },
+      {
+        "name": "Emília Duarte",
+        "slug": "emilia-duarte"
+      },
+      {
+        "name": "Fernando Marson",
+        "slug": "fernando-marson"
+      },
+      {
+        "name": "José Graça",
+        "slug": "jose-graca"
+      },
+      {
+        "name": "Maria Inês Pires",
+        "slug": "maria-ines-pires"
+      },
+      {
+        "name": "Pamela Teubig",
+        "slug": "pamela-teubig"
+      },
+      {
+        "name": "Paula Neves",
+        "slug": "paula-neves"
+      }
+    ],
+    "name": "DTN: Design-Tech Nexus Lab",
+    "objectives": [],
+    "overview": "The DTN.Lab (Design-Tech Nexus Lab) operates at the intersection of engineering, computer science, technology, art, and design, with the primary aim of developing ethical, fair, and responsible technology-based solutions. Its core mission is to address the pressing challenges of the digital age while promoting human dignity, protecting natural and built heritage, supporting democracy, and fostering peace. Through an interdisciplinary approach, the lab engages in the creation of innovative technologies that have a positive impact on society, focusing on solutions that contribute to a flourishing future for humanity. The DTN.Lab collaborates with industry leaders, research institutions, and technology developers, adopting frameworks such as human-centered design, responsible innovation, and sustainable development, to ensure that its outcomes promote social good and respect for the environment.",
+    "projects": [
+      {
+        "slug": "unidcom-projects-atlantic-exploration-lagos",
+        "title": "UNIDCOM | Projects | Atlantic Exploration Lagos"
+      }
+    ],
+    "slug": "dtn"
+  },
+  {
+    "code": "MADx",
+    "id": "2bd45537-9ccd-585c-86c9-a6985b3cee14",
+    "members": [
+      {
+        "name": "Ana Gloria Neves",
+        "slug": "ana-gloria-neves"
+      },
+      {
+        "name": "Madalena Miranda",
+        "slug": "madalena-miranda"
+      },
+      {
+        "name": "Sofia Ponte",
+        "slug": "sofia-ponte"
+      },
+      {
+        "name": "Sílvia Rosado",
+        "slug": "silvia-rosado"
+      }
+    ],
+    "name": "MADx: Media Arts and Design Lab",
+    "objectives": [],
+    "overview": "MADx.Lab - Media Arts and Design is a laboratory of the UNIDCOM-IADE research center that works at the intersection of artistic and cultural fields in an experimental and speculative way in the areas of Image Studies, Digital Art, Design, Multimedia, Cinema, Video, Photography, Drawing and Game Design, critically investigating symbolic and representational issues related to the context of visual culture, heritage and entertainment.",
+    "projects": [
+      {
+        "slug": "archeologies-of-the-web-media-history",
+        "title": "Archeologies of the Web: Media History"
+      },
+      {
+        "slug": "collecting-and-conserving-digital-art-in-portugal",
+        "title": "Collecting and Conserving Digital Art in Portugal"
+      },
+      {
+        "slug": "participatory-documentary-as-design-research",
+        "title": "Participatory Documentary as Design Research"
+      },
+      {
+        "slug": "visual-culture-archives-and-algorithmic-collective-memory",
+        "title": "Visual Culture Archives and Algorithmic Collective Memory"
+      }
+    ],
+    "slug": "madx"
+  },
+  {
+    "code": "SDI",
+    "id": "e9e4427a-d634-5dc7-bfa7-225da992076e",
+    "members": [
+      {
+        "name": "Daniel Risi Crespo",
+        "slug": "daniel-risi-crespo"
+      },
+      {
+        "name": "Davide Gambera",
+        "slug": "davide-gambera"
+      },
+      {
+        "name": "Hélder Ferreira",
+        "slug": "helder-ferreira"
+      },
+      {
+        "name": "Joaquim Casaca",
+        "slug": "joaquim-casaca"
+      },
+      {
+        "name": "Pedro Alegria",
+        "slug": "pedro-alegria"
+      },
+      {
+        "name": "Pedro Gomide",
+        "slug": "pedro-gomide"
+      },
+      {
+        "name": "Rui Patrício",
+        "slug": "rui-patricio"
+      },
+      {
+        "name": "Sara Gancho",
+        "slug": "sara-gancho"
+      }
+    ],
+    "name": "SDI: Strategic Design and Innovation Lab",
+    "objectives": [
+      {
+        "name": "SDI.1: Engage Stakeholders",
+        "slug": "sdi-1"
+      },
+      {
+        "name": "SDI.2: Create Knowledge",
+        "slug": "sdi-2"
+      },
+      {
+        "name": "SDI.3: Disseminate Knowledge",
+        "slug": "sdi-3"
+      }
+    ],
+    "overview": "SDI.Lab is a strategic design and innovation research lab hosted by UNIDCOM/IADE – Universidade Europeia, in partnership with the Department of Design/CILAB at Politecnico di Milano. It aims to increase the business and social impact of design research by addressing complex challenges through breakthrough approaches, accelerating innovation capabilities, and enhancing talent development.",
+    "projects": [
+      {
+        "slug": "building-design-and-innovation-capabilities",
+        "title": "Building Design and Innovation Capabilities"
+      },
+      {
+        "slug": "designing-phygital-experiences-and-business-models",
+        "title": "Designing Phygital Experiences and Business Models"
+      },
+      {
+        "slug": "entrepreneurship-brokering-network",
+        "title": "Entrepreneurship Brokering Network"
+      },
+      {
+        "slug": "humanizing-the-digital-transition",
+        "title": "Humanizing the Digital Transition"
+      },
+      {
+        "slug": "supporting-open-innovation-with-gamification",
+        "title": "Supporting Open Innovation with Gamification"
+      },
+      {
+        "slug": "tackling-innovation-challenges-through-industry-academia-collaboration",
+        "title": "Tackling Innovation Challenges through Industry–Academia Collaboration"
+      }
+    ],
+    "slug": "sdi"
+  }
+]

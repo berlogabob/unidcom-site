@@ -1,0 +1,1423 @@
+[
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Ponte, S. 2025. A Curadoria Online e a Net Art em Portugal in Arte, Digital, Academia, Museu Zer0 vol.2. Ribas, L. e Carvalhais, M. (Eds.), (105-121). Museu Zer0. ISBN: 10.34626/2024/978-989-9049-70-3",
+    "id": "ca69c0c8-793e-5b98-804e-b51854b7d73e",
+    "macro_type": "Livros",
+    "title": "A Curadoria Online e a Net Art em Portugal (chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Eduardo Gonçalves",
+        "role": "Co-autor",
+        "slug": "eduardo-goncalves"
+      }
+    ],
+    "doi": "10.48528/pvy2-ww14",
+    "full_reference": "Alves, H., Gonçalves, E., & Ferreira, A. M. (2025). A Participatory Speculation Toolkit for Co-designing with Rural Communities. In M. J. Felix, F. Pombo, F. M. Silva, & R. A. Almendra (Eds.), Design Commit 2024 - 1st International Conference on Design & Industry (pp. 1021 - 1028). UA Editora - Universidade de Aveiro. https://doi.org/10.48528/pvy2-ww14",
+    "id": "3a1df193-f4ec-5fec-9225-b3cfd846a906",
+    "macro_type": "Livros",
+    "title": "A Participatory Speculation Toolkit for Co-designing with Rural Communities",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.3390/computers14060209",
+    "full_reference": "Ramos, R.; Casaca, J.; Patrício, R. (2025). Adoption Drivers of Intelligent Virtual Assistants in Banking: Rethinking the Artificial Intelligence Banker. Computers, 14(6), 209. https://doi.org/10.3390/computers14060209",
+    "id": "4e0d3cd0-6cb2-56cc-b10e-b64d7b72a61b",
+    "macro_type": "Artigos em revistas",
+    "title": "Adoption Drivers of Intelligent Virtual Assistants in Banking: Rethinking the Artificial Intelligence Banker",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Único autor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Morais, R. (2025). Advances in Design and Technology for Enhanced Avatar Therapy: A Hermeneutic Approach. In Lecture Notes in Computer Science. Springer Nature Switzerland, pp. 305–313. ISBN: 9783031939815.",
+    "id": "a3e38239-bc1b-58e8-a338-bd3917590575",
+    "macro_type": "Livros",
+    "title": "Advances in Design and Technology for Enhanced Avatar Therapy: A Hermeneutic Approach",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Hande Ayanoglu",
+        "role": "Co-autor",
+        "slug": "hande-ayanoglu"
+      },
+      {
+        "author_position": 2,
+        "name": "Rodrigo Hernandez-Ramirez",
+        "role": "Co-autor",
+        "slug": "rodrigo-hernandez-ramirez"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93982-2_26",
+    "full_reference": "Oliveira, A.L., Hernandez-Ramirez, R., Ayanoglu, H. (2025). AI and Gender Perspectives in Startup Environments: Mitigating Bias, Challenging Stereotypes, and Design Implications. In: Kurosu, M., Hashizume, A. (eds) Human-Computer Interaction. HCII 2025. Lecture Notes in Computer Science, vol 15772. Springer, Cham. https://doi.org/10.1007/978-3-031-93982-2_26",
+    "id": "a12eea06-de42-56f8-b6ac-4eb2f8c38097",
+    "macro_type": "Livros",
+    "title": "AI and Gender Perspectives in Startup Environments: Mitigating Bias, Challenging Stereotypes, and Design Implications",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Ponte, S. (submetido) Arte Digital. In Glossário Colaborativo de Acesso Digital na Cultura, Barranha, H.; Carvalho, A.; Matos, A. (Eds.) Acesso Cultura.",
+    "id": "da5ecf54-b725-5136-8a86-d2503803805d",
+    "macro_type": "Livros",
+    "title": "Arte Digital (submitted chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "António Gorgel",
+        "role": "Co-autor",
+        "slug": "antonio-gorgel"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93982-2_23",
+    "full_reference": "Gorgel Pinto, A., Reaes Pinto, P. (2025). Assembling Around Collective Experiences: Empowering Communities in Lisbon's Margins Through Expanded HCI and Digital Social Innovation. In: Kurosu, M., Hashizume, A. (eds) Human-Computer Interaction. HCII 2025. Lecture Notes in Computer Science, vol 15772. Springer, Cham. https://doi.org/10.1007/978-3-031-93982-2_23",
+    "id": "360a1bc0-b122-5144-8cc7-c0280b4b80fe",
+    "macro_type": "Livros",
+    "title": "Assembling Around Collective Experiences: Empowering Communities in Lisbon's Margins... (book chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Primeiro autor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Morais, R. (2025). Designing Immersion: A Transnational Project-Based Experience with Porsche. In: Jornadas Ibéricas de Inovação Pedagógica da Universidade Europeia & IPAM. Morais, R., Morais, C. (2025). A construção sígnica do self: uma perspectiva semiótica da identidade pessoal. In: 18ª Jornada do CIEP e 2º Encontro da Rede Brasileira de Pesquisa em Semiótica Peirceana. Atas. Morais, R., Marques, A., Boechat, A., Figueiredo, F., Oliveira, S., Neves, C., Oliveira, P. (2025). Aprendizaje centrado en el ser humano y semiótica cognitiva: una metodología de enseñanza transdisciplinar en tiempos de inteligencia artificial. In: XI Congreso de la Federación Latinoamericana de Semiótica. Actas. Morais, R., Vicente, M. (2025). Comunicación feminista: visualización estética de la historia visual del movimiento en sus cuatro olas. In: XI Congreso de la Federación Latinoamericana de Semiótica. Actas. Morais, R., Jordão, C. (2025). Integración entre PBL y HCL para la Sostenibilidad en la Enseñanza del Design. In: XI Congreso de la Federación Latinoamericana de Semiótica. Actas. Morais, R., Jordão, C., Simões, S. (2025). Inteligencia artificial generativa y repertorios culturales vernaculares: una lectura semiótico-crítica de los procesos de traducción visual. In: XI Congreso de la Federación Latinoamericana de Semiótica. Actas. Morais, R., Costa, J. (2025). La influencia de diferentes técnicas de transmedia storytelling en la retención de contenido publicitario. In: XI Congreso de la Federación Latinoamericana de Semiótica. Actas. Morais, R., Jordão, C. (2025). 360º Sustainability: A Project-Based Pedagogical Experience in Advertising Design for IKEA. In: Jornadas Ibéricas de Inovação Pedagógica da Universidade Europeia & IPAM.",
+    "id": "fca9b3c2-0cfe-511e-b2c9-0941308add86",
+    "macro_type": "Livros",
+    "title": "Atas (não indexadas) — lista agregada (Jornadas Ibéricas, CIEP, FELS, etc.)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Único autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Boechat, A. C. (2025). AVATARS AS BRIDGES BETWEEN BRANDS AND THE METAVERSE: PSYCHOLOGICAL, SOCIAL, AND TECHNOLOGICAL PERSPECTIVES. 7th INTERNATIONAL BOĞAZİÇİ SCIENTIFIC RESEARCH CONGRESS. ISARC / ISKAD.",
+    "id": "cb2d4a40-cf1c-5579-b8c2-daa938c75acf",
+    "macro_type": "Livros",
+    "title": "AVATARS AS BRIDGES BETWEEN BRANDS AND THE METAVERSE: PSYCHOLOGICAL, SOCIAL, AND TECHNOLOGICAL PERSPECTIVES",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Primeiro autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Boechat, A. C.; Ferreira, S. (2025). Brand Destinations and Instagram Storytelling as Strategic Communication Tools: The Case of ‘I amsterdam’ through Gen Z’s Perspective. II Seminario Internacional de Formación Permanente para los Estudios del Lenguaje Audiovisual e Interfaces. Universidad Europea de Madrid.",
+    "id": "794b67aa-2c66-51a2-b3c0-a29796612c74",
+    "macro_type": "Livros",
+    "title": "Brand Destinations and Instagram Storytelling as Strategic Communication Tools: The Case of ‘I amsterdam’ through Gen Z’s Perspective",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.62754/joe.v4i2.6426",
+    "full_reference": "Rosário, A. T., & Casaca, J. A. (2025). Brand Loyalty and Generations X, Y, Z. Journal of Ecohumanism, 4(2), 1132–1151. https://doi.org/10.62754/joe.v4i2.6426.",
+    "id": "e180b07d-8342-5cab-ab82-a097b3171815",
+    "macro_type": "Artigos em revistas",
+    "title": "Brand Loyalty and Generations X, Y, Z",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Barreto, A. M.; Boechat, A. C.; (2025). Comunicação Política em Redes Sociais: Um Paradoxo para o Discurso Democrático. A (In)Sustentabilidade dos Media. Escola Superior de Comunicação Social.",
+    "id": "f64a7650-222e-5eba-af3d-e3430fa8e158",
+    "macro_type": "Livros",
+    "title": "Comunicação Política em Redes Sociais: Um Paradoxo para o Discurso Democrático",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.37394/23207.2025.22.76",
+    "full_reference": "Rosário, A. T., & Casaca, J. A. (2025). Consumer Behavior in Online Retail. WSEAS Transactions on Business and Economics, 22, 880-906. https://doi.org/10.37394/23207.2025.22.76",
+    "id": "d390c8cd-e9eb-5ae7-a906-762a9f24535e",
+    "macro_type": "Artigos em revistas",
+    "title": "Consumer Behavior in Online Retail",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": "10.7903/cmr.23592",
+    "full_reference": "Rodrigues, P., Sousa, A., Boechat, A., & Borges, A. P. (2025). Consumer Happiness Toward Celebrity Endorsement: Attitude Toward the Brands. Contemporary Management Research, 21(1), 27–51. https://doi.org/10.7903/cmr.23592",
+    "id": "ae63559e-e2e6-57ba-8071-3609fb8ea7be",
+    "macro_type": "Artigos em revistas",
+    "title": "Consumer Happiness Toward Celebrity Endorsement: Attitude Toward the Brands",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Isabel Farinha",
+        "role": "Primeiro autor",
+        "slug": "isabel-farinha"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Farinha, I., Lisboa, C., Pinheiro, C., & Ferreira, A. M. (2025). Creative Challenges as Laboratories for Promoting Cooperative and Collaborative Learning in Higher Education Institutions, Panel: Creativity & Design Thinking. EduLearn2025 - 17th annual International Conference on Education and New Learning Technologies - 30 June to 2 July 2025, Palma de Mallorca, Spain.",
+    "id": "c5daab1d-8f87-5833-b196-bd2c33ce3ae4",
+    "macro_type": "Livros",
+    "title": "Creative Challenges as Laboratories for Promoting Cooperative and Collaborative Learning in Higher Education Institutions (EduLearn2025)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rui Cruz",
+        "role": "Co-autor",
+        "slug": "rui-cruz"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Cruz, R. N., & Rosário, A. T. (2025). Data-Driven Decision-Making in Marketing: A Systematic Literature Review of Emerging Themes and Research Gaps. Systems, 13(12), 1114.",
+    "id": "2247f59a-8010-5d47-990a-1b2d36e08cf5",
+    "macro_type": "Artigos em revistas",
+    "title": "Data-Driven Decision-Making in Marketing: A Systematic Literature Review of Emerging Themes and Research Gaps",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Primeiro autor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": "10.1080/21650349.2025.2575166",
+    "full_reference": "Morais, R., & Rosa, C. (2025). Design and collective cognition: a semiotic-theoretical framework for understanding shared meanings. International Journal of Design Creativity and Innovation, 1–25. https://doi.org/10.1080/21650349.2025.2575166",
+    "id": "cde443d2-048b-5f27-a64d-f2f394084961",
+    "macro_type": "Artigos em revistas",
+    "title": "Design and collective cognition: a semiotic-theoretical framework for understanding shared meanings",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Hande Ayanoglu",
+        "role": "Co-autor",
+        "slug": "hande-ayanoglu"
+      },
+      {
+        "author_position": 2,
+        "name": "Rodrigo Hernandez-Ramirez",
+        "role": "Co-autor",
+        "slug": "rodrigo-hernandez-ramirez"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93864-1_8",
+    "full_reference": "Silva, V., Ayanoglu, H., Hernández Ramírez, R. (2025). Designing Against Bias: AI, Crime Racialization, and the Ethics of Image. In: Kurosu, M., Hashizume, A. (eds) Human-Computer Interaction. HCII 2025. Lecture Notes in Computer Science, vol 15770. Springer, Cham. https://doi.org/10.1007/978-3-031-93864-1_8",
+    "id": "e9c5c25e-d25a-5eb8-92d0-03d62ce226e2",
+    "macro_type": "Livros",
+    "title": "Designing Against Bias: AI, Crime Racialization, and the Ethics of Image",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Aznar, G.; Palomo, R.; Lorenzo, S.; Boechat, A. C. (2025). Digital Horizons: Transforming Higher Education through the Metaverse. XIII Congreso Internacional de la Iberoamerican Academy of Management. Universidad CEU San Pablo.",
+    "id": "681ad55c-aca2-5c89-90c2-51e61f455824",
+    "macro_type": "Livros",
+    "title": "Digital Horizons: Transforming Higher Education through the Metaverse",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Hande Ayanoglu",
+        "role": "Co-autor",
+        "slug": "hande-ayanoglu"
+      },
+      {
+        "author_position": 2,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93861-0_20",
+    "full_reference": "Pires, G.A., Morgado, M., Casaca, J., Ayanoglu, H., Duarte, E. (2025). Do Robots Sound Human Enough? Exploring Human Gender and Tone in Shaping Empathy Towards Social Robots. In: Kurosu, M., Hashizume, A. (eds) Human-Computer Interaction. HCII 2025. Lecture Notes in Computer Science, vol 15769. Springer, Cham. https://doi.org/10.1007/978-3-031-93861-0_20",
+    "id": "d539833e-2016-55bd-b88f-e69a0dbad6c9",
+    "macro_type": "Livros",
+    "title": "Do Robots Sound Human Enough? Exploring Human Gender and Tone in Shaping Empathy Towards Social Robots",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Juliana Duque",
+        "role": "Co-autor",
+        "slug": "juliana-duque"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Do You Want to Be a Hero? The Power of Design in Health Literacy: How Visual Communication Helps Save Lives. Info Saúde 11 (2025): 29-33.",
+    "id": "3f12ea90-5035-5295-9923-b09cc4bacc24",
+    "macro_type": "Artigos em revistas",
+    "title": "Do You Want to Be a Hero? The Power of Design in Health Literacy: How Visual Communication Helps Save Lives",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": "10.4018/979-8-3693-3579-6.ch012",
+    "full_reference": "Danhauser, R., Boechat, A. C., Inácio, A. I., & Tavares, P. (2025). Eatertainment: Staging Food and Experiences for Brand Competitiveness in Restaurants. In A. Rosário & A. Boechat (Eds.), Impact of Digitalization on Communication Dynamics (pp. 299–342). IGI Global Scientific Publishing. https://doi.org/10.4018/979-8-3693-3579-6.ch012",
+    "id": "4d4b6181-bb83-5f48-b387-2119c067d0d8",
+    "macro_type": "Livros",
+    "title": "Eatertainment: Staging Food and Experiences for Brand Competitiveness in Restaurants",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Primeiro autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": "10.5281/zenodo.18114264",
+    "full_reference": "Boechat, A. C.; Barreto, A. M.; Bernardo, S. (2026). Employer Branding: Strategic Communication for the Integration of People with Down Syndrome. Journal Comunicar, ISSN 1134-3478, 84, 2026, 116-127. https://doi.org/10.5281/zenodo.18114264",
+    "id": "df922d06-16fb-554e-8458-bfe46d86545c",
+    "macro_type": "Artigos em revistas",
+    "title": "Employer Branding: Strategic Communication for the Integration of People with Down Syndrome",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rui Cruz",
+        "role": "Co-autor",
+        "slug": "rui-cruz"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Rosário, A. T., Raimundo, R. J., & Cruz, R. N. (2025). Enhancing Business Higher Education through Simulation-Based Learning, Problem-Based Learning, and Challenge-Based Learning. WSEAS Transactions on Business and Economics.",
+    "id": "0f316a85-ca6e-5ab4-a47a-ffa20414505f",
+    "macro_type": "Artigos em revistas",
+    "title": "Enhancing Business Higher Education through Simulation-Based Learning, Problem-Based Learning, and Challenge-Based Learning",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rui Cruz",
+        "role": "Co-autor",
+        "slug": "rui-cruz"
+      }
+    ],
+    "doi": "10.1007/978-3-031-86079-9_4",
+    "full_reference": "Rosário, A., & Cruz, R. (2025). Environment, Social, and Governance business: challenges and opportunities. In A. d. B. Machado, M. J. Sousa, A. Brambilla, A. Pesqueira, & A. Rocha (Eds.), Environmental, Social, Governance and Digital Transformation in Organizations (Information Systems Engineering and Management, Vol. 35). Springer, Cham. https://doi.org/10.1007/978-3-031-86079-9_4",
+    "id": "7619ce93-d8c3-5470-832c-54b4de3c7ce0",
+    "macro_type": "Livros",
+    "title": "Environment, Social, and Governance business: challenges and opportunities",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Co-editor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Morais, R., & Jordão, C. (orgs.) (2025). Estudos contemporâneos em Design & Publicidade. Lisboa: IADE Press. ISBN 978-989-35792-1-3.",
+    "id": "93c937c6-96f6-5ae4-ba97-d7f238226150",
+    "macro_type": "Livros",
+    "title": "Estudos contemporâneos em Design & Publicidade (Edição)",
+    "type": "Edição de livro",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Miguel Boavida",
+        "role": "Co-autor",
+        "slug": "miguel-boavida"
+      }
+    ],
+    "doi": "10.4018/979-8-3693-3579-6.ch002",
+    "full_reference": "Exploring the Frontiers of Communication With Extended Reality (XR), 2025, DOI: 10.4018/http://979-8-3693-3579-6.ch002, Part of ISBN: 9798369335796",
+    "id": "248992f4-9571-5438-bf73-7a4c8cd1d658",
+    "macro_type": "Livros",
+    "title": "Exploring the Frontiers of Communication With Extended Reality (XR)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Ponte, S. (submetido) Femanoid. In Prospective Lexicon, Favaretto, L. (Ed.) RIBCO.",
+    "id": "c1f834cb-d9b2-5208-b1bb-eebcd5963341",
+    "macro_type": "Livros",
+    "title": "Femanoid (submitted chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Hande Ayanoglu",
+        "role": "Co-autor",
+        "slug": "hande-ayanoglu"
+      }
+    ],
+    "doi": "10.1007/978-3-031-77566-6_33",
+    "full_reference": "Morgado, M., Ayanoglu, H., de Lima, E.S. (2025). Focus Group Insights into Student Experiences and Real-Time Data Visualization Expectations to Enhance Campus Life. In: Martins, N., Brandão, D. (eds) Advances in Design and Digital Communication V. DIGICOM 2024. Springer Series in Design and Innovation, vol 51. Springer, Cham. https://doi.org/10.1007/978-3-031-77566-6_33",
+    "id": "f07236be-159e-57b5-a627-3924b8cdeb3c",
+    "macro_type": "Livros",
+    "title": "Focus Group Insights into Student Experiences and Real-Time Data Visualization Expectations to Enhance Campus Life",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Primeiro autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "From Red to Green: How Portuguese Consumers Perceive EDP’s New Sustainable Brand Identity. Boechat, A. C., Oliveira, M. F., Ricarte, E., Rosário, A. 23rd SRRNet Conference 2025. Status: Aprovado, a aguardar publicação.",
+    "id": "2814fed6-9d3e-5025-8449-c9f91b072848",
+    "macro_type": "Livros",
+    "title": "From Red to Green: How Portuguese Consumers Perceive EDP’s New Sustainable Brand Identity",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "António Gorgel",
+        "role": "Co-autor",
+        "slug": "antonio-gorgel"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93861-0_1",
+    "full_reference": "Barbato, Marcos, and Antonio Gorgel Pinto. 2025. From Smart Cities to Art Cities: Two Cases of Social Computer Interaction by Design for Social Innovation. In Lecture Notes in Computer Science, 3–19. https://doi.org/10.1007/978-3-031-93861-0_1.",
+    "id": "2497494c-a07a-5c3d-940b-1ca5d6564118",
+    "macro_type": "Livros",
+    "title": "From Smart Cities to Art Cities: Two Cases of Social Computer Interaction... (book chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Isabel Farinha",
+        "role": "Co-autor",
+        "slug": "isabel-farinha"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Espada, A., Farinha, I., & Pestana, G. (2025). From Tool to Co-Agent: Reframing AI as a Co-Worker in Design Ideation. 13th International Conference Senses & Sensibility 2025 - From Natural Intelligence to Artificial Intelligence in Design? UNIDCOM/IADE, LDCI/UFRGS, Porto Alegre, Brasil, 24–28 November 2025. https://senses.unidcom-iade.pt/ ; https://www.ufrgs.br/ldci/senses-and-sensibility-2025/",
+    "id": "48b6bb08-ca40-59c5-8ba7-2fcba9daaee1",
+    "macro_type": "Livros",
+    "title": "From Tool to Co-Agent: Reframing AI as a Co-Worker in Design Ideation (Senses & Sensibility 2025)",
+    "type": "Capítulos de livros",
+    "url": "https://senses.unidcom-iade.pt/",
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.4018/979-8-3693-5340-0.ch001",
+    "full_reference": "Rosário, A. T. & Casaca, J. A. (2025). How Artificial Intelligence Can Leverage Relationship Marketing Strategies. In J. Santos, P. Pires, & N. Grigoriou (Eds.), Leveraging AI for Effective Digital Relationship Marketing (pp. 1-34). IGI Global Scientific Publishing. https://doi.org/10.4018/979-8-3693-5340-0.ch001",
+    "id": "519dfd82-b059-54bb-9c33-b263828e6a8a",
+    "macro_type": "Livros",
+    "title": "How Artificial Intelligence Can Leverage Relationship Marketing Strategies",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": "10.3390/su17083499",
+    "full_reference": "Rosário, A. T., & Boechat, A. C. (2025). How Sustainable Leadership Can Leverage Sustainable Development. Sustainability, 17(8), 3499. https://doi.org/10.3390/su17083499",
+    "id": "600a5489-f708-5c8a-abc1-4665873c2a8d",
+    "macro_type": "Artigos em revistas",
+    "title": "How Sustainable Leadership Can Leverage Sustainable Development",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sara Gancho",
+        "role": "Co-autor",
+        "slug": "sara-gancho"
+      }
+    ],
+    "doi": "10.1186/s12884-024-07119-1",
+    "full_reference": "Landeiro, F., Silva, M., Veiga e Moura, C., Martins, C., Miller, P., Ferraz, S., Azevedo, A. P. de, Gancho, S., Rocha, L., Patrício, R., & Nunes, I. (2025). Human-centered design and maternity care: Is this a possible interplay? – A systematic review. BMC Pregnancy Childbirth 25, 261 (2025). https://doi.org/10.1186/s12884-024-07119-1",
+    "id": "a8ef8923-76ea-55b0-8e44-3e2ed5373ed2",
+    "macro_type": "Artigos em revistas",
+    "title": "Human-centered design and maternity care: Is this a possible interplay? – A systematic review",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-editor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": "10.4018/979-8-3693-3579-6",
+    "full_reference": "Rosário, A., & Boechat, A. (Eds.). (2025). Impact of Digitalization on Communication Dynamics. IGI Global Scientific Publishing. https://doi.org/10.4018/979-8-3693-3579-6",
+    "id": "8ed13963-d854-5b55-8b87-b28df0be435b",
+    "macro_type": "Livros",
+    "title": "Impact of Digitalization on Communication Dynamics (edited book)",
+    "type": "Edição de livro",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Eduardo Gonçalves",
+        "role": "Co-autor",
+        "slug": "eduardo-goncalves"
+      },
+      {
+        "author_position": 2,
+        "name": "António Gorgel",
+        "role": "Co-autor",
+        "slug": "antonio-gorgel"
+      }
+    ],
+    "doi": "10.18848/2325-1328/cgp/v19i02/79-103",
+    "full_reference": "Dhibar, A., Gonçalves, E., & Gorgel Pinto, A. (2025). Inclusive play framework for parents and children: A tool to promote awareness about gender-neutral play. The International Journal of Design in Society, 19(2) (pp. 79-103). https://doi.org/10.18848/2325-1328/cgp/v19i02/79-103",
+    "id": "a5b1acc9-3d63-50de-b6c1-3179f857009a",
+    "macro_type": "Artigos em revistas",
+    "title": "Inclusive play framework for parents and children: A tool to promote awareness about gender-neutral play",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Isabel Farinha",
+        "role": "Único autor",
+        "slug": "isabel-farinha"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Farinha, I. (2025). Integration of the Sustainable Development Goals (SDGs) in Communication Curricular Units - Project-Based Learning in a Higher Education Institution. ICONSUS2025 – International Conference on Sustainability: Transforming Higher Education for a Sustainable Future, 11th and 12th of September 2025, School of Management and Technology, Santarém Polytechnic University, Portugal.",
+    "id": "7a65a0b8-a156-59be-8ff8-54a5a8122b85",
+    "macro_type": "Livros",
+    "title": "Integration of the SDGs in Communication Curricular Units – Project-Based Learning in a Higher Education Institution (ICONSUS2025)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Co-autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "(submetido) Gago, A. e Ponte, S. Lab.anoide: diálogos ciberliterários no outro lado do ecrã",
+    "id": "34021129-3188-5388-8fcb-36cfdcf1928b",
+    "macro_type": "Artigos em revistas",
+    "title": "Lab.anoide: diálogos ciberliterários no outro lado do ecrã (submitted article)",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.36922/dp.4292",
+    "full_reference": "Passadouro, M., Patrício, R., & Casaca, J. (2025). Legitimizing design thinking: Addressing barriers to corporate adoption. Design+. https://doi.org/10.36922/dp.4292",
+    "id": "b172bbc2-b4cd-51e3-b694-71ef8b111ffa",
+    "macro_type": "Artigos em revistas",
+    "title": "Legitimizing design thinking: Addressing barriers to corporate adoption",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sara Gancho",
+        "role": "Co-autor",
+        "slug": "sara-gancho"
+      }
+    ],
+    "doi": "10.18848/1833-1866/cgp/v17i01/1-26",
+    "full_reference": "Magalhães, C. M., Gancho, S. P. M., & Ramalho, J. L. (2025). Live Music After COVID-19: Case Studies of Digital Transformation in Portugal. The International Journal of the Arts in Society: Annual Review 10.18848/1833-1866/CGP/v17i01/1-26",
+    "id": "cb25f17d-c69b-5381-8056-fbf5c0e11e76",
+    "macro_type": "Artigos em revistas",
+    "title": "Live Music After COVID-19: Case Studies of Digital Transformation in Portugal",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único editor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Ponte, S. 2025. Net Arte no Triângulo das Bermudas, Fundação MEO. ISBN: 978-972-99685-9-4",
+    "id": "cbf69029-41bc-56b0-8afc-8f11412dcfd6",
+    "macro_type": "Livros",
+    "title": "Net Arte no Triângulo das Bermudas (book, Fundação MEO)",
+    "type": "Edição de livro",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "(submetido) Ponte, S. O Conceito de Site-specific em Portugal: uma análise histórico-crítica da escultura à net art",
+    "id": "d6427065-7fc6-5b1c-95c7-e8d5d2c80e61",
+    "macro_type": "Artigos em revistas",
+    "title": "O Conceito de Site-specific em Portugal: uma análise histórico-crítica da escultura à net art (submitted article)",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Ponte, S. 2025. O Estudo da Net Art em Portugal e a Exposição \"Net Arte no Triângulo das Bermudas\" in Net Arte no Triângulo das Bermudas, (8-25). Fundação MEO. ISBN: 978-972-99685-9-4",
+    "id": "05247746-59c0-5334-8a2c-c2ae69f6dcdb",
+    "macro_type": "Livros",
+    "title": "O Estudo da Net Art em Portugal e a Exposição \"Net Arte no Triângulo das Bermudas\" (chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Patrícia Silveira",
+        "role": "Co-editor",
+        "slug": "patricia-silveira"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Silveira, P., Pessôa, C. & Petrella, S. (Eds.) (2025). Os media e a guerra: cobertura mediática e desinformação em tempos de conflito. Lisboa: IADE Press. ISBN: 978-989-35792-2-0",
+    "id": "933bf69e-e1bc-5fac-a112-9d986f834dd0",
+    "macro_type": "Livros",
+    "title": "Os media e a guerra: cobertura mediática e desinformação em tempos de conflito (Edição)",
+    "type": "Edição de livro",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Patrícia Silveira",
+        "role": "Co-autor",
+        "slug": "patricia-silveira"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Petrella, S., Silveira, P. & Pessôa, C. (2025). Perceções sobre o retrato de conflitos geopolíticos nos media e (des)informações: um estudo junto dos públicos portugueses. In P. Silveira, S. Petrella, C. Pessôa & R. Mourão (Eds.), Os media e a guerra: cobertura mediática e desinformação em tempos de conflito. Lisboa: IADE Press. ISBN: 978-989-35792-2-0",
+    "id": "dc550d9a-a169-5568-9ae1-9cd1eae3750d",
+    "macro_type": "Livros",
+    "title": "Perceções sobre o retrato de conflitos geopolíticos nos media e (des)informações: um estudo junto dos públicos portugueses",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Maria Inês Pires",
+        "role": "Primeiro autor",
+        "slug": "maria-ines-pires"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93567-1_23",
+    "full_reference": "Maria Inês Pires and Ana Luísa Marques. 2025. Personalized Education: Exploring AI and UX to Transform Learning Experience. In Learning and Collaboration Technologies: 12th International Conference, LCT 2025, Held as Part of the 27th HCI International Conference, HCII 2025, Gothenburg, Sweden, June 22–27, 2025, Proceedings, Part II. Springer-Verlag, Berlin, Heidelberg, 336–352. https://doi.org/10.1007/978-3-031-93567-1_23",
+    "id": "b83ef375-54b1-599e-8938-5487a8552c48",
+    "macro_type": "Livros",
+    "title": "Personalized Education: Exploring AI and UX to Transform Learning Experience",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Filipa Alves",
+        "role": "Co-autor",
+        "slug": "filipa-alves"
+      },
+      {
+        "author_position": 2,
+        "name": "João Bernarda",
+        "role": "Co-autor",
+        "slug": "joao-bernarda"
+      },
+      {
+        "author_position": 3,
+        "name": "Juliana Duque",
+        "role": "Primeiro autor",
+        "slug": "juliana-duque"
+      },
+      {
+        "author_position": 4,
+        "name": "António Gorgel",
+        "role": "Co-editor",
+        "slug": "antonio-gorgel"
+      }
+    ],
+    "doi": "10.30618/978-989-658-977-6",
+    "full_reference": "Beatriz Muñoz Fonseca, Filipa Alves (corresponding author) (2025). Printing with natural inks: embracing eco-friendly analogue practices in design education, Cross Media Arts 2025 - 3rd International Conference, FBAUL, Lisbon, Portugal, June 16-18, 2025, full paper. http://doi.org/10.30618/978-989-658-977-6, ISBN 978-989-658-977-6",
+    "id": "0021fe18-9b27-5e99-a5a3-c9436cd90437",
+    "macro_type": "Livros",
+    "title": "Printing with natural inks: embracing eco-friendly analogue practices in design education",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Isabel Farinha",
+        "role": "Único autor",
+        "slug": "isabel-farinha"
+      }
+    ],
+    "doi": "10.21125/edulearn.2025.1001",
+    "full_reference": "Farinha, I. (2025). Project-Based Learning In Higher Education: Mapping The Integration of Sustainable Development Goals (SDGs) into Communication Curricular Units, Panel: Integrating Sustainable Development Goals (SDGs) in Education (1). EduLearn2025 - 17th annual International Conference on Education and New Learning Technologies - 30 June to 2 July 2025, Palma de Mallorca, Spain. 10.21125/edulearn.2025.1001",
+    "id": "a130ee2c-b80b-50ee-a05f-570e1ee79d14",
+    "macro_type": "Livros",
+    "title": "Project-Based Learning in Higher Education: Mapping the Integration of SDGs into Communication Curricular Units (EduLearn2025)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Primeiro autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Ponte, S. e Rivero-Moreno, L. 2025. Proposta para uma Cronologia - Panorama da Net Art em Portugal in Net Arte no Triângulo das Bermudas. Ponte, S. (Ed.) (96-132). Fundação MEO. ISBN: 978-972-99685-9-4",
+    "id": "562eeafc-83d6-53aa-9d1b-cccb6c69463c",
+    "macro_type": "Livros",
+    "title": "Proposta para uma Cronologia - Panorama da Net Art em Portugal (chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "António Gorgel",
+        "role": "Primeiro autor",
+        "slug": "antonio-gorgel"
+      }
+    ],
+    "doi": "10.1007/978-3-032-00733-9_10",
+    "full_reference": "Gorgel Pinto, António, Paula Reaes Pinto, Filipe Figueiredo, and Joana Ramalho. 2025. Reimagining Wicked Problems Through Speculative Design: Collaborative Classroom Experiments. In Springer Series in Design and Innovation, 149–61. https://doi.org/10.1007/978-3-032-00733-9_10.",
+    "id": "192056fa-1aac-5d1b-a454-d8d01f5052d5",
+    "macro_type": "Livros",
+    "title": "Reimagining Wicked Problems Through Speculative Design: Collaborative Classroom Experiments (book chapter)",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Único autor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": "10.15603/2175-7755/cs.v47n47pe2502",
+    "full_reference": "Morais, R. (2025). Semiotic thinking: Uma revisão fenomenológica do design thinking. Comunicação & Sociedade, 47(47), e2502. https://doi.org/10.15603/2175-7755/cs.v47n47pe2502",
+    "id": "19fbd821-826c-5f3c-9aba-412999f5209e",
+    "macro_type": "Artigos em revistas",
+    "title": "Semiotic thinking: Uma revisão fenomenológica do design thinking",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Paula Neves",
+        "role": "Primeiro autor",
+        "slug": "paula-neves"
+      }
+    ],
+    "doi": "10.1007/978-3-032-12657-3_4",
+    "full_reference": "Neves, P., Duarte, E. (2026). Sensing the Other: Multisensory Design Within the More-Than-Human Turn. In: Kurosu, M., Hashizume, A. (eds) HCI International 2025 – Late Breaking Papers. HCII 2025. Lecture Notes in Computer Science, vol 16331. Springer, Cham. https://doi.org/10.1007/978-3-032-12657-3_4",
+    "id": "ed607851-8d98-52a1-ab30-a2c657d5221f",
+    "macro_type": "Artigos em revistas",
+    "title": "Sensing the Other: Multisensory Design Within the More-Than-Human Turn",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Pereira. B., Baptista. N.; Boechat, A. C. (2025). SMEs BRAND BUILDING IN THE DIGITAL ENVIRONMENT: A SCOPING REVIEW. In GLOBAL TO GLOCAL: DIGITAL TRANSFORMATION AND BRAND EQUITY. Liberty Publishing House. https://www.libertyacademicbooks.com/_files/ugd/614b1f_9075b46995b94a9fbf20cf204187bddc.pdf",
+    "id": "55804943-62ce-591d-b365-1eaa74feb885",
+    "macro_type": "Livros",
+    "title": "SMEs BRAND BUILDING IN THE DIGITAL ENVIRONMENT: A SCOPING REVIEW",
+    "type": "Capítulos de livros",
+    "url": "https://www.libertyacademicbooks.com/_files/ugd/614b1f_9075b46995b94a9fbf20cf204187bddc.pdf",
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Isabel Farinha",
+        "role": "Co-autor",
+        "slug": "isabel-farinha"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Carlos A. M. D., Farinha, I., & Pestana, G. (2025). Social Innovation and Community-Centred Design: co-creation of solutions for the reuse of end-of-life fishing nets and gear. 13th International Conference Senses & Sensibility 2025 - From Natural Intelligence to Artificial Intelligence in Design? UNIDCOM/IADE, LDCI/UFRGS, Porto Alegre, Brasil, 24–28 November 2025. https://senses.unidcom-iade.pt/ ; https://www.ufrgs.br/ldci/senses-and-sensibility-2025/",
+    "id": "b4c41576-0c3e-5c01-885f-1498c865aeb8",
+    "macro_type": "Livros",
+    "title": "Social Innovation and Community-Centred Design: co-creation of solutions for reuse of end-of-life fishing nets and gear (Senses & Sensibility 2025)",
+    "type": "Capítulos de livros",
+    "url": "https://senses.unidcom-iade.pt/",
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Primeiro autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Boechat, A. C.; Rosário, A. (2025). Sustainable Leadership in Action: Enhancing Sustainable Development for Change. ICONSUS 2025 - International Conference on Sustainability: Transforming Higher Education for a Sustainable Future. Instituto Politécnico de Setúbal.",
+    "id": "56e36fd7-c90b-58dd-a9a5-66ddb112d6e7",
+    "macro_type": "Livros",
+    "title": "Sustainable Leadership in Action: Enhancing Sustainable Development for Change",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Co-autor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Figueiredo, G., & Morais, R. (2025). The Creative Semiosis in the Human Mind in Dialogue with AI. In Lecture Notes in Computer Science. Springer Nature Switzerland, pp. 181–193. ISBN: 9783031938375.",
+    "id": "c047715c-7433-540d-b9f7-bd43b0aa2b0d",
+    "macro_type": "Livros",
+    "title": "The Creative Semiosis in the Human Mind in Dialogue with AI",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.37394/23207.2025.22.125",
+    "full_reference": "Rosário, A. T., & Casaca, J. A. (2025). The Effects of Commitment on Relationship Marketing. WSEAS Transactions on Business and Economics, 22, 1553–1573. https://doi.org/10.37394/23207.2025.22.125",
+    "id": "736acdc9-11f7-51a9-96e0-af42631dd352",
+    "macro_type": "Artigos em revistas",
+    "title": "The Effects of Commitment on Relationship Marketing",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Primeiro autor",
+        "slug": "anna-boechat"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Boechat, A. C.; Dias, J.; Feital, M. (2025). The Impact of Artificial Intelligence on Fashion: A Study of Consumer Satisfaction in Portugal. HCI International Conference 2025 (Human-Computer Interaction).",
+    "id": "2db78798-1991-591a-a69d-dffbe12e1785",
+    "macro_type": "Livros",
+    "title": "The Impact of Artificial Intelligence on Fashion: A Study of Consumer Satisfaction in Portugal",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.54663/2182-9306.2025.v.13.n.24.139-168",
+    "full_reference": "Rosário, A., & Casaca, J. A. (2025). The Impact of Relationship Marketing on Customer Loyalty: A Systematic Literature Review. International Journal of Marketing, Communication and New Media, 13(24), 139–168. https://doi.org/10.54663/2182-9306.2025.v.13.n.24.139-168",
+    "id": "5a7b5c4c-f405-5f7b-9b6a-ece52c2b0ceb",
+    "macro_type": "Artigos em revistas",
+    "title": "The Impact of Relationship Marketing on Customer Loyalty: A Systematic Literature Review",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Joaquim Casaca",
+        "role": "Co-autor",
+        "slug": "joaquim-casaca"
+      }
+    ],
+    "doi": "10.1431/117308",
+    "full_reference": "Rosário, Albérico T., & Casaca, Joaquim A. (2025). The Importance of Trust in Relationship Marketing: A Literature Review. Micro & Macro Marketing, 34(3), 593–620. https://doi.org/10.1431/117308",
+    "id": "48c21722-ea9b-51c9-916f-9dcb236b5381",
+    "macro_type": "Artigos em revistas",
+    "title": "The Importance of Trust in Relationship Marketing: A Literature Review",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Anna Boechat",
+        "role": "Co-autor",
+        "slug": "anna-boechat"
+      },
+      {
+        "author_position": 2,
+        "name": "João Dias",
+        "role": "Co-autor",
+        "slug": "joao-dias"
+      }
+    ],
+    "doi": "10.4018/979-8-3373-2502-6.ch011",
+    "full_reference": "Boechat, A. C., Dias, J., Danieli, A., & Baptista, N. (2026). The Role of Geolocation-Based Personalized Marketing in Food Delivery Applications. In A. Rosário & A. Boechat (Eds.), Adapting Global Communication and Marketing Strategies to Generative AI (pp. 315–350). IGI Global Scientific Publishing. https://doi.org/10.4018/979-8-3373-2502-6.ch011",
+    "id": "98a9d54e-6d71-5757-8fdb-f1059e91da9b",
+    "macro_type": "Livros",
+    "title": "The Role of Geolocation-Based Personalized Marketing in Food Delivery Applications",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Fernando Oliveira",
+        "role": "Co-autor",
+        "slug": "fernando-oliveira"
+      }
+    ],
+    "doi": "10.1504/ijart.2025.147849",
+    "full_reference": "Li Zhenyu, Gao Zhan / Oliveira, Fernando Sanches (2025). The Study of Kim Jong-hee's Chinese Character Calligraphy Art in His Early Exile Period. In International Journal of Arts and Technology, 2025 Vol.15 No.3, pp.308–324. SJR Quartile: Q2. DOI: 10.1504/IJART.2025.147849 https://doi.org/10.1504/IJART.2025.147849",
+    "id": "b09d818d-80f3-572b-ab4e-f95ed474bb33",
+    "macro_type": "Artigos em revistas",
+    "title": "The Study of Kim Jong-hee's Chinese Character Calligraphy Art in His Early Exile Period",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Morais",
+        "role": "Co-autor",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Hernández-Ramirez, R., Morais, R., & Rosa, C. (2025). The synergies initiative. In Which Proximity in Design Education? A Contemporary Curriculum. Routledge, v.1, p. 49. ISBN: 9781032835549.",
+    "id": "6051fd7e-326e-5db3-9d86-f8a5a597e46a",
+    "macro_type": "Livros",
+    "title": "The synergies initiative",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Rodrigo Hernandez-Ramirez",
+        "role": "Primeiro autor",
+        "slug": "rodrigo-hernandez-ramirez"
+      }
+    ],
+    "doi": "10.4324/9781003509929-5",
+    "full_reference": "Hernández-Ramirez, R., Ferreira, J. B., Morais, R., & Rosa, C. (2025). The synergies initiative: Enhancing interdisciplinarity through problem-based learning in design education. In R. A. Almendra (Ed.), Which proximity in design education? (pp. 35–44). Routledge. https://doi.org/10.4324/9781003509929-5",
+    "id": "44295ab9-72fa-5812-a8f9-38b5755a052b",
+    "macro_type": "Livros",
+    "title": "The synergies initiative: Enhancing interdisciplinarity through problem-based learning in design education",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Miguel Boavida",
+        "role": "Co-autor",
+        "slug": "miguel-boavida"
+      },
+      {
+        "author_position": 2,
+        "name": "João Dias",
+        "role": "Primeiro autor",
+        "slug": "joao-dias"
+      }
+    ],
+    "doi": "10.1109/access.2025.3560547",
+    "full_reference": "Toward an IoT Framework for the New Generation of XR Applications, IEEE Access, DOI: 10.1109/ACCESS.2025.3560547",
+    "id": "fa3febba-7918-5953-97af-82bc9742b171",
+    "macro_type": "Artigos em revistas",
+    "title": "Toward an IoT Framework for the New Generation of XR Applications",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Maria Inês Pires",
+        "role": "Co-autor",
+        "slug": "maria-ines-pires"
+      }
+    ],
+    "doi": "10.54941/ahfe1005946",
+    "full_reference": "Marques, Ana & Pires, Maria & Dias, João. (2025). Traditional vs. Personalised Teaching: An experimental study on AI's role in education. 10.54941/ahfe1005946.",
+    "id": "d192969f-aab6-544e-b183-5671e0e4295d",
+    "macro_type": "Livros",
+    "title": "Traditional vs. Personalised Teaching: An experimental study on AI's role in education",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Verónica Silva",
+        "role": "Único autor",
+        "slug": "veronica-silva"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Trusting the Unknown: Understanding Designers’ Acceptance of Generative AI Amid Ethical Concerns, for Artificial Intelligence in Creative Industries: Psychological and Social Implications, to be published by Routledge Taylor & Francis Group.",
+    "id": "409c896d-4769-58a9-bd26-b4718d8fbba2",
+    "macro_type": "Livros",
+    "title": "Trusting the Unknown: Understanding Designers’ Acceptance of Generative AI Amid Ethical Concerns",
+    "type": "Capítulos de livros",
+    "url": "https://www.routledge.com/Artificial-Intelligence-in-Creative-Industries-Psychological-and-Social-Implications/TigreMoura-Moruzzi/p/book/9781032999432",
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Sofia Ponte",
+        "role": "Único autor",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "doi": null,
+    "full_reference": "(submetido) Ponte, S. Underworld — Uma Rede para Escapar. Entrevista de Sofia Ponte (SP) a Alice Geirinhas (AG), Outubro 2025",
+    "id": "d4fec055-3288-5861-8db8-3d491f4ffe9e",
+    "macro_type": "Artigos em revistas",
+    "title": "Underworld — Uma Rede para Escapar (submitted interview)",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Juliana Duque",
+        "role": "Único autor",
+        "slug": "juliana-duque"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Artigo Untold Stories: The Graphic Design of Maria Keil and Cristina Reis during the Portuguese dictatorship and the path towards inclusiveness em Design Across Borders, United in Creativity: Cumulus Conference Proceedings Series. Publicado em Maio de 2025. Link fornecido: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cumulusmonterrey2024.udem.edu.mx/hubfs/Cumulus%20Monterrey%20Update.pdf",
+    "id": "86918263-ceac-5eb6-be41-251dd1e74962",
+    "macro_type": "Livros",
+    "title": "Untold Stories: The Graphic Design of Maria Keil and Cristina Reis during the Portuguese dictatorship and the path towards inclusiveness",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Hande Ayanoglu",
+        "role": "Co-autor",
+        "slug": "hande-ayanoglu"
+      }
+    ],
+    "doi": "10.1007/978-3-031-93835-1_6",
+    "full_reference": "Morgado, M., Ayanoglu, H., Soares de Lima, E. (2025). User Testing Insights of Application and Dashboard Interfaces for a Real-Time Campus Space Monitoring Solution. In: Kurosu, M., Hashizume, A. (eds) Human-Computer Interaction. HCII 2025. Lecture Notes in Computer Science, vol 15766. Springer, Cham. https://doi.org/10.1007/978-3-031-93835-1_6",
+    "id": "650f1425-b8be-5e5f-a04f-3071b9bebf0c",
+    "macro_type": "Livros",
+    "title": "User Testing Insights of Application and Dashboard Interfaces for a Real-Time Campus Space Monitoring Solution",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Fernando Oliveira",
+        "role": "Co-autor",
+        "slug": "fernando-oliveira"
+      }
+    ],
+    "doi": "10.1007/978-3-031-73705-3_15",
+    "full_reference": "Gastal, Manuela; Oliveira, Fernando Jorge Matias Sanches; Martins, Daniel Raposo (2024) Imagery analysis requirements in the context of Brand Visual Language: The case of Fiat Mobi; In Advances in Design, Music and Arts III (EIMAD 2024). Editores: Daniel Raposo, Rui Dias, Daniel Brandão, Luísa Correia Castilho, João Neves, Ricardo Silva. 2024 | Capítulo de livro. Springer. DOI: 10.1007/978-3-031-73705-3_15.",
+    "id": "08e00845-05f7-5d99-b73d-e5b5812c50c4",
+    "macro_type": "Livros",
+    "title": "Imagery analysis requirements in the context of Brand Visual Language: The case of Fiat Mobi",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": 2024
+  },
+  {
+    "authors": [],
+    "doi": null,
+    "full_reference": "Book: planned",
+    "id": "04fc177b-b348-55ad-8459-27ef0b7011b0",
+    "macro_type": "Livros",
+    "title": "Book: planned",
+    "type": "Autoria de Livro",
+    "url": null,
+    "year": null
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Filipa Alves",
+        "role": "Outros",
+        "slug": "filipa-alves"
+      }
+    ],
+    "doi": "10.33774/coe-2024-0szqr",
+    "full_reference": "Filipa Alves (2024). Complexity by Design: a nature-inspired approach to generative product design. Research Directions: Biotechnology Design Community, Cambridge University Press. doi: 10.33774/coe-2024-0szqr",
+    "id": "4ddde3a3-f09d-59e9-9712-c7ac9a282751",
+    "macro_type": "Artigos em revistas",
+    "title": "Filipa Alves (2024). Complexity by Design: a nature-inspired approach to generative product design. Research Directions: Biotechnology Design Community, Cambridge University Press. doi: 10.33774/coe-2024-0szqr",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": null
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Filipa Alves",
+        "role": "Outros",
+        "slug": "filipa-alves"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Filipa Alves (2025). Complexity by Design: a nature-inspired approach to generative product design. Research Directions: Biotechnology Design, Cambridge University Press. (invitation to submit full paper).",
+    "id": "e8549f05-3a68-5418-81ff-3f53142e8310",
+    "macro_type": "Artigos em revistas",
+    "title": "Filipa Alves (2025). Complexity by Design: a nature-inspired approach to generative product design. Research Directions: Biotechnology Design, Cambridge University Press. (invitation to submit full paper).",
+    "type": "Artigos em revistas",
+    "url": null,
+    "year": null
+  },
+  {
+    "authors": [
+      {
+        "author_position": 1,
+        "name": "Filipa Alves",
+        "role": "Outros",
+        "slug": "filipa-alves"
+      },
+      {
+        "author_position": 2,
+        "name": "Eduardo Gonçalves",
+        "role": "Outros",
+        "slug": "eduardo-goncalves"
+      }
+    ],
+    "doi": null,
+    "full_reference": "Filipa Alves and Eduardo Gonçalves, Biophysical Mechanisms of Morphogenesis as Tools for Bio-Inspired Design, Proceedings of the WAD?24 International Conference — What’s Around Design: Designing Nature and Humanity Centered Futures, Portimão, Portugal, October 8-11, 2024.",
+    "id": "44d30998-12ae-5677-9e14-0b6397df204c",
+    "macro_type": "Livros",
+    "title": "Filipa Alves and Eduardo Gonçalves, Biophysical Mechanisms of Morphogenesis as Tools for Bio-Inspired Design, Proceedings of the WAD?24 International Conference — What’s Around Design: Designing Nature and Humanity Centered Futures, Portimão, Portugal, October 8-11, 2024.",
+    "type": "Capítulos de livros",
+    "url": null,
+    "year": null
+  }
+]

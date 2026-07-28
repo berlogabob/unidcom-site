@@ -1,0 +1,330 @@
+[
+  {
+    "clusters": [],
+    "code": "SDI.1",
+    "description": "Provide opportunities for professors, students, and researchers to engage in academic and applied projects with companies, public institutions, and NGOs.",
+    "id": "73a9d72a-3ca0-5adc-980d-f11475ecc9d2",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "name": "SDI.1: Engage Stakeholders",
+    "projects": [],
+    "slug": "sdi-1"
+  },
+  {
+    "clusters": [],
+    "code": "SDI.2",
+    "description": "Develop research activities bridging academia and industry to address key business and societal challenges.",
+    "id": "c6590e2e-82c4-58fc-84cf-62f553e237ea",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "name": "SDI.2: Create Knowledge",
+    "projects": [],
+    "slug": "sdi-2"
+  },
+  {
+    "clusters": [],
+    "code": "SDI.3",
+    "description": "Share research findings and tools through publications, seminars, training courses, workshops, and social media.",
+    "id": "f97ccd96-6297-5289-bfe1-f3fee5ba3fcb",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "name": "SDI.3: Disseminate Knowledge",
+    "projects": [],
+    "slug": "sdi-3"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.1",
+    "description": "Medidas: integrar investigação no ensino, guest lectures, longitudinal studies, grants, contratação (FCT Tenure), parcerias.",
+    "id": "64476851-caea-5ea4-a06b-63d034a82003",
+    "labs": [],
+    "name": "UNID.1: Research on Design Theory, Philosophy, and Practice",
+    "projects": [],
+    "slug": "unid-1"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.2",
+    "description": "Medidas: eventos de partilha, toolkits/recursos, lançamento de revista peer-reviewed, financiamento de projetos-piloto.",
+    "id": "bec75079-1d4c-594a-b2d9-17e7277c0b3c",
+    "labs": [],
+    "name": "UNID.2: Inter e transdisciplinaridade",
+    "projects": [
+      {
+        "slug": "driw",
+        "title": "DRIW"
+      },
+      {
+        "slug": "driw-outreach",
+        "title": "DRIW | Outreach"
+      }
+    ],
+    "slug": "unid-2"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      }
+    ],
+    "code": "UNID.3",
+    "description": "Medidas: investGATE (incubadora), dinamização/revisão de labs, ciência cidadã, eventos públicos, ciência-comunicação.",
+    "id": "bf1563b6-b059-5126-ad60-5498d48662fe",
+    "labs": [],
+    "name": "UNID.3: Parcerias com sociedade e mercado",
+    "projects": [
+      {
+        "slug": "driw",
+        "title": "DRIW"
+      },
+      {
+        "slug": "driw-outreach",
+        "title": "DRIW | Outreach"
+      },
+      {
+        "slug": "unidcom-projects-atlantic-exploration-lagos",
+        "title": "UNIDCOM | Projects | Atlantic Exploration Lagos"
+      }
+    ],
+    "slug": "unid-3"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.4",
+    "description": "Medidas: reforço de parcerias (ex.: POLIMI, PUC), workshops internacionais, visiting researchers, plataformas online, funding para colaborações.",
+    "id": "d81e155a-8306-5834-8196-139b47d8a211",
+    "labs": [],
+    "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+    "projects": [
+      {
+        "slug": "unidcom-projects-atlantic-exploration-lagos",
+        "title": "UNIDCOM | Projects | Atlantic Exploration Lagos"
+      }
+    ],
+    "slug": "unid-4"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.5",
+    "description": "Medidas: DDC como Summer Doctoral Consortium, Summer School, bem-estar e work-life balance, fundo apoio PhD, sUPport.",
+    "id": "a4d577da-b281-59f3-864b-361f0eb3a04c",
+    "labs": [],
+    "name": "UNID.5: Educação, formação e talento",
+    "projects": [],
+    "slug": "unid-5"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.6",
+    "description": "Medidas: Annual Research Chronicle (IADE Press), conferências, exposições, equipa de ciência-comunicação, advocacy, UNreleased, DRIW.",
+    "id": "c7eda972-74d4-552c-8821-e276d601e656",
+    "labs": [],
+    "name": "UNID.6: Disseminação e outreach",
+    "projects": [
+      {
+        "slug": "driw",
+        "title": "DRIW"
+      },
+      {
+        "slug": "driw-doctoral-consortium",
+        "title": "DRIW | Doctoral Consortium"
+      },
+      {
+        "slug": "driw-outreach",
+        "title": "DRIW | Outreach"
+      },
+      {
+        "slug": "unidcom-outputs-biodesign-guidebook-edited-book",
+        "title": "UNIDCOM | Outputs | BioDesign Guidebook (edited book)"
+      }
+    ],
+    "slug": "unid-6"
+  },
+  {
+    "clusters": [
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.7",
+    "description": "Medidas: diversificar funding, equipa de grant writing, revenue (consultoria, licensing/commercialização), otimização, planeamento financeiro, formação.",
+    "id": "f6fdba8e-2da5-5911-9856-8ad29eca75c4",
+    "labs": [],
+    "name": "UNID.7: Sustentabilidade financeira",
+    "projects": [],
+    "slug": "unid-7"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.8",
+    "description": "Medidas: DPO e proteção de dados, canais e regulação anti-assédio, política de equidade de género, infraestruturas, prémios de excelência, critérios de avaliação, guidelines com entidade gestora.",
+    "id": "6cddacc9-f35d-53cd-861f-4393d42f6e1f",
+    "labs": [],
+    "name": "UNID.8: Desenvolvimento institucional e compliance",
+    "projects": [],
+    "slug": "unid-8"
+  },
+  {
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "code": "UNID.9",
+    "description": "Nota: usar como base para mapear projetos/outputs atuais e lacunas por cluster (C3, R3, T3, E3, F3).",
+    "id": "ac0befd5-67ce-57c2-9eaf-29635b749a75",
+    "labs": [],
+    "name": "UNID.9: Projetos por cluster (exemplos)",
+    "projects": [],
+    "slug": "unid-9"
+  }
+]

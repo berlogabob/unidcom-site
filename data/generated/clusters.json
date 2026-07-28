@@ -1,0 +1,337 @@
+[
+  {
+    "code": "C3",
+    "concern": "Design in a world of tension",
+    "id": "2ea6b5e1-988b-58f0-97b3-a6b132a3fd65",
+    "name": "C3: Crafting Cooperation and Coexistence",
+    "objectives": [
+      {
+        "name": "UNID.1: Research on Design Theory, Philosophy, and Practice",
+        "slug": "unid-1"
+      },
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.3: Parcerias com sociedade e mercado",
+        "slug": "unid-3"
+      },
+      {
+        "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+        "slug": "unid-4"
+      },
+      {
+        "name": "UNID.5: Educação, formação e talento",
+        "slug": "unid-5"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      },
+      {
+        "name": "UNID.8: Desenvolvimento institucional e compliance",
+        "slug": "unid-8"
+      },
+      {
+        "name": "UNID.9: Projetos por cluster (exemplos)",
+        "slug": "unid-9"
+      }
+    ],
+    "projects": [
+      {
+        "slug": "icdc-international-creative-design-challenge",
+        "title": "ICDC: International Creative Design Challenge"
+      },
+      {
+        "slug": "natural-pigments-in-graphic-design-and-visual-arts-applications-of-plant-piugmen",
+        "title": "Natural pigments in graphic design and visual arts: applications of plant piugments in screen printing"
+      },
+      {
+        "slug": "participatory-documentary-as-design-research",
+        "title": "Participatory Documentary as Design Research"
+      },
+      {
+        "slug": "tackling-innovation-challenges-through-industry-academia-collaboration",
+        "title": "Tackling Innovation Challenges through Industry–Academia Collaboration"
+      }
+    ],
+    "slug": "c3"
+  },
+  {
+    "code": "E3",
+    "concern": "Design in a capitalist world",
+    "id": "ed43a144-9f44-5fde-8730-a208f5779d6e",
+    "name": "E3: Exploring Economic Ethos",
+    "objectives": [
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.3: Parcerias com sociedade e mercado",
+        "slug": "unid-3"
+      },
+      {
+        "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+        "slug": "unid-4"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      },
+      {
+        "name": "UNID.7: Sustentabilidade financeira",
+        "slug": "unid-7"
+      },
+      {
+        "name": "UNID.8: Desenvolvimento institucional e compliance",
+        "slug": "unid-8"
+      },
+      {
+        "name": "UNID.9: Projetos por cluster (exemplos)",
+        "slug": "unid-9"
+      }
+    ],
+    "projects": [
+      {
+        "slug": "building-design-and-innovation-capabilities",
+        "title": "Building Design and Innovation Capabilities"
+      },
+      {
+        "slug": "designing-phygital-experiences-and-business-models",
+        "title": "Designing Phygital Experiences and Business Models"
+      },
+      {
+        "slug": "entrepreneurship-brokering-network",
+        "title": "Entrepreneurship Brokering Network"
+      },
+      {
+        "slug": "mycelium-based-packaging-sustainable-material-design-management-framework",
+        "title": "Mycelium-Based Packaging (sustainable material + design management framework)"
+      },
+      {
+        "slug": "supporting-open-innovation-with-gamification",
+        "title": "Supporting Open Innovation with Gamification"
+      },
+      {
+        "slug": "tackling-innovation-challenges-through-industry-academia-collaboration",
+        "title": "Tackling Innovation Challenges through Industry–Academia Collaboration"
+      }
+    ],
+    "slug": "e3"
+  },
+  {
+    "code": "F3",
+    "concern": "Design for a flourishing world",
+    "id": "fa0a2a6a-391b-5976-9f3e-0d693be62f2c",
+    "name": "F3: Finding Flourishing Futures",
+    "objectives": [
+      {
+        "name": "UNID.1: Research on Design Theory, Philosophy, and Practice",
+        "slug": "unid-1"
+      },
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.3: Parcerias com sociedade e mercado",
+        "slug": "unid-3"
+      },
+      {
+        "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+        "slug": "unid-4"
+      },
+      {
+        "name": "UNID.5: Educação, formação e talento",
+        "slug": "unid-5"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      },
+      {
+        "name": "UNID.9: Projetos por cluster (exemplos)",
+        "slug": "unid-9"
+      }
+    ],
+    "projects": [
+      {
+        "slug": "humanizing-the-digital-transition",
+        "title": "Humanizing the Digital Transition"
+      },
+      {
+        "slug": "icdc-international-creative-design-challenge",
+        "title": "ICDC: International Creative Design Challenge"
+      },
+      {
+        "slug": "labideas-impact-driven-education-for-action-and-sustainability",
+        "title": "LabIDEAS: Impact-Driven Education for Action and Sustainability"
+      },
+      {
+        "slug": "push-project-ubiquitous-success-for-humanity",
+        "title": "PUSH: Project – Ubiquitous Success for Humanity"
+      },
+      {
+        "slug": "re-connect-nature-inspired-speculative-design",
+        "title": "Re-connect: nature-inspired speculative design"
+      },
+      {
+        "slug": "through-the-looking-glass-a-dive-into-the-microcosmos",
+        "title": "Through the Looking Glass: A dive into the microcosmos"
+      }
+    ],
+    "slug": "f3"
+  },
+  {
+    "code": "R3",
+    "concern": "Design in an unsustainable world",
+    "id": "efed1184-f795-5202-8906-90add4e9bde3",
+    "name": "R3: Rethinking for Regeneration and Resilience",
+    "objectives": [
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+        "slug": "unid-4"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      },
+      {
+        "name": "UNID.7: Sustentabilidade financeira",
+        "slug": "unid-7"
+      },
+      {
+        "name": "UNID.9: Projetos por cluster (exemplos)",
+        "slug": "unid-9"
+      }
+    ],
+    "projects": [
+      {
+        "slug": "archeologies-of-the-web-media-history",
+        "title": "Archeologies of the Web: Media History"
+      },
+      {
+        "slug": "collecting-and-conserving-digital-art-in-portugal",
+        "title": "Collecting and Conserving Digital Art in Portugal"
+      },
+      {
+        "slug": "invasifi-invasive-alien-species-as-feedstocks-for-sustainable-biomaterial-innova",
+        "title": "INVASIFI: Invasive Alien Species as Feedstocks for Sustainable Biomaterial Innovation"
+      },
+      {
+        "slug": "labideas-impact-driven-education-for-action-and-sustainability",
+        "title": "LabIDEAS: Impact-Driven Education for Action and Sustainability"
+      },
+      {
+        "slug": "mycelium-based-packaging-sustainable-material-design-management-framework",
+        "title": "Mycelium-Based Packaging (sustainable material + design management framework)"
+      },
+      {
+        "slug": "natural-pigments-in-graphic-design-and-visual-arts-applications-of-plant-piugmen",
+        "title": "Natural pigments in graphic design and visual arts: applications of plant piugments in screen printing"
+      },
+      {
+        "slug": "re-connect-nature-inspired-speculative-design",
+        "title": "Re-connect: nature-inspired speculative design"
+      },
+      {
+        "slug": "unidcom-outputs-biodesign-guidebook-edited-book",
+        "title": "UNIDCOM | Outputs | BioDesign Guidebook (edited book)"
+      },
+      {
+        "slug": "unidcom-projects-atlantic-exploration-lagos",
+        "title": "UNIDCOM | Projects | Atlantic Exploration Lagos"
+      }
+    ],
+    "slug": "r3"
+  },
+  {
+    "code": "T3",
+    "concern": "Design in a sociotechnical world",
+    "id": "c88c4f56-2aa2-5caa-a211-d93055ea7fee",
+    "name": "T3: Thoughtfulness Technology for Thrive",
+    "objectives": [
+      {
+        "name": "UNID.1: Research on Design Theory, Philosophy, and Practice",
+        "slug": "unid-1"
+      },
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+        "slug": "unid-4"
+      },
+      {
+        "name": "UNID.5: Educação, formação e talento",
+        "slug": "unid-5"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      },
+      {
+        "name": "UNID.7: Sustentabilidade financeira",
+        "slug": "unid-7"
+      },
+      {
+        "name": "UNID.8: Desenvolvimento institucional e compliance",
+        "slug": "unid-8"
+      },
+      {
+        "name": "UNID.9: Projetos por cluster (exemplos)",
+        "slug": "unid-9"
+      }
+    ],
+    "projects": [
+      {
+        "slug": "archeologies-of-the-web-media-history",
+        "title": "Archeologies of the Web: Media History"
+      },
+      {
+        "slug": "bio-inspired-approaches-to-computational-design-morphogenesis",
+        "title": "Bio-Inspired approaches to computational design (morphogenesis)"
+      },
+      {
+        "slug": "collecting-and-conserving-digital-art-in-portugal",
+        "title": "Collecting and Conserving Digital Art in Portugal"
+      },
+      {
+        "slug": "designing-phygital-experiences-and-business-models",
+        "title": "Designing Phygital Experiences and Business Models"
+      },
+      {
+        "slug": "humanizing-the-digital-transition",
+        "title": "Humanizing the Digital Transition"
+      },
+      {
+        "slug": "push-project-ubiquitous-success-for-humanity",
+        "title": "PUSH: Project – Ubiquitous Success for Humanity"
+      },
+      {
+        "slug": "supporting-open-innovation-with-gamification",
+        "title": "Supporting Open Innovation with Gamification"
+      },
+      {
+        "slug": "the-hunting-maritime-museum-of-sesimbra-four-parallel-exhibitions",
+        "title": "The Hunting: Maritime Museum of Sesimbra) — four parallel exhibitions"
+      },
+      {
+        "slug": "unidcom-projects-atlantic-exploration-lagos",
+        "title": "UNIDCOM | Projects | Atlantic Exploration Lagos"
+      },
+      {
+        "slug": "visual-culture-archives-and-algorithmic-collective-memory",
+        "title": "Visual Culture Archives and Algorithmic Collective Memory"
+      }
+    ],
+    "slug": "t3"
+  }
+]

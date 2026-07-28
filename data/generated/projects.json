@@ -1,0 +1,1018 @@
+[
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": null,
+    "end_date": null,
+    "funding": "Outro",
+    "id": "b37b328b-dfbf-5274-8ec4-6e9f7b6a4d7e",
+    "labs": [
+      {
+        "name": "MADx: Media Arts and Design Lab",
+        "slug": "madx"
+      }
+    ],
+    "members": [
+      {
+        "name": "Madalena Miranda",
+        "role": "pi",
+        "slug": "madalena-miranda"
+      }
+    ],
+    "objectives": [],
+    "slug": "archeologies-of-the-web-media-history",
+    "start_date": null,
+    "status": "active",
+    "title": "Archeologies of the Web: Media History"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "Bio-inspired algorithms for topology optimization and generative design: development and testing of a set of computational generative algorithms that can be integrated into the creative design process.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "c193bd80-2379-5a3d-84ab-bd5e9844b23b",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Eduardo Gonçalves",
+        "role": "member",
+        "slug": "eduardo-goncalves"
+      },
+      {
+        "name": "Filipa Alves",
+        "role": "member",
+        "slug": "filipa-alves"
+      }
+    ],
+    "objectives": [],
+    "slug": "bio-inspired-approaches-to-computational-design-morphogenesis",
+    "start_date": null,
+    "status": "active",
+    "title": "Bio-Inspired approaches to computational design (morphogenesis)"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      }
+    ],
+    "description": "Focused on organizational transformation, this project aims to embed strategic design capabilities within companies and institutions. It includes tailored interventions such as design audits, capability-building workshops, and co-creation sessions. The goal is to foster a culture of innovation and empower teams to solve problems creatively and sustainably.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "8abd5451-547d-52f5-a49d-5341c978ab70",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "members": [],
+    "objectives": [],
+    "slug": "building-design-and-innovation-capabilities",
+    "start_date": null,
+    "status": "active",
+    "title": "Building Design and Innovation Capabilities"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "The purpose of the project Collecting and Conserving Digital Art in Portugal is to contribute to the creation of a model for the conservation of Internet-based digital art in Portugal. It aims to ensure the longevity of the country's recent technocultural and artistic past, addressing the contradiction between rapid innovation cycles and the short lifespan of current technologies versus the need for durable conservation of born-digital artworks. With no existing conservation model in Portugal that meets the requirements of this kind of art, the project proposes to develop a Model for the Conservation of Internet-Based Digital Art in Portugal through an in-depth study of the conceptual, artistic, and technological situation of online digital artworks created in Portugal and analysis of strategies and measures for preservation. Key research questions include: What is the status quo of online artworks created by artists in Portugal? What kind of conservation model for Internet-based digital art is needed in the country?",
+    "end_date": "2028-02-29",
+    "funding": "FCT, Outro",
+    "id": "d18f935c-eb5f-5e32-b0be-cfcf4df9531a",
+    "labs": [
+      {
+        "name": "MADx: Media Arts and Design Lab",
+        "slug": "madx"
+      }
+    ],
+    "members": [
+      {
+        "name": "Sofia Ponte",
+        "role": "pi",
+        "slug": "sofia-ponte"
+      },
+      {
+        "name": "Luisa Ribas",
+        "role": "member",
+        "slug": "luisa-ribas"
+      },
+      {
+        "name": "Margarida Carvalho",
+        "role": "member",
+        "slug": "margarida-carvalho"
+      },
+      {
+        "name": "Miguel Carvalhais",
+        "role": "member",
+        "slug": "miguel-carvalhais"
+      },
+      {
+        "name": "Rui Torres",
+        "role": "member",
+        "slug": "rui-torres"
+      }
+    ],
+    "objectives": [],
+    "slug": "collecting-and-conserving-digital-art-in-portugal",
+    "start_date": "2026-09-01",
+    "status": "active",
+    "title": "Collecting and Conserving Digital Art in Portugal"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "This research investigates the convergence of physical and digital experiences—“phygital”—to enhance customer engagement and brand interaction. It explores immersive technologies, service design, and user experience strategies to create seamless, meaningful touchpoints across channels. The project also examines how phygital models can drive innovation in retail, education, and cultural sectors.",
+    "end_date": null,
+    "funding": "Interno",
+    "id": "a35eaedf-b6ee-5516-bd80-a80528a92e27",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "members": [],
+    "objectives": [],
+    "slug": "designing-phygital-experiences-and-business-models",
+    "start_date": null,
+    "status": "active",
+    "title": "Designing Phygital Experiences and Business Models"
+  },
+  {
+    "acronym": null,
+    "category": "Eventos",
+    "clusters": [],
+    "description": null,
+    "end_date": "2026-05-15",
+    "funding": null,
+    "id": "01905127-d23f-5158-b971-68f587340625",
+    "labs": [],
+    "members": [
+      {
+        "name": "Raquel Lima",
+        "role": "responsible",
+        "slug": "raquel-lima"
+      },
+      {
+        "name": "Rui Ramos",
+        "role": "responsible",
+        "slug": "rui-ramos"
+      },
+      {
+        "name": "Sofia Ponte",
+        "role": "responsible",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "objectives": [
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.3: Parcerias com sociedade e mercado",
+        "slug": "unid-3"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      }
+    ],
+    "slug": "driw",
+    "start_date": "2026-02-23",
+    "status": "active",
+    "title": "DRIW"
+  },
+  {
+    "acronym": null,
+    "category": "Eventos",
+    "clusters": [],
+    "description": null,
+    "end_date": "2026-05-15",
+    "funding": null,
+    "id": "87431d75-247e-5327-a1fd-f6f6133c95fc",
+    "labs": [],
+    "members": [
+      {
+        "name": "José Graça",
+        "role": "responsible",
+        "slug": "jose-graca"
+      },
+      {
+        "name": "Maria Inês Pires",
+        "role": "responsible",
+        "slug": "maria-ines-pires"
+      },
+      {
+        "name": "Rui Ramos",
+        "role": "responsible",
+        "slug": "rui-ramos"
+      }
+    ],
+    "objectives": [
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      }
+    ],
+    "slug": "driw-doctoral-consortium",
+    "start_date": "2026-03-06",
+    "status": "active",
+    "title": "DRIW | Doctoral Consortium"
+  },
+  {
+    "acronym": null,
+    "category": "Eventos",
+    "clusters": [],
+    "description": null,
+    "end_date": "2026-04-30",
+    "funding": null,
+    "id": "d91aa3b7-2401-5ad4-8768-343fefc2fcab",
+    "labs": [],
+    "members": [
+      {
+        "name": "Raquel Lima",
+        "role": "responsible",
+        "slug": "raquel-lima"
+      },
+      {
+        "name": "Rui Ramos",
+        "role": "responsible",
+        "slug": "rui-ramos"
+      },
+      {
+        "name": "Sofia Ponte",
+        "role": "responsible",
+        "slug": "sofia-ponte"
+      }
+    ],
+    "objectives": [
+      {
+        "name": "UNID.2: Inter e transdisciplinaridade",
+        "slug": "unid-2"
+      },
+      {
+        "name": "UNID.3: Parcerias com sociedade e mercado",
+        "slug": "unid-3"
+      },
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      }
+    ],
+    "slug": "driw-outreach",
+    "start_date": "2026-02-23",
+    "status": "active",
+    "title": "DRIW | Outreach"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      }
+    ],
+    "description": "This project aims to bridge the gap between innovative ideas and capable teams by creating a brokering network for entrepreneurship. It includes mentoring programs, matchmaking platforms, and gamified collaboration formats to support early-stage ventures. The initiative is particularly relevant for incubators, accelerators, and university-based innovation hubs.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "1a5652d6-9692-5d6d-884c-80428b89e68f",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "members": [],
+    "objectives": [],
+    "slug": "entrepreneurship-brokering-network",
+    "start_date": null,
+    "status": "active",
+    "title": "Entrepreneurship Brokering Network"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "Digital transformation often lacks emotional resonance. This project focuses on integrating emotional design and digital empathy into digital systems and services. It aims to make technology more inclusive, intuitive, and human-centered, particularly in sectors like healthcare, education, and public services. Methods include persona development, empathy mapping, and affective interface design.",
+    "end_date": null,
+    "funding": "Externo, Interno",
+    "id": "343eec53-1e1a-5533-a1f0-d21b4c711f25",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "members": [],
+    "objectives": [],
+    "slug": "humanizing-the-digital-transition",
+    "start_date": null,
+    "status": "active",
+    "title": "Humanizing the Digital Transition"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      }
+    ],
+    "description": "The International Creative Design Challenge (ICDC) is a transnational initiative connecting design students, educators, and institutions through collaborative creative challenges. Anchored in empathy, diversity, and intercultural understanding, it fosters cross-disciplinary collaboration between universities and promotes design as a driver for positive social change. It produces educational and scientific outcomes including exhibitions, publications, and case studies that explore creativity as a form of global citizenship.",
+    "end_date": null,
+    "funding": null,
+    "id": "50b4368c-5366-551a-b7bc-d02336626b24",
+    "labs": [
+      {
+        "name": "DFH: Design for Humanity Lab",
+        "slug": "dfh"
+      }
+    ],
+    "members": [
+      {
+        "name": "Rodrigo Morais",
+        "role": "pi",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "objectives": [],
+    "slug": "icdc-international-creative-design-challenge",
+    "start_date": null,
+    "status": "active",
+    "title": "ICDC: International Creative Design Challenge"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      }
+    ],
+    "description": "This project asks: What is the viability of using IAS as feedstocks for biomaterials, starting regionally and developing best practices for this approach for global implementation? INVASIFI will provide insights into two environmental challenges: Invasive Alien Species mitigation and new biomaterial development",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "e48ea15d-4bad-5bbb-93da-e5ce4b0ee2bf",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Barbara Pollini",
+        "role": "member",
+        "slug": "barbara-pollini"
+      },
+      {
+        "name": "Carla Paoliello",
+        "role": "member",
+        "slug": "carla-paoliello"
+      },
+      {
+        "name": "Catarina Östlund",
+        "role": "member",
+        "slug": "catarina-ostlund"
+      },
+      {
+        "name": "Ena Naito",
+        "role": "member",
+        "slug": "ena-naito"
+      },
+      {
+        "name": "Filipa Alves",
+        "role": "member",
+        "slug": "filipa-alves"
+      },
+      {
+        "name": "Helena Hansson",
+        "role": "member",
+        "slug": "helena-hansson"
+      },
+      {
+        "name": "Julia Ihls",
+        "role": "member",
+        "slug": "julia-ihls"
+      },
+      {
+        "name": "Lara Torres",
+        "role": "member",
+        "slug": "lara-torres"
+      },
+      {
+        "name": "Sofia Duarte",
+        "role": "member",
+        "slug": "sofia-duarte"
+      },
+      {
+        "name": "Taryn Mead",
+        "role": "member",
+        "slug": "taryn-mead"
+      },
+      {
+        "name": "Valentina Rognoli",
+        "role": "member",
+        "slug": "valentina-rognoli"
+      }
+    ],
+    "objectives": [],
+    "slug": "invasifi-invasive-alien-species-as-feedstocks-for-sustainable-biomaterial-innova",
+    "start_date": null,
+    "status": "planned",
+    "title": "INVASIFI: Invasive Alien Species as Feedstocks for Sustainable Biomaterial Innovation"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      }
+    ],
+    "description": "The IDEAS Lab develops educational models and design-based interventions aimed at advancing sustainability and social responsibility in higher education. Grounded in human-centered and impact-driven pedagogies, it integrates research, teaching, and community engagement to promote the Sustainable Development Goals (SDGs) through design. The project explores how educational ecosystems can generate social innovation and ethical awareness, combining methods from design, psychology, and learning sciences.",
+    "end_date": null,
+    "funding": null,
+    "id": "b49947df-3148-5e9f-99a1-956001dad511",
+    "labs": [
+      {
+        "name": "DFH: Design for Humanity Lab",
+        "slug": "dfh"
+      }
+    ],
+    "members": [
+      {
+        "name": "Rodrigo Morais",
+        "role": "pi",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "objectives": [],
+    "slug": "labideas-impact-driven-education-for-action-and-sustainability",
+    "start_date": null,
+    "status": "active",
+    "title": "LabIDEAS: Impact-Driven Education for Action and Sustainability"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      }
+    ],
+    "description": "The project aims to develop a durable, biodegradable packaging material using mycelium, possibly in combination with other organic or recycled components, that can withstand shipping conditions while minimizing ecological impact. In parallel, the research will propose a design management model, outlining how such a solution can be developed, implemented, and scaled within a small to medium-sized enterprise (SME) environment.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "3331d9d0-770e-55df-b33a-88189d6f9b2b",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Dilay Kocogullari",
+        "role": "member",
+        "slug": "dilay-kocogullari"
+      },
+      {
+        "name": "Filipa Alves",
+        "role": "member",
+        "slug": "filipa-alves"
+      },
+      {
+        "name": "Leonor Freire",
+        "role": "member",
+        "slug": "leonor-freire"
+      }
+    ],
+    "objectives": [],
+    "slug": "mycelium-based-packaging-sustainable-material-design-management-framework",
+    "start_date": null,
+    "status": "active",
+    "title": "Mycelium-Based Packaging (sustainable material + design management framework)"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      }
+    ],
+    "description": null,
+    "end_date": null,
+    "funding": "Outro",
+    "id": "5c6c94fb-2bc0-50ad-8ba8-27c373cb9bd4",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Filipa Alves",
+        "role": "member",
+        "slug": "filipa-alves"
+      },
+      {
+        "name": "Filipa Oliveira",
+        "role": "member",
+        "slug": "filipa-oliveira"
+      },
+      {
+        "name": "João Flecha",
+        "role": "member",
+        "slug": "joao-flecha"
+      },
+      {
+        "name": "Maria Beatriz Fonseca",
+        "role": "member",
+        "slug": "maria-beatriz-fonseca"
+      },
+      {
+        "name": "Beatriz Muñoz Fonseca",
+        "role": null,
+        "slug": "beatriz-munoz-fonseca"
+      }
+    ],
+    "objectives": [],
+    "slug": "natural-pigments-in-graphic-design-and-visual-arts-applications-of-plant-piugmen",
+    "start_date": null,
+    "status": "active",
+    "title": "Natural pigments in graphic design and visual arts: applications of plant piugments in screen printing"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      }
+    ],
+    "description": null,
+    "end_date": null,
+    "funding": "Outro",
+    "id": "a6733aa1-738c-5b1e-8f87-94b181e115e7",
+    "labs": [
+      {
+        "name": "MADx: Media Arts and Design Lab",
+        "slug": "madx"
+      }
+    ],
+    "members": [
+      {
+        "name": "Madalena Miranda",
+        "role": "pi",
+        "slug": "madalena-miranda"
+      }
+    ],
+    "objectives": [],
+    "slug": "participatory-documentary-as-design-research",
+    "start_date": null,
+    "status": "active",
+    "title": "Participatory Documentary as Design Research"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "The PUSH project is an internally funded research initiative that aims to establish an academic model integrating design, technology, communication, psychology, and the social sciences to foster human development through inter-, multi- and transdisciplinary collaboration. Grounded in design research and pedagogy, it connects scientific innovation with applied teaching practices, aligning its activities with the United Nations Sustainable Development Goals (SDGs). It promotes active learning and design methodologies such as Challenge-Based Learning and Problem-Based Learning to address real-world challenges in diversity, mental health, and sustainability, producing outputs such as community partnerships, publications, and curricular integration.",
+    "end_date": null,
+    "funding": "Interno",
+    "id": "0c01b97c-0d9a-5f4f-b063-6e72a1f04e7c",
+    "labs": [
+      {
+        "name": "DFH: Design for Humanity Lab",
+        "slug": "dfh"
+      }
+    ],
+    "members": [
+      {
+        "name": "Rodrigo Morais",
+        "role": "pi",
+        "slug": "rodrigo-morais"
+      }
+    ],
+    "objectives": [],
+    "slug": "push-project-ubiquitous-success-for-humanity",
+    "start_date": null,
+    "status": "active",
+    "title": "PUSH: Project – Ubiquitous Success for Humanity"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      },
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      }
+    ],
+    "description": null,
+    "end_date": null,
+    "funding": "Outro",
+    "id": "fb69af63-58d2-588b-96b0-461668a21234",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Filipa Alves",
+        "role": "member",
+        "slug": "filipa-alves"
+      },
+      {
+        "name": "Hande Ayanoglu",
+        "role": "member",
+        "slug": "hande-ayanoglu"
+      }
+    ],
+    "objectives": [],
+    "slug": "re-connect-nature-inspired-speculative-design",
+    "start_date": null,
+    "status": "completed",
+    "title": "Re-connect: nature-inspired speculative design"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "This initiative leverages gamification to foster open innovation ecosystems. It connects startups, corporates, and academia through playful, challenge-based formats that encourage idea generation and rapid prototyping. The project includes the development of gamified platforms, innovation sprints, and collaborative design games to stimulate engagement and creativity.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "16a617f7-b03d-5103-b482-c0679b842cb3",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "members": [],
+    "objectives": [],
+    "slug": "supporting-open-innovation-with-gamification",
+    "start_date": null,
+    "status": "active",
+    "title": "Supporting Open Innovation with Gamification"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "C3: Crafting Cooperation and Coexistence",
+        "slug": "c3"
+      },
+      {
+        "name": "E3: Exploring Economic Ethos",
+        "slug": "e3"
+      }
+    ],
+    "description": "This project explores how gamified and design-driven methodologies can be used to address complex innovation challenges in collaboration with industry partners. It promotes autonomous, interdisciplinary teams composed of students, researchers, and professionals from various sectors. The approach emphasizes early-stage ideation, stakeholder engagement, and iterative prototyping, reducing risk and enhancing the quality of innovation outcomes.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "93fa3e87-b0a0-5657-88ed-e70bdcd90576",
+    "labs": [
+      {
+        "name": "SDI: Strategic Design and Innovation Lab",
+        "slug": "sdi"
+      }
+    ],
+    "members": [],
+    "objectives": [],
+    "slug": "tackling-innovation-challenges-through-industry-academia-collaboration",
+    "start_date": null,
+    "status": "active",
+    "title": "Tackling Innovation Challenges through Industry–Academia Collaboration"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": null,
+    "end_date": null,
+    "funding": "Outro",
+    "id": "6d00bd0e-86f5-551f-bc4e-6372643be45b",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Filipa Alves",
+        "role": "member",
+        "slug": "filipa-alves"
+      },
+      {
+        "name": "Pedro Barros",
+        "role": "member",
+        "slug": "pedro-barros"
+      },
+      {
+        "name": "Ângela Menezes",
+        "role": "member",
+        "slug": "angela-menezes"
+      }
+    ],
+    "objectives": [],
+    "slug": "the-hunting-maritime-museum-of-sesimbra-four-parallel-exhibitions",
+    "start_date": null,
+    "status": "completed",
+    "title": "The Hunting: Maritime Museum of Sesimbra) — four parallel exhibitions"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "F3: Finding Flourishing Futures",
+        "slug": "f3"
+      }
+    ],
+    "description": "This interdisciplinary workshop invites students to playfully explore the unseen beauty of the microscopic world as a source of inspiration for their creative works. Through hands-on sessions using microscopes to observe biological samples, students collect images, translate these visuals into design concepts, and develop projects ranging from artworks to conceptual designs or three-dimensional models at diﬀerent scales.",
+    "end_date": null,
+    "funding": "Outro",
+    "id": "6b4cf9d8-49c0-5516-a218-a115ca0e74ff",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Filipa Alves",
+        "role": "pi",
+        "slug": "filipa-alves"
+      }
+    ],
+    "objectives": [],
+    "slug": "through-the-looking-glass-a-dive-into-the-microcosmos",
+    "start_date": null,
+    "status": "completed",
+    "title": "Through the Looking Glass: A dive into the microcosmos"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      }
+    ],
+    "description": null,
+    "end_date": "2026-12-31",
+    "funding": null,
+    "id": "ce19906d-11e7-5213-92ec-54deb067fab5",
+    "labs": [
+      {
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "members": [
+      {
+        "name": "Dilay Kocogullari",
+        "role": "pi",
+        "slug": "dilay-kocogullari"
+      },
+      {
+        "name": "Rui Ramos",
+        "role": "responsible",
+        "slug": "rui-ramos"
+      }
+    ],
+    "objectives": [
+      {
+        "name": "UNID.6: Disseminação e outreach",
+        "slug": "unid-6"
+      }
+    ],
+    "slug": "unidcom-outputs-biodesign-guidebook-edited-book",
+    "start_date": "2026-02-23",
+    "status": "planned",
+    "title": "UNIDCOM | Outputs | BioDesign Guidebook (edited book)"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "R3: Rethinking for Regeneration and Resilience",
+        "slug": "r3"
+      },
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": "Participação no projeto Agree Interact / Great Atlantic Exploration Routes com caso-piloto em Lagos (Portugal). UNIDCOM atua como prestador de serviços via EUID (não como parceiro oficial).",
+    "end_date": null,
+    "funding": "Externo, Outro",
+    "id": "aee473a5-c5be-5296-af4e-561f54947458",
+    "labs": [
+      {
+        "name": "DTN: Design-Tech Nexus Lab",
+        "slug": "dtn"
+      }
+    ],
+    "members": [
+      {
+        "name": "Alexandre Monteiro",
+        "role": "responsible",
+        "slug": "alexandre-monteiro"
+      },
+      {
+        "name": "André Sabino",
+        "role": "responsible",
+        "slug": "andre-sabino"
+      },
+      {
+        "name": "Emília Duarte",
+        "role": "responsible",
+        "slug": "emilia-duarte"
+      },
+      {
+        "name": "Hande Ayanoglu",
+        "role": "responsible",
+        "slug": "hande-ayanoglu"
+      },
+      {
+        "name": "José Graça",
+        "role": "responsible",
+        "slug": "jose-graca"
+      },
+      {
+        "name": "Pamela Teubig",
+        "role": "responsible",
+        "slug": "pamela-teubig"
+      },
+      {
+        "name": "Rui Ramos",
+        "role": "responsible",
+        "slug": "rui-ramos"
+      }
+    ],
+    "objectives": [
+      {
+        "name": "UNID.3: Parcerias com sociedade e mercado",
+        "slug": "unid-3"
+      },
+      {
+        "name": "UNID.4: Internacionalização e redes (incl. “peripheral worldviews”)",
+        "slug": "unid-4"
+      }
+    ],
+    "slug": "unidcom-projects-atlantic-exploration-lagos",
+    "start_date": null,
+    "status": "active",
+    "title": "UNIDCOM | Projects | Atlantic Exploration Lagos"
+  },
+  {
+    "acronym": null,
+    "category": "Labs",
+    "clusters": [
+      {
+        "name": "T3: Thoughtfulness Technology for Thrive",
+        "slug": "t3"
+      }
+    ],
+    "description": null,
+    "end_date": null,
+    "funding": "Outro",
+    "id": "273e0ced-a5ad-55be-8083-03b8e3a6669f",
+    "labs": [
+      {
+        "name": "MADx: Media Arts and Design Lab",
+        "slug": "madx"
+      }
+    ],
+    "members": [
+      {
+        "name": "Madalena Miranda",
+        "role": "pi",
+        "slug": "madalena-miranda"
+      }
+    ],
+    "objectives": [],
+    "slug": "visual-culture-archives-and-algorithmic-collective-memory",
+    "start_date": null,
+    "status": "active",
+    "title": "Visual Culture Archives and Algorithmic Collective Memory"
+  }
+]

@@ -1,0 +1,46 @@
+name: Sync content from Supabase
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+    inputs:
+      preview:
+        description: 'Ignore approval gates (unapproved records are published)'
+        type: boolean
+        default: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+
+      # Preview defaults to true on the nightly run too, until curation is done.
+      # Flip PREVIEW to false here to publish only approved, publicly-visible records.
+      - name: Sync
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          PREVIEW: ${{ github.event.inputs.preview != 'false' }}
+        run: |
+          if [ "$PREVIEW" = 'true' ]; then
+            uv run --project scripts scripts/sync.py --preview
+          else
+            uv run --project scripts scripts/sync.py
+          fi
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain data/generated)" ]; then
+            git config user.name  'github-actions[bot]'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git add data/generated
+            git commit -m 'Sync content from Supabase'
+            git push
+          else
+            echo 'No content changes.'
+          fi
