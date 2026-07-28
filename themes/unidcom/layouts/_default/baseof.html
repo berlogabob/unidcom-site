@@ -9,11 +9,10 @@
   {{- with .Summary }}{{ $description = . | plainify }}{{ end -}}
   {{- with .Description }}{{ $description = . | plainify }}{{ end -}}
   {{- $robots := "" -}}
-  {{- $bannerHidden := " hidden" -}}
+  {{- $preview := hugo.Data.generated._meta.preview -}}
   {{- $bodyClass := "" -}}
-  {{- if hugo.Data.generated._meta.preview -}}
+  {{- if $preview -}}
     {{- $robots = `<meta name="robots" content="noindex, nofollow">` -}}
-    {{- $bannerHidden = "" -}}
     {{- $bodyClass = "preview-mode" -}}
   {{- end -}}
   <title>{{ $title }}</title>
@@ -43,7 +42,9 @@
 </head>
 <body{{ with $bodyClass }} class="{{ . }}"{{ end }}>
   <a class="skip-link utility" href="#main">Skip to content</a>
-  <div class="preview-banner utility"{{ $bannerHidden | safeHTMLAttr }}>Preview build — content is unapproved and not indexed.</div>
+  {{- if $preview }}
+  <div class="preview-banner utility">Preview build — content is unapproved and not indexed.</div>
+  {{- end }}
   {{ partial "header.html" . }}
   <main id="main" class="site-main site-shell">
     {{ block "main" . }}{{ end }}
