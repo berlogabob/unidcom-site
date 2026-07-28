@@ -12,7 +12,7 @@
 
 .header-inner {
   display: flex;
-  min-height: 4.25rem;
+  min-height: 4.75rem;
   align-items: center;
   justify-content: space-between;
   gap: var(--sp-4);
@@ -21,7 +21,16 @@
 
 .wordmark img {
   width: auto;
-  height: 2rem;
+  /* The source PNG used to be 52% transparent padding, so this height rendered a
+     15px mark against 12px nav caps. The file is now cropped to the artwork, so
+     this is the real height of the mark. */
+  height: 2.25rem;
+}
+
+@media (max-width: 30rem) {
+  .wordmark img {
+    height: 1.75rem;
+  }
 }
 
 .nav-list {
