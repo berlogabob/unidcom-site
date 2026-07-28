@@ -1,0 +1,16 @@
+<form class="filter-bar" data-filters data-target="{{ .target }}" role="search">
+  {{- range .filters }}
+    <div class="filter-field">
+      <label for="{{ .id }}">{{ .label }}</label>
+      {{- if eq .type "search" }}
+        <input id="{{ .id }}" name="{{ .id }}" type="search" data-filter data-field="{{ .field }}" autocomplete="off">
+      {{- else }}
+        <select id="{{ .id }}" name="{{ .id }}" data-filter data-field="{{ .field }}">
+          <option value="">All</option>
+          {{- range .options }}<option value="{{ .value }}">{{ .label }}</option>{{ end }}
+        </select>
+      {{- end }}
+    </div>
+  {{- end }}
+  <p class="filter-count" aria-live="polite" data-result-count>{{ .count }} result{{ if ne .count 1 }}s{{ end }}</p>
+</form>

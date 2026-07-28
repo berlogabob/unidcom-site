@@ -1,0 +1,25 @@
+{{ define "main" }}
+  {{- $projects := slice -}}
+  {{- with hugo.Data.generated.projects }}{{ $projects = . }}{{ end -}}
+  <header class="page-head">
+    <p class="eyebrow">Projects</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+  {{ partial "filter-bar.html" (dict
+    "target" "#projects-grid"
+    "count" (len $projects)
+    "filters" (slice
+      (dict "id" "projects-search" "label" "Search" "type" "search" "field" "search")
+      (dict "id" "project-status" "label" "Status" "type" "select" "field" "status" "options" (slice
+        (dict "value" "active" "label" "Active")
+        (dict "value" "completed" "label" "Completed")
+        (dict "value" "planned" "label" "Planned")
+      ))
+    )
+  ) }}
+  <div id="projects-grid" class="lattice">
+    {{ range $projects }}{{ partial "project-cell.html" . }}{{ end }}
+  </div>
+  {{ if not $projects }}<p class="empty-state">Projects will appear here when the research database is published.</p>{{ end }}
+{{ end }}

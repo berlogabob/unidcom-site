@@ -1,0 +1,18 @@
+{{- $project := . -}}
+{{- $title := default $project.name $project.title -}}
+{{- $status := $project.status | default "" | lower -}}
+{{- $dates := slice -}}
+{{- with $project.start_date }}{{ $dates = $dates | append . }}{{ end -}}
+{{- with $project.end_date }}{{ $dates = $dates | append . }}{{ end -}}
+<article class="cell project-cell"
+  data-filter-item
+  data-search="{{ $title }} {{ $project.acronym | default "" }}"
+  data-status="{{ $status }}">
+  <a href="{{ printf "projects/%s/" $project.slug | relURL }}">
+    <p class="eyebrow{{ if eq $status "active" }} status--live{{ end }}">{{ $status | default "Project" }}</p>
+    {{ with $project.acronym }}<p class="display">{{ . }}</p>{{ end }}
+    <h3 class="cell-title">{{ $title }}</h3>
+    {{ with $dates }}<p class="meta">{{ delimit . "–" }}</p>{{ end }}
+    {{ with $project.funding }}<p class="meta">{{ . }}</p>{{ end }}
+  </a>
+</article>

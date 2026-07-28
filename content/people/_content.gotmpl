@@ -1,0 +1,7 @@
+{{ with hugo.Data.generated.people }}
+  {{ range . }}
+    {{ $title := default .name .preferred_name }}
+    {{ $page := dict "kind" "page" "path" .slug "title" $title "params" . }}
+    {{ $.AddPage $page }}
+  {{ end }}
+{{ end }}

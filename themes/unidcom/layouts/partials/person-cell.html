@@ -1,0 +1,25 @@
+{{- $person := .person -}}
+{{- $name := default $person.name $person.preferred_name -}}
+{{- $parts := split $name " " -}}
+{{- $initials := "" -}}
+{{- with index $parts 0 }}{{ $initials = substr . 0 1 }}{{ end -}}
+{{- if gt (len $parts) 1 }}{{ $initials = printf "%s%s" $initials (substr (index $parts (sub (len $parts) 1)) 0 1) }}{{ end -}}
+{{- $roles := slice -}}
+{{- range $person.roles }}{{ with .label }}{{ $roles = $roles | append . }}{{ end }}{{ end -}}
+<article class="cell person-cell"
+  data-filter-item
+  data-search="{{ $name }} {{ delimit $roles " " }}"
+  data-membership="{{ $person.membership_type | default "" | lower }}">
+  <a href="{{ printf "people/%s/" $person.slug | relURL }}">
+    <div class="cell-media{{ if not $person.photo_url }} portrait--placeholder display{{ end }}">
+      {{- with $person.photo_url }}
+        <img src="{{ . }}" alt="Portrait of {{ $name }}" width="640" height="640" loading="lazy" decoding="async">
+      {{- else }}
+        <span aria-hidden="true">{{ $initials | upper }}</span>
+      {{- end }}
+    </div>
+    <p class="eyebrow">{{ default $person.membership_type $.role }}</p>
+    <h3 class="cell-title">{{ $name }}</h3>
+  </a>
+</article>
+

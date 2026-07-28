@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <article>
+    <header class="page-head">
+      <p class="eyebrow">{{ .Section | default "UNIDCOM/IADE" }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </header>
+    <div class="prose">{{ .Content }}</div>
+  </article>
+{{ end }}
+

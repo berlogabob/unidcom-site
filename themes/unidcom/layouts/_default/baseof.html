@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- $title := printf "%s — UNIDCOM/IADE" .Title -}}
+  {{- if .IsHome }}{{ $title = "UNIDCOM/IADE" }}{{ end -}}
+  {{- $description := site.Params.description -}}
+  {{- with .Summary }}{{ $description = . | plainify }}{{ end -}}
+  {{- with .Description }}{{ $description = . | plainify }}{{ end -}}
+  {{- $robots := "" -}}
+  {{- $bannerHidden := " hidden" -}}
+  {{- $bodyClass := "" -}}
+  {{- if hugo.Data.generated._meta.preview -}}
+    {{- $robots = `<meta name="robots" content="noindex, nofollow">` -}}
+    {{- $bannerHidden = "" -}}
+    {{- $bodyClass = "preview-mode" -}}
+  {{- end -}}
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $description }}">
+  {{ $robots | safeHTML }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:site_name" content="UNIDCOM/IADE">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "img/unidcom-logo.png" | absURL }}{{ end }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "img/unidcom-logo.png" | absURL }}{{ end }}">
+  {{- $cssSources := slice
+    (resources.Get "css/tokens.css")
+    (resources.Get "css/base.css")
+    (resources.Get "css/typography.css")
+    (resources.Get "css/layout.css")
+    (resources.Get "css/components.css")
+  -}}
+  {{- $css := $cssSources | resources.Concat "css/unidcom.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ partial "json-ld.html" . }}
+</head>
+<body{{ with $bodyClass }} class="{{ . }}"{{ end }}>
+  <a class="skip-link utility" href="#main">Skip to content</a>
+  <div class="preview-banner utility"{{ $bannerHidden | safeHTMLAttr }}>Preview build — content is unapproved and not indexed.</div>
+  {{ partial "header.html" . }}
+  <main id="main" class="site-main site-shell">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  {{- $jsSources := slice (resources.Get "js/nav.js") (resources.Get "js/filters.js") -}}
+  {{- $js := $jsSources | resources.Concat "js/unidcom.js" | minify | fingerprint -}}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

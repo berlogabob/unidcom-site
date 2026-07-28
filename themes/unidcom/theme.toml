@@ -1,0 +1,5 @@
+name = "UNIDCOM"
+license = "MIT"
+description = "The lattice theme for UNIDCOM/IADE."
+min_version = "0.164.0"
+

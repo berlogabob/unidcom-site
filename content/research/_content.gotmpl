@@ -1,0 +1,13 @@
+{{ with hugo.Data.generated }}
+  {{ $generated := . }}
+  {{ range $kind := slice "clusters" "labs" "objectives" }}
+    {{ with index $generated $kind }}
+      {{ range . }}
+        {{ $title := default .name .title }}
+        {{ $params := merge . (dict "research_kind" (singularize $kind)) }}
+        {{ $page := dict "kind" "page" "path" (printf "%s/%s" $kind .slug) "title" $title "params" $params }}
+        {{ $.AddPage $page }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

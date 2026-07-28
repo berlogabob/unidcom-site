@@ -1,5 +1,5 @@
 baseURL = "https://berlogabob.github.io/unidcom-site/"
-languageCode = "en-gb"
+locale = "en-gb"
 title = "UNIDCOM/IADE"
 theme = "unidcom"
 enableRobotsTXT = true

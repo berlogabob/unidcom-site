@@ -1,0 +1,10 @@
+{{- if hugo.Data.generated._meta.preview -}}
+# Preview build: content is unapproved. Keep the whole site out of search indexes.
+User-agent: *
+Disallow: /
+{{- else -}}
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- end -}}

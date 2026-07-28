@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <header class="page-head">
+    <p class="eyebrow">{{ .Section | default "UNIDCOM/IADE" }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+  {{ with .RegularPages }}
+    <div class="lattice">
+      {{ range .ByTitle }}
+        <article class="cell">
+          <a href="{{ .RelPermalink }}">
+            <p class="eyebrow">{{ .Section }}</p>
+            <h2 class="cell-title">{{ .Title }}</h2>
+            {{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+

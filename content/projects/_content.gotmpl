@@ -1,0 +1,7 @@
+{{ with hugo.Data.generated.projects }}
+  {{ range . }}
+    {{ $title := default .name .title }}
+    {{ $page := dict "kind" "page" "path" .slug "title" $title "params" . }}
+    {{ $.AddPage $page }}
+  {{ end }}
+{{ end }}

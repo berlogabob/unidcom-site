@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{- $upcoming := .Date.After now -}}
+  {{- $end := "" -}}
+  {{- with .Params.end_date }}{{ $end = time.Format "2 January 2006, 15:04" . }}{{ end -}}
+  {{- $registration := "" -}}
+  {{- with .Params.registration_url }}{{ $registration = "Register" }}{{ end -}}
+  <article>
+    <header class="page-head">
+      <p class="eyebrow{{ if $upcoming }} status--live{{ end }}">{{ if $upcoming }}Upcoming event{{ else }}Past event{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+    </header>
+    {{ partial "meta-list.html" (slice
+      (dict "label" "Starts" "value" (.Date.Format "2 January 2006, 15:04") "datetime" (.Date.Format "2006-01-02T15:04:05Z07:00"))
+      (dict "label" "Ends" "value" $end "datetime" .Params.end_date)
+      (dict "label" "Type" "value" .Params.event_type)
+      (dict "label" "Venue" "value" .Params.venue)
+      (dict "label" "City" "value" .Params.city)
+      (dict "label" "Registration" "value" $registration "url" .Params.registration_url)
+    ) }}
+    <div class="prose">{{ .Content }}</div>
+  </article>
+{{ end }}

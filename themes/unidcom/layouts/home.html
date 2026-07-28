@@ -1,0 +1,81 @@
+{{ define "main" }}
+  {{- $people := slice -}}
+  {{- $projects := slice -}}
+  {{- $publications := slice -}}
+  {{- $clusters := slice -}}
+  {{- $labs := slice -}}
+  {{- with hugo.Data.generated -}}
+    {{- with .people }}{{ $people = . }}{{ end -}}
+    {{- with .projects }}{{ $projects = . }}{{ end -}}
+    {{- with .publications }}{{ $publications = . }}{{ end -}}
+    {{- with .clusters }}{{ $clusters = . }}{{ end -}}
+    {{- with .labs }}{{ $labs = . }}{{ end -}}
+  {{- end -}}
+  {{- $featured := where $projects "featured" true -}}
+  {{- if not $featured }}{{ $featured = first 4 $projects }}{{ end -}}
+  {{- $upcoming := slice -}}
+  {{- with site.GetPage "/events" -}}
+    {{- range .RegularPages }}{{ if .Date.After now }}{{ $upcoming = $upcoming | append . }}{{ end }}{{ end -}}
+  {{- end -}}
+  {{- $upcoming = sort $upcoming "Date" "asc" -}}
+  {{- $newest := first 4 (sort $publications "year" "desc") -}}
+
+  <div class="lattice home-lattice">
+    <section class="home-opening">
+      <img src="{{ "img/unidcom-logo.png" | relURL }}" alt="UNIDCOM/IADE" width="1014" height="393">
+      <div>
+        <h1>{{ .Params.statement | default "Design and communication research." }}</h1>
+        {{ with .Content }}<div class="prose home-intro">{{ . }}</div>{{ end }}
+      </div>
+    </section>
+
+    <header class="lattice-heading"><h2>Featured research</h2></header>
+    {{ range $featured }}{{ partial "project-cell.html" . }}{{ end }}
+
+    <header class="lattice-heading"><h2>Research structure</h2></header>
+    {{ range $clusters }}
+      {{- $title := default .name .title -}}
+      <article class="cell">
+        <a href="{{ printf "research/clusters/%s/" .slug | relURL }}">
+          <p class="eyebrow">Research cluster</p>
+          {{ with .acronym }}<p class="display">{{ . }}</p>{{ end }}
+          <h3 class="cell-title">{{ $title }}</h3>
+        </a>
+      </article>
+    {{ end }}
+
+    <header class="lattice-heading"><h2>Latest</h2></header>
+    {{ range first 4 $upcoming }}{{ partial "event-cell.html" (dict "event" . "upcoming" true) }}{{ end }}
+    {{ range $newest }}
+      {{- $url := .url -}}
+      {{- with .doi }}{{ $url = printf "https://doi.org/%s" . }}{{ end -}}
+      <article class="cell">
+        {{ if $url }}<a href="{{ $url }}">{{ else }}<div class="cell-body">{{ end }}
+          <p class="eyebrow">Publication · {{ .year }}</p>
+          <h3 class="cell-title">{{ .title }}</h3>
+        {{ if $url }}</a>{{ else }}</div>{{ end }}
+      </article>
+    {{ end }}
+
+    <article class="cell span-2">
+      <a href="{{ "people/" | relURL }}">
+        <p class="eyebrow">People</p>
+        <p class="display cell-title">{{ len $people }} researchers and collaborators</p>
+      </a>
+    </article>
+    <section class="cell span-2">
+      <div class="home-figures">
+        <p class="eyebrow">Impact figures</p>
+        <p class="display">{{ len $projects }} projects</p>
+        <p class="display">{{ len $publications }} publications</p>
+        <p class="display">{{ len $clusters }} clusters · {{ len $labs }} labs</p>
+      </div>
+    </section>
+    <section class="cell full-span">
+      <div class="home-funders">
+        <p class="eyebrow">Funders</p>
+        <h2>FCT · European Union — NextGenerationEU</h2>
+      </div>
+    </section>
+  </div>
+{{ end }}

@@ -1,0 +1,77 @@
+{{ define "main" }}
+  {{- $people := slice -}}
+  {{- with hugo.Data.generated.people }}{{ $people = . }}{{ end -}}
+  {{- $groups := slice
+    (dict "key" "scientific-coordination" "label" "Scientific Coordination")
+    (dict "key" "executive-direction" "label" "Executive Direction")
+    (dict "key" "science-management" "label" "Science Management")
+    (dict "key" "advisory-board" "label" "Advisory Board")
+    (dict "key" "staff" "label" "Staff")
+    (dict "key" "integrated" "label" "Integrated researchers")
+    (dict "key" "collaborator" "label" "Collaborators")
+    (dict "key" "external" "label" "External researchers")
+    (dict "key" "phd-student" "label" "PhD students")
+  -}}
+  {{- $grouped := newScratch -}}
+  {{- range $people -}}
+    {{- $person := . -}}
+    {{- $group := "" -}}
+    {{- $rank := 99 -}}
+    {{- range $person.roles -}}
+      {{- $role := lower (printf "%v %v" (.kind | default "") (.label | default "")) -}}
+      {{- if and (strings.Contains $role "scientific coordination") (gt $rank 0) }}{{ $group = "scientific-coordination" }}{{ $rank = 0 }}
+      {{- else if and (strings.Contains $role "executive direction") (gt $rank 1) }}{{ $group = "executive-direction" }}{{ $rank = 1 }}
+      {{- else if and (strings.Contains $role "science management") (gt $rank 2) }}{{ $group = "science-management" }}{{ $rank = 2 }}
+      {{- else if and (strings.Contains $role "advisory") (gt $rank 3) }}{{ $group = "advisory-board" }}{{ $rank = 3 }}
+      {{- else if and (strings.Contains $role "staff") (gt $rank 4) }}{{ $group = "staff" }}{{ $rank = 4 }}
+      {{- else if and (or (strings.Contains $role "phd") (strings.Contains $role "doctoral")) (gt $rank 8) }}{{ $group = "phd-student" }}{{ $rank = 8 }}
+      {{- end -}}
+    {{- end -}}
+    {{- if eq $group "" -}}
+      {{- $membership := lower ($person.membership_type | default "") -}}
+      {{- if strings.Contains $membership "integrated" }}{{ $group = "integrated" }}
+      {{- else if strings.Contains $membership "collaborator" }}{{ $group = "collaborator" }}
+      {{- else if strings.Contains $membership "external" }}{{ $group = "external" }}
+      {{- else if or (strings.Contains $membership "phd") (strings.Contains $membership "doctoral") }}{{ $group = "phd-student" }}
+      {{- else }}{{ $group = "staff" }}
+      {{- end -}}
+    {{- end -}}
+    {{- $members := $grouped.Get $group | default (slice) -}}
+    {{- $grouped.Set $group ($members | append $person) -}}
+  {{- end -}}
+
+  <header class="page-head">
+    <p class="eyebrow">People</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ partial "filter-bar.html" (dict
+    "target" "#people-groups"
+    "count" (len $people)
+    "filters" (slice
+      (dict "id" "people-search" "label" "Search" "type" "search" "field" "search")
+      (dict "id" "membership" "label" "Membership type" "type" "select" "field" "membership" "options" (slice
+        (dict "value" "integrated" "label" "Integrated")
+        (dict "value" "collaborator" "label" "Collaborator")
+        (dict "value" "external" "label" "External")
+      ))
+    )
+  ) }}
+
+  <div id="people-groups">
+    {{- range $groups -}}
+      {{- $groupDefinition := . -}}
+      {{- $members := $grouped.Get .key -}}
+      {{- with $members }}
+        <section class="section-block" data-filter-group>
+          <h2>{{ $groupDefinition.label }}</h2>
+          <div class="lattice">
+            {{ range . }}{{ partial "person-cell.html" (dict "person" . "role" $groupDefinition.label) }}{{ end }}
+          </div>
+        </section>
+      {{- end }}
+    {{- end }}
+    {{ if not $people }}<p class="empty-state">People will appear here when the research database is published.</p>{{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+  {{- $publications := slice -}}
+  {{- with hugo.Data.generated.publications }}{{ $publications = sort . "year" "desc" }}{{ end -}}
+  {{- $years := newScratch -}}
+  {{- $types := newScratch -}}
+  {{- range $publications -}}
+    {{- with .year }}{{ $years.Set (printf "%v" .) true }}{{ end -}}
+    {{- with .type }}{{ $types.Set (lower .) . }}{{ end -}}
+  {{- end -}}
+  {{- $yearOptions := slice -}}
+  {{- range $year, $_ := $years.Values }}{{ $yearOptions = $yearOptions | append (dict "value" $year "label" $year) }}{{ end -}}
+  {{- $yearOptions = sort $yearOptions "value" "desc" -}}
+  {{- $typeOptions := slice -}}
+  {{- range $type, $label := $types.Values }}{{ $typeOptions = $typeOptions | append (dict "value" $type "label" $label) }}{{ end -}}
+  {{- $typeOptions = sort $typeOptions "label" "asc" -}}
+
+  <header class="page-head">
+    <p class="eyebrow">Publications</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+  {{ partial "filter-bar.html" (dict
+    "target" "#bibliography"
+    "count" (len $publications)
+    "filters" (slice
+      (dict "id" "publication-year" "label" "Year" "type" "select" "field" "year" "options" $yearOptions)
+      (dict "id" "publication-type" "label" "Type" "type" "select" "field" "type" "options" $typeOptions)
+      (dict "id" "publication-author" "label" "Author" "type" "search" "field" "author")
+    )
+  ) }}
+
+  <div id="bibliography" class="bibliography">
+    {{- $currentYear := "" -}}
+    {{- range $publications -}}
+      {{- $year := printf "%v" (default "Undated" .year) -}}
+      {{- if ne $year $currentYear -}}
+        {{- if $currentYear }}</ol></section>{{ end }}
+        <section class="bibliography-year" data-filter-group>
+          <h2>{{ $year }}</h2>
+          <ol class="publication-list">
+        {{- $currentYear = $year -}}
+      {{- end -}}
+      {{ partial "publication-item.html" . }}
+    {{- end -}}
+    {{- if $currentYear }}</ol></section>{{ end }}
+  </div>
+  {{ if not $publications }}<p class="empty-state">Publications will appear here when the research database is published.</p>{{ end }}
+{{ end }}

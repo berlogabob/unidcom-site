@@ -1,0 +1,17 @@
+{{- with . }}
+<dl class="meta-list">
+  {{- range . }}
+    {{- $item := . -}}
+    {{- with $item.value }}
+      <div>
+        <dt>{{ $item.label }}</dt>
+        <dd>
+          {{- with $item.url }}<a href="{{ . }}">{{ end -}}
+          {{- with $item.datetime }}<time datetime="{{ . }}">{{ $item.value }}</time>{{ else }}{{ $item.value }}{{ end -}}
+          {{- with $item.url }}</a>{{ end -}}
+        </dd>
+      </div>
+    {{- end }}
+  {{- end }}
+</dl>
+{{- end }}

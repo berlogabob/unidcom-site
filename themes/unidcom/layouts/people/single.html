@@ -1,0 +1,60 @@
+{{ define "main" }}
+  {{- $person := .Params -}}
+  {{- $name := default $person.name $person.preferred_name -}}
+  <article>
+    <header class="page-head">
+      <p class="eyebrow">People</p>
+      <h1>{{ $name }}</h1>
+      {{ with $person.roles }}
+        <ul class="link-list">
+          {{ range . }}<li>{{ .label }}{{ with .year }} ({{ . }}){{ end }}</li>{{ end }}
+        </ul>
+      {{ end }}
+    </header>
+
+    {{- $identifiers := slice -}}
+    {{- with $person.orcid -}}
+      {{- $url := . -}}
+      {{- if not (strings.HasPrefix $url "http") }}{{ $url = printf "https://orcid.org/%s" $url }}{{ end -}}
+      {{- $identifiers = $identifiers | append (dict "label" "ORCID" "value" . "url" $url) -}}
+    {{- end -}}
+    {{- with $person.ciencia_id -}}
+      {{- $url := $person.ciencia_id_url | default (printf "https://www.cienciavitae.pt/portal/en/%s" .) -}}
+      {{- $identifiers = $identifiers | append (dict "label" "Ciência ID" "value" . "url" $url) -}}
+    {{- end -}}
+    {{ partial "meta-list.html" $identifiers }}
+
+    {{ with $person.bio }}
+      <section class="section-block">
+        <h2>Biography</h2>
+        <div class="prose">{{ . | markdownify }}</div>
+      </section>
+    {{ end }}
+
+    {{ with $person.publications }}
+      <section class="section-block">
+        <h2>Publications</h2>
+        <ol class="publication-list">{{ range . }}{{ partial "publication-item.html" . }}{{ end }}</ol>
+      </section>
+    {{ end }}
+
+    {{ with $person.projects }}
+      <section class="section-block">
+        <h2>Projects</h2>
+        <ul class="link-list">
+          {{ range . }}<li><a href="{{ printf "projects/%s/" .slug | relURL }}">{{ default .name .title }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    {{ with $person.labs }}
+      <section class="section-block">
+        <h2>Labs</h2>
+        <ul class="link-list">
+          {{ range . }}<li><a href="{{ printf "research/labs/%s/" .slug | relURL }}">{{ default .name .title }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  </article>
+{{ end }}
+

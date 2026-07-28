@@ -1,0 +1,42 @@
+{{ define "main" }}
+  {{- $item := .Params -}}
+  <article>
+    <header class="page-head">
+      <p class="eyebrow">{{ $item.research_kind | default "Research" }}</p>
+      <h1>{{ default $item.name $item.title }}</h1>
+      {{ with $item.acronym }}<p class="display">{{ . }}</p>{{ end }}
+    </header>
+    {{ with ($item.description | default $item.overview | default $item.concern) }}<div class="prose">{{ . | markdownify }}</div>{{ end }}
+    {{ with $item.members }}
+      <section class="section-block">
+        <h2>People</h2>
+        <ul class="link-list">
+          {{ range . }}<li><a href="{{ printf "people/%s/" .slug | relURL }}">{{ default .name .preferred_name }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+    {{ with $item.projects }}
+      <section class="section-block">
+        <h2>Projects</h2>
+        <ul class="link-list">
+          {{ range . }}<li><a href="{{ printf "projects/%s/" .slug | relURL }}">{{ default .name .title }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+    {{ range slice
+      (dict "key" "clusters" "label" "Clusters" "path" "clusters")
+      (dict "key" "labs" "label" "Labs" "path" "labs")
+      (dict "key" "objectives" "label" "Objectives" "path" "objectives")
+    }}
+      {{- $collection := . -}}
+      {{- with index $item $collection.key }}
+        <section class="section-block">
+          <h2>{{ $collection.label }}</h2>
+          <ul class="link-list">
+            {{ range . }}<li><a href="{{ printf "research/%s/%s/" $collection.path .slug | relURL }}">{{ default .name .title }}</a></li>{{ end }}
+          </ul>
+        </section>
+      {{- end }}
+    {{ end }}
+  </article>
+{{ end }}

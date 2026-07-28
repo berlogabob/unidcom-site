@@ -1,0 +1,56 @@
+{{- if .IsHome -}}
+  {{- $data := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "name" "UNIDCOM/IADE"
+    "url" .Permalink
+    "logo" ("img/unidcom-logo.png" | absURL)
+  -}}
+  {{- with site.Params.description }}{{ $data = merge $data (dict "description" .) }}{{ end -}}
+  {{- with site.Params.email }}{{ $data = merge $data (dict "email" .) }}{{ end -}}
+  {{- with site.Params.address }}{{ $data = merge $data (dict "address" .) }}{{ end -}}
+  <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- else if and (eq .Section "people") (eq .Kind "page") -}}
+  {{- $person := .Params -}}
+  {{- $name := default $person.name $person.preferred_name -}}
+  {{- $data := dict
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" $name
+    "url" .Permalink
+  -}}
+  {{- with $person.bio }}{{ $data = merge $data (dict "description" (. | plainify)) }}{{ end -}}
+  {{- with $person.photo_url }}{{ $data = merge $data (dict "image" .) }}{{ end -}}
+  {{- $sameAs := slice -}}
+  {{- with $person.orcid -}}
+    {{- $url := . -}}
+    {{- if not (strings.HasPrefix $url "http") }}{{ $url = printf "https://orcid.org/%s" $url }}{{ end -}}
+    {{- $sameAs = $sameAs | append $url -}}
+  {{- end -}}
+  {{- with $person.ciencia_id_url }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with $sameAs }}{{ $data = merge $data (dict "sameAs" .) }}{{ end -}}
+  <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- else if and (eq .Section "publications") .IsSection -}}
+  {{- $publications := slice -}}
+  {{- with hugo.Data.generated.publications }}{{ $publications = . }}{{ end -}}
+  {{- $articles := slice -}}
+  {{- range $publications -}}
+    {{- $article := dict "@type" "ScholarlyArticle" -}}
+    {{- with .title }}{{ $article = merge $article (dict "headline" .) }}{{ end -}}
+    {{- with .year }}{{ $article = merge $article (dict "datePublished" (printf "%v" .)) }}{{ end -}}
+    {{- with .full_reference }}{{ $article = merge $article (dict "citation" .) }}{{ end -}}
+    {{- $authors := slice -}}
+    {{- range .authors -}}
+      {{- $name := . -}}
+      {{- if reflect.IsMap . }}{{ $name = default .preferred_name .name }}{{ end -}}
+      {{- with $name }}{{ $authors = $authors | append (dict "@type" "Person" "name" .) }}{{ end -}}
+    {{- end -}}
+    {{- with $authors }}{{ $article = merge $article (dict "author" .) }}{{ end -}}
+    {{- with .doi }}{{ $article = merge $article (dict "sameAs" (printf "https://doi.org/%s" .)) }}{{ else with .url }}{{ $article = merge $article (dict "sameAs" .) }}{{ end -}}
+    {{- $articles = $articles | append $article -}}
+  {{- end -}}
+  {{- with $articles -}}
+    {{- $data := dict "@context" "https://schema.org" "@graph" . -}}
+    <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}

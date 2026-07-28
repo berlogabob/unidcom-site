@@ -1,0 +1,32 @@
+{{- $publication := . -}}
+{{- $reference := $publication.full_reference -}}
+{{- if not $reference -}}
+  {{- $authors := slice -}}
+  {{- range $publication.authors -}}
+    {{- if reflect.IsMap . -}}
+      {{- $authors = $authors | append (default .name .preferred_name) -}}
+    {{- else -}}
+      {{- $authors = $authors | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $reference = $publication.title -}}
+  {{- with $authors }}{{ $reference = printf "%s. %s" (delimit . ", ") $reference }}{{ end -}}
+{{- end -}}
+{{- $authorFilter := slice -}}
+{{- range $publication.authors -}}
+  {{- if reflect.IsMap . }}{{ $authorFilter = $authorFilter | append (default .name .preferred_name) }}{{ else }}{{ $authorFilter = $authorFilter | append . }}{{ end -}}
+{{- end -}}
+<li class="publication-item"
+  data-filter-item
+  data-search="{{ $publication.title }} {{ $reference }}"
+  data-year="{{ $publication.year }}"
+  data-type="{{ $publication.type | default "" | lower }}"
+  data-author="{{ delimit $authorFilter " " }}">
+  <p>{{ $reference }}</p>
+  {{ with $publication.doi }}
+    <p class="publication-links utility"><a href="https://doi.org/{{ . }}">DOI</a></p>
+  {{ else with $publication.url }}
+    <p class="publication-links utility"><a href="{{ . }}">View publication</a></p>
+  {{ end }}
+</li>
+

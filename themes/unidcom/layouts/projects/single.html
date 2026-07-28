@@ -1,0 +1,69 @@
+{{ define "main" }}
+  {{- $project := .Params -}}
+  {{- $title := default $project.name $project.title -}}
+  {{- $status := $project.status | default "" | lower -}}
+  <article>
+    <header class="page-head">
+      <p class="eyebrow{{ if eq $status "active" }} status--live{{ end }}">{{ $status | default "Project" }}</p>
+      <h1>{{ $title }}</h1>
+      {{ with $project.acronym }}<p class="display">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ partial "meta-list.html" (slice
+      (dict "label" "Start" "value" $project.start_date "datetime" $project.start_date)
+      (dict "label" "End" "value" $project.end_date "datetime" $project.end_date)
+      (dict "label" "Funding" "value" $project.funding)
+    ) }}
+
+    {{ with $project.description }}
+      <section class="section-block">
+        <h2>About the project</h2>
+        <div class="prose">{{ . | markdownify }}</div>
+      </section>
+    {{ end }}
+
+    {{- with $project.members -}}
+      <section class="section-block">
+        <h2>People</h2>
+        {{- range slice
+          (dict "key" "pi" "label" "Principal investigator")
+          (dict "key" "responsible" "label" "Responsible researchers")
+          (dict "key" "member" "label" "Members")
+        -}}
+          {{- $group := . -}}
+          {{- $members := where $project.members "role" .key -}}
+          {{- with $members }}
+            <h3>{{ $group.label }}</h3>
+            <ul class="link-list">
+              {{ range . }}<li><a href="{{ printf "people/%s/" .slug | relURL }}">{{ default .name .preferred_name }}</a></li>{{ end }}
+            </ul>
+          {{- end }}
+        {{- end }}
+      </section>
+    {{- end }}
+
+    {{- range slice
+      (dict "key" "clusters" "label" "Clusters" "path" "clusters")
+      (dict "key" "labs" "label" "Labs" "path" "labs")
+      (dict "key" "objectives" "label" "Objectives" "path" "objectives")
+    -}}
+      {{- $collection := . -}}
+      {{- $items := index $project .key -}}
+      {{- with $items }}
+        <section class="section-block">
+          <h2>{{ $collection.label }}</h2>
+          <ul class="link-list">
+            {{ range . }}<li><a href="{{ printf "research/%s/%s/" $collection.path .slug | relURL }}">{{ default .name .title }}</a></li>{{ end }}
+          </ul>
+        </section>
+      {{- end }}
+    {{- end }}
+
+    {{ with $project.publications }}
+      <section class="section-block">
+        <h2>Related publications</h2>
+        <ol class="publication-list">{{ range . }}{{ partial "publication-item.html" . }}{{ end }}</ol>
+      </section>
+    {{ end }}
+  </article>
+{{ end }}

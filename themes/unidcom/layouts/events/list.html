@@ -1,0 +1,39 @@
+{{ define "main" }}
+  {{- $upcoming := slice -}}
+  {{- $past := slice -}}
+  {{- range .RegularPages -}}
+    {{- if .Date.After now }}{{ $upcoming = $upcoming | append . }}{{ else }}{{ $past = $past | append . }}{{ end -}}
+  {{- end -}}
+  {{- $upcoming = sort $upcoming "Date" "asc" -}}
+  {{- $past = sort $past "Date" "desc" -}}
+  <header class="page-head">
+    <p class="eyebrow">Events</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+  {{ with $upcoming }}
+    <section class="section-block">
+      <h2>Upcoming</h2>
+      <div class="lattice">{{ range . }}{{ partial "event-cell.html" (dict "event" . "upcoming" true) }}{{ end }}</div>
+    </section>
+  {{ end }}
+  {{ with $past }}
+    <section class="section-block">
+      <h2>Past events</h2>
+      {{- $currentYear := "" -}}
+      {{- range . -}}
+        {{- $year := .Date.Format "2006" -}}
+        {{- if ne $year $currentYear -}}
+          {{- if $currentYear }}</div></section>{{ end }}
+          <section class="section-block">
+            <h3>{{ $year }}</h3>
+            <div class="lattice">
+          {{- $currentYear = $year -}}
+        {{- end -}}
+        {{ partial "event-cell.html" (dict "event" . "upcoming" false) }}
+      {{- end -}}
+      {{- if $currentYear }}</div></section>{{ end }}
+    </section>
+  {{ end }}
+{{ end }}
+

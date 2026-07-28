@@ -1,0 +1,10 @@
+<nav id="site-navigation" class="site-nav" aria-label="Main navigation" data-site-nav>
+  <ul class="nav-list">
+    {{- range site.Menus.main }}
+      <li>
+        <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      </li>
+    {{- end }}
+  </ul>
+</nav>
+

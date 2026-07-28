@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="lattice footer-lattice site-shell">
+    <section class="footer-cell">
+      <h2>Contact</h2>
+      {{ with site.Params.address }}<p>{{ . }}</p>{{ end }}
+      {{ with site.Params.email }}<p><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+    </section>
+    <nav class="footer-cell" aria-label="Footer navigation">
+      <h2>Sections</h2>
+      <ul>
+        {{ range site.Menus.main }}<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>{{ end }}
+      </ul>
+    </nav>
+    <section class="footer-cell">
+      <h2>Funders</h2>
+      <p>FCT — Fundação para a Ciência e a Tecnologia</p>
+      <p>European Union — NextGenerationEU</p>
+    </section>
+    <section class="footer-cell">
+      <h2>Colophon</h2>
+      <p>This site is generated from the UNIDCOM research database{{ with hugo.Data.generated._meta.generated_at }}, last updated <time datetime="{{ . }}">{{ time.Format "2 January 2006" . }}</time>{{ end }}.</p>
+    </section>
+  </div>
+</footer>

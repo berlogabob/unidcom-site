@@ -1,0 +1,33 @@
+{{ define "main" }}
+  {{- $collections := slice
+    (dict "key" "clusters" "label" "Research clusters")
+    (dict "key" "labs" "label" "Labs")
+    (dict "key" "objectives" "label" "Objectives")
+  -}}
+  {{- $generated := dict -}}
+  {{- with hugo.Data.generated }}{{ $generated = . }}{{ end -}}
+  <header class="page-head">
+    <p class="eyebrow">Research</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+  {{ range $collections }}
+    {{- $collection := . -}}
+    {{- $items := index $generated $collection.key | default (slice) -}}
+    <section class="section-block">
+      <h2>{{ $collection.label }}</h2>
+      <div class="lattice">
+        {{ range $items }}
+          <article class="cell">
+            <a href="{{ printf "research/%s/%s/" $collection.key .slug | relURL }}">
+              <p class="eyebrow">{{ singularize $collection.key }}</p>
+              {{ with .acronym }}<p class="display">{{ . }}</p>{{ end }}
+              <h3 class="cell-title">{{ default .name .title }}</h3>
+              {{ with .summary }}<p class="cell-summary">{{ . }}</p>{{ end }}
+            </a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,16 @@
+{{- /* Overrides Hugo's built-in alias stub so old-URL redirects inherit the
+       preview noindex too — without this they are the only indexable pages
+       in a preview build. */ -}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </head>
+  <body>
+    <p>This page has moved to <a href="{{ .Permalink }}">{{ .Permalink }}</a>.</p>
+  </body>
+</html>
