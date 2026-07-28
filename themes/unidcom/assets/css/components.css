@@ -125,6 +125,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Portraits come from two sources in two styles — colour from the old UNIDCOM
+     site, black and white from IADE. Normalising them here means the grid reads
+     as one set, and the colour originals stay untouched in storage. */
+  filter: grayscale(1);
 }
 
 .portrait--placeholder {
@@ -133,6 +137,31 @@
   background: var(--ink);
   color: var(--paper);
   font-size: var(--fs-7);
+}
+
+/* Person page: portrait beside the name, stacking on narrow screens. The
+   negative margins .cell-media uses to bleed into a lattice cell make no sense
+   here, so they are reset. */
+.person-head {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  align-items: start;
+}
+
+.person-head .person-portrait {
+  margin: 0;
+  border: 1px solid var(--ink);
+}
+
+@media (max-width: 40rem) {
+  .person-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .person-head .person-portrait {
+    max-width: 12rem;
+  }
 }
 
 .status--live {

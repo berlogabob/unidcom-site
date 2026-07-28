@@ -1,8 +1,20 @@
 {{ define "main" }}
   {{- $person := .Params -}}
   {{- $name := default $person.name $person.preferred_name -}}
+  {{- $parts := split $name " " -}}
+  {{- $initials := "" -}}
+  {{- with index $parts 0 }}{{ $initials = substr . 0 1 }}{{ end -}}
+  {{- if gt (len $parts) 1 }}{{ $initials = printf "%s%s" $initials (substr (index $parts (sub (len $parts) 1)) 0 1) }}{{ end -}}
   <article>
-    <header class="page-head">
+    <header class="page-head person-head">
+      <div class="person-portrait cell-media{{ if not $person.photo_url }} portrait--placeholder display{{ end }}">
+        {{- with $person.photo_url }}
+          <img src="{{ . }}" alt="Portrait of {{ $name }}" width="640" height="640" decoding="async">
+        {{- else }}
+          <span aria-hidden="true">{{ $initials | upper }}</span>
+        {{- end }}
+      </div>
+      <div>
       <p class="eyebrow">People</p>
       <h1>{{ $name }}</h1>
       {{ with $person.roles }}
@@ -10,6 +22,7 @@
           {{ range . }}<li>{{ .label }}{{ with .year }} ({{ . }}){{ end }}</li>{{ end }}
         </ul>
       {{ end }}
+      </div>
     </header>
 
     {{- $identifiers := slice -}}
