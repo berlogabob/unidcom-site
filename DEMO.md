@@ -11,6 +11,25 @@ Three demos showing one pipeline: **ORCID → admin app → database → website
 
 ---
 
+## Verified ready — checked 29 July, 09:00
+
+| | |
+|---|---|
+| Both Saras still unmerged | ✅ demo 2 is primed |
+| Address still the old one in both files | ✅ demo 5 is primed |
+| ORCID bio still matches the database | ✅ — so `Auto-fill` says "already up to date" **until you edit ORCID**, which is the point |
+| Supabase secrets + sync workflow | ✅ proven end to end |
+| Database backup | ✅ `Unidcom-IADE/scripts/out/` |
+
+Site state: **105 of 184 portraits**, 112 biographies, 8 real events, 25 projects, 76
+publications. Preview banner reads "Preview — work in progress"; `noindex` and
+`robots.txt Disallow: /` are both on.
+
+**One gap to consider closing first:** Rui Ramos, Executive Direction, has no photo — the most
+visible blank on the site. So do you, on the profile you are about to demo.
+
+---
+
 ## 60-second pre-flight
 
 Run these before you present. Each should pass without thinking about it.
@@ -245,9 +264,20 @@ you having to explain what a CDN is.
 
 ## Questions you are likely to get
 
-**Why do most people have no photo?**
-51 of 184 came across from the old WordPress site. The rest were never on it — there is no
-source for them. They get added through the admin app.
+**Why do some people have no photo?**
+105 of 184 have one: 51 recovered from the old UNIDCOM site, 54 from the official IADE staff
+directory. The remaining 79 are almost all collaborators and external affiliates that neither
+institution ever published a page for — **42 of your 46 integrated researchers do have a
+photo.** The rest get added through the admin app, or by asking people directly.
+
+**Why are the photos black and white?**
+They arrive from two sources in two styles, so the site renders them all greyscale. It matches
+the identity and means the grid reads as one set rather than a patchwork.
+
+**Are the events real?**
+Yes — DRIW '21 through 2024, the International Congress on Past and Present Slaveries, the AI
+Workshop with Leonel Moura, European Researchers' Night and Italian Design Day. Text and
+artwork came from the old site; the dates come from the source pages.
 
 **What is the "Preview — work in progress" banner?**
 The site is generated from data that is still being curated, so it carries the banner and is
