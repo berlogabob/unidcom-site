@@ -1,0 +1,25 @@
+# Second Hugo site: the PixelFrames conference landing page, on its own domain.
+# The main site is a GitHub Pages project site and Pages allows one custom domain
+# per repo, so the conference domain needs its own build. Reuses the vendored
+# unidcom theme via themesDir so there is no duplicated CSS, fonts, or logo.
+#
+# Build:  hugo --source pixelframes --minify --gc
+# Deploy: FTP_PASS='...' ./scripts/deploy_pixelframes.sh
+
+baseURL = "https://pixelframe2027.unidcom-iade.pt/"
+locale = "en-gb"
+title = "PixelFrames 2027"
+theme = "unidcom"
+themesDir = "../themes"
+enableRobotsTXT = true
+
+[params]
+  description = "PixelFrames 2027 — [one-line conference description TBD]. Organised by UNIDCOM/IADE, Lisbon."
+  email = "unidcom@iade.pt"
+  address = "IADE, Universidade Europeia — Av. D. Carlos I, 4, 1200-649 Lisboa, Portugal"
+  # ponytail: one place to change when the main site moves to a custom domain.
+  main_site = "https://berlogabob.github.io/unidcom-site/"
+  profile_base = "https://berlogabob.github.io/unidcom-site/people/"
+
+[markup.goldmark.renderer]
+  unsafe = true

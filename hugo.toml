@@ -4,6 +4,11 @@ title = "UNIDCOM/IADE"
 theme = "unidcom"
 enableRobotsTXT = true
 
+# Announcements are the point of the events section, so future-dated pages must
+# build. Without this Hugo drops them and the "Upcoming event" branches in
+# home.html and events/single.html can never fire.
+buildFuture = true
+
 # Slugs come from data/generated/*.json, so let Hugo trust them verbatim.
 disablePathToLower = false
 removePathAccents = true

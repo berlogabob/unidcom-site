@@ -1,0 +1,20 @@
+{{/* Conference header: the theme's version renders the UNIDCOM wordmark and the
+     six-section research menu, which is wrong on a single-page event site. The
+     nav-toggle and nav-list markup is kept verbatim so the theme's nav.js
+     mobile menu keeps working untouched. */}}
+<header class="site-header">
+  <div class="header-inner site-shell">
+    <a class="wordmark display" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <button class="nav-toggle utility" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>Menu</button>
+    <nav id="site-navigation" class="site-nav" aria-label="Main navigation" data-site-nav>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#hosts">Hosts</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#dates">Key dates</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="{{ site.Params.main_site }}">UNIDCOM/IADE</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

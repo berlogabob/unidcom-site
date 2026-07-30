@@ -1,0 +1,30 @@
+{{/* Conference footer. Same classes as the theme's, minus its colophon — this
+     site is hand-written, not generated from the research database. */}}
+<footer class="site-footer">
+  <div class="lattice footer-lattice site-shell">
+    <section class="footer-cell">
+      <h2>Contact</h2>
+      {{ with site.Params.address }}<p>{{ . }}</p>{{ end }}
+      {{ with site.Params.email }}<p><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+    </section>
+    <nav class="footer-cell" aria-label="Footer navigation">
+      <h2>Sections</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hosts">Hosts</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#dates">Key dates</a></li>
+        <li><a href="#venue">Venue</a></li>
+      </ul>
+    </nav>
+    <section class="footer-cell">
+      <h2>Funders</h2>
+      <p>FCT — Fundação para a Ciência e a Tecnologia</p>
+      <p>European Union — NextGenerationEU</p>
+    </section>
+    <section class="footer-cell">
+      <h2>Organised by</h2>
+      <p><a href="{{ site.Params.main_site }}">UNIDCOM/IADE</a> — Unidade de Investigação em Design e Comunicação, IADE, Universidade Europeia.</p>
+    </section>
+  </div>
+</footer>
