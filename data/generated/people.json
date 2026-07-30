@@ -372,7 +372,7 @@
     "status": "active"
   },
   {
-    "bio": "IADE UNIDCOM updated bio to test sdgkhljgashjkagsdhjklgdashjkdsfg",
+    "bio": "IADE UNIDCOM updated bio to testTEST",
     "ciencia_id": "E018-7F41-627B",
     "id": "72e62c1e-536c-4385-bc4a-ad690330da85",
     "integration_year": null,
@@ -4123,21 +4123,33 @@
     "status": "active"
   },
   {
-    "bio": null,
-    "ciencia_id": null,
-    "id": "f19adb74-4a59-5c39-b9c2-2d94914afdec",
+    "bio": "",
+    "ciencia_id": "",
+    "id": "c46781c5-3e58-5abf-b206-fe2d69ba0d73",
     "integration_year": null,
-    "labs": [],
-    "membership_type": null,
-    "orcid": null,
+    "labs": [
+      {
+        "is_coordinator": false,
+        "name": "BiD: Bio-Inspired Design Lab",
+        "slug": "bid"
+      }
+    ],
+    "membership_type": "collaborator",
+    "orcid": "",
     "phd": null,
-    "photo_url": null,
+    "photo_url": "",
     "preferred_name": "Paulo Bago D’Uva",
     "projects": [],
     "publications": [],
-    "roles": [],
+    "roles": [
+      {
+        "kind": "membership",
+        "label": "collaborator",
+        "year": 2026
+      }
+    ],
     "slug": "paulo-bago-d-uva",
-    "status": "a_confirmar"
+    "status": "active"
   },
   {
     "bio": null,
@@ -4206,35 +4218,6 @@
       }
     ],
     "slug": "paulo-teixeira-costa",
-    "status": "active"
-  },
-  {
-    "bio": null,
-    "ciencia_id": null,
-    "id": "c46781c5-3e58-5abf-b206-fe2d69ba0d73",
-    "integration_year": null,
-    "labs": [
-      {
-        "is_coordinator": false,
-        "name": "BiD: Bio-Inspired Design Lab",
-        "slug": "bid"
-      }
-    ],
-    "membership_type": "collaborator",
-    "orcid": null,
-    "phd": null,
-    "photo_url": null,
-    "preferred_name": "Paulo Uva",
-    "projects": [],
-    "publications": [],
-    "roles": [
-      {
-        "kind": "membership",
-        "label": "collaborator",
-        "year": 2026
-      }
-    ],
-    "slug": "paulo-uva",
     "status": "active"
   },
   {
@@ -5486,7 +5469,7 @@
     "integration_year": null,
     "labs": [],
     "membership_type": "collaborator",
-    "orcid": null,
+    "orcid": "0000-0001-7372-0963",
     "phd": "Digital Game Development",
     "photo_url": null,
     "preferred_name": "Tatyana Losik",
