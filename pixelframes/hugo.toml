@@ -13,6 +13,9 @@ theme = "unidcom"
 themesDir = "../themes"
 enableRobotsTXT = true
 
+# One page, no tags — don't emit empty /categories/ and /tags/ listings.
+disableKinds = ["taxonomy", "term"]
+
 [params]
   description = "PixelFrames 2027 — [one-line conference description TBD]. Organised by UNIDCOM/IADE, Lisbon."
   email = "unidcom@iade.pt"
