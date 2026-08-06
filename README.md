@@ -113,9 +113,11 @@ export SUPABASE_URL=…  SUPABASE_SERVICE_KEY=…
 uv run --project scripts scripts/sync.py
 ```
 
-The publishable (anon) key works here too: RLS now exposes exactly the approved, publicly
-visible set, so the anon role sees precisely what the approval gates select anyway. A service
-key is only needed for `--preview`, which has to read unapproved rows.
+**The service key is required.** An earlier version of this README said the publishable (anon)
+key worked too. It did — because `anon` had been granted `select` on every table, which is the
+exposure closed by `20260806150100_revoke_anon_public_schema.sql` in the portal repo. `anon` now
+has no access to the database at all, so the sync will fail with `permission denied for table
+people` if you give it anything but the service key.
 
 Useful flags:
 
