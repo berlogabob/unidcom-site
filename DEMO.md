@@ -11,7 +11,10 @@ Three demos showing one pipeline: **ORCID → admin app → database → website
 
 ---
 
-## Verified ready — checked 29 July, 09:00
+## Preconditions — last verified 29 July, 09:00
+
+⚠️ These ticks are from 29 July and the database has moved since. **Re-check them
+before you present**; they are a checklist, not a guarantee.
 
 | | |
 |---|---|
@@ -21,7 +24,7 @@ Three demos showing one pipeline: **ORCID → admin app → database → website
 | Supabase secrets + sync workflow | ✅ proven end to end |
 | Database backup | ✅ `Unidcom-IADE/scripts/out/` |
 
-Site state: **105 of 183 portraits**, 112 biographies, 8 real events, 25 projects, 76
+Site state: **105 of 183 portraits**, 112 biographies, 9 events, 25 projects, 76
 publications. The site went **live on 6 August**: the preview banner is gone, `robots.txt`
 reads `Allow: /` with a sitemap, and only approved records are published.
 
@@ -281,6 +284,11 @@ the identity and means the grid reads as one set rather than a patchwork.
 Yes — DRIW '21 through 2024, the International Congress on Past and Present Slaveries, the AI
 Workshop with Leonel Moura, European Researchers' Night and Italian Design Day. Text and
 artwork came from the old site; the dates come from the source pages.
+
+The ninth, **PixelFrames 2027**, sorts to the top as the upcoming event and is the one to
+expect a question about: it is a real conference with its own site at
+pixelframe2027.unidcom-iade.pt, but its listing here is still placeholder copy and a
+placeholder date until the call for papers is out. Say so rather than being caught by it.
 
 **Is everything in the database on the site?**
 No — only what has been approved. The sync publishes a person once their profile is approved

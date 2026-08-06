@@ -9,6 +9,10 @@ confirm their profile, manage selected publications and file support requests. E
 there except the login screen and the Welcome pack needs a session. The site links into it
 from the nav, the footer, every person page, and `/researchers/`.
 
+For how the two fit together — the data flow, and the two separate privacy boundaries — see
+[ARCHITECTURE.md](https://github.com/berlogabob/Unidcom-IADE/blob/main/ARCHITECTURE.md) in the
+portal repository.
+
 **Live:** https://berlogabob.github.io/unidcom-site/ — publishing approved records and
 indexable since 6 August 2026. Preview builds are still available on demand
 (see [Preview mode](#preview-mode)).
@@ -49,6 +53,7 @@ edited in this repo.**
 | A publication, or who authored it | **Researcher portal** → Supabase | next sync |
 | Clusters, labs, objectives | **Researcher portal** → Supabase | next sync |
 | An event / conference / DRIW page | `content/events/*.md` **here** | next push |
+| The PixelFrames 2027 conference site | `pixelframes/content/_index.md` | **manual FTP deploy** |
 | About, Vision & Mission, Ethics, Contact, Opportunities | `content/*.md` **here** | next push |
 | Section intro text (e.g. the blurb above the people list) | `content/<section>/_index.md` | next push |
 | Navigation menu | `hugo.toml` → `[[menu.main]]` | next push |
@@ -154,8 +159,8 @@ on.
 
 - **projects** ship only when `category` is `Labs` or `Eventos`. This excludes `Operação`
   and `Estratégia` rows such as `FCT Report | Outputs | BD + narrativa`.
-- **publications** ship only when `macro_type` is `Artigos em revistas` or `Livros`. Of 361
-  `outputs` rows, 76 qualify; the other 285 are activity records, not publications.
+- **publications** ship only when `macro_type` is `Artigos em revistas` or `Livros`. Of 365
+  `outputs` rows, 76 qualify; the other 289 are activity records, not publications.
 
 Both allowlists are **fail-closed** — a category nobody has seen before is excluded, not
 included. If a legitimately public category is added in the portal, add it to
@@ -202,6 +207,25 @@ The nightly sync publishes only approved records, which is what you want by defa
 **Going live was done on 6 August 2026** — the approval gate cost exactly one profile
 (184 → 183 people, projects and publications unchanged). If you ever re-run it, confirm the
 counts don't collapse to near-zero; that would mean curation isn't done.
+
+### Why the workflow input is compared against `'true'`
+
+This looks like a nitpick and is not. The expression used to read:
+
+```yaml
+PREVIEW: ${{ github.event.inputs.preview != 'false' }}
+```
+
+A `schedule` trigger sends **no inputs at all**, so `inputs.preview` is empty, `!= 'false'` is
+true, and the nightly run was pinned to preview no matter what. While the site was genuinely
+in preview that was intentional and harmless — four bot syncs ran under it between 28 July and
+6 August, all correctly noindexed.
+
+The hazard was the exit. Going live meant editing the workflow, and if anyone had gone live
+without that edit, **the 04:00 run the next morning would have silently put the site back to
+unapproved content and `noindex`** — with nothing in the commit to suggest a revert had
+happened. Comparing against `'true'` makes preview strictly opt-in and the cron unable to
+re-enter it.
 
 ---
 
@@ -261,6 +285,18 @@ rather than silently breaking links. Old WordPress URLs redirect via Hugo `alias
 Push to `main`. `.github/workflows/deploy.yml` builds and publishes to GitHub Pages; it needs
 no secrets.
 
+That covers **this site only.** `deploy.yml` runs a bare `hugo --minify --gc` and never passes
+`--source pixelframes`, so pushing does *not* update the conference site. That one goes out by
+FTP mirror, by hand:
+
+```sh
+hugo --source pixelframes --minify --gc
+FTP_PASS='…' ./scripts/deploy_pixelframes.sh
+```
+
+It is a separate host (`pixelframe2027.unidcom-iade.pt`) precisely because GitHub Pages allows
+only one custom domain per repository — see below.
+
 `baseURL` in `hugo.toml` carries the `/unidcom-site/` subpath, so **never hardcode a
 root-relative path** in a template — use `.RelPermalink`, `relURL` or `resources.Get`, or
 assets will 404.
@@ -273,7 +309,8 @@ assets will 404.
    `185.199.108.153`, `.109.153`, `.110.153`, `.111.153` for an apex domain.
 
 GitHub issues the certificate. **One custom domain per repository** — a `beta.` staging
-domain and an apex cutover are mutually exclusive.
+domain and an apex cutover are mutually exclusive. That constraint is why the conference site
+in `pixelframes/` is hosted by FTP on its own domain rather than as a second Pages site here.
 
 ---
 
@@ -290,14 +327,23 @@ domain and an apex cutover are mutually exclusive.
   DOI. Add detail pages when there is an abstract or PDF to put on them.
 - **No search.** Deferred until the filters prove insufficient.
 - **English only.** The old site has a Portuguese side; Hugo multilingual is not set up.
+- **Placeholder copy is live.** `content/events/pixelframes-2027.md` is `draft: false` with a
+  `[One-line description TBD]` summary and a placeholder date that drives its upcoming/past
+  styling, and `pixelframes/content/_index.md` carries eleven more `TBD` markers. The site is
+  indexable now, so these are public. They want replacing once the call for papers is out.
 
 ## Repository layout
 
 ```
-content/            editorial Markdown + content adapters (_content.gotmpl)
-data/generated/     committed output of sync.py — do not hand-edit
-scripts/sync.py     Supabase → JSON, and the project's privacy boundary
-themes/unidcom/     layouts, CSS, JS
-static/             wordmark, self-hosted fonts
-.github/workflows/  sync.yml (nightly, commits) · deploy.yml (on push)
+content/                     editorial Markdown + content adapters (_content.gotmpl)
+data/generated/              committed output of sync.py — do not hand-edit
+scripts/sync.py              Supabase → JSON, and the project's privacy boundary
+scripts/deploy_pixelframes.sh  FTP deploy for the conference subsite (manual)
+themes/unidcom/              layouts, CSS, JS — shared by both sites
+pixelframes/                 a SECOND Hugo site (own hugo.toml, own hostname)
+.github/workflows/           sync.yml (nightly, commits) · deploy.yml (on push)
 ```
+
+`pixelframes/` is the PixelFrames 2027 conference site. It reuses this theme
+(`themesDir = "../themes"`) but is otherwise independent, and **it is not built or
+deployed by CI** — see [Deploying](#deploying).
