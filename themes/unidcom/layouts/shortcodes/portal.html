@@ -1,0 +1,3 @@
+{{- /* Emits a URL into the researcher portal, so content files don't hardcode
+       the host. Usage: [Welcome pack]({{< portal "/app/welcome/start" >}}) */ -}}
+{{- printf "%s#%s" site.Params.portal_url (.Get 0 | default "/login") -}}

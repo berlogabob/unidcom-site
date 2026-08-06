@@ -8,7 +8,7 @@ on:
       preview:
         description: 'Ignore approval gates (unapproved records are published)'
         type: boolean
-        default: true
+        default: false
 
 jobs:
   sync:
@@ -19,13 +19,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
 
-      # Preview defaults to true on the nightly run too, until curation is done.
-      # Flip PREVIEW to false here to publish only approved, publicly-visible records.
+      # The nightly run publishes only approved, publicly-visible records.
+      # Preview (approval gates ignored, site noindexed) is opt-in, and only
+      # via workflow_dispatch — the cron run sends no inputs at all, so the
+      # comparison must be against 'true', not away from 'false'.
       - name: Sync
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          PREVIEW: ${{ github.event.inputs.preview != 'false' }}
+          PREVIEW: ${{ github.event.inputs.preview == 'true' }}
         run: |
           if [ "$PREVIEW" = 'true' ]; then
             uv run --project scripts scripts/sync.py --preview

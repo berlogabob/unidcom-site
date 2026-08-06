@@ -9,6 +9,12 @@
       <h2>Sections</h2>
       <ul>
         {{ range site.Menus.main }}<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>{{ end }}
+        {{/* Appended rather than given their own cell: .lattice is a 4-then-2
+             column grid, so a fifth cell orphans a row at two breakpoints. */}}
+        {{ with site.Params.portal_url }}
+          <li><a href="{{ . }}#/login">Researcher login</a></li>
+          <li><a href="{{ . }}#/app/welcome/start">Welcome pack</a></li>
+        {{ end }}
       </ul>
     </nav>
     <section class="footer-cell">

@@ -6,5 +6,8 @@
       </li>
     {{- end }}
   </ul>
+  {{- with site.Params.portal_url }}
+    <a class="nav-login" href="{{ . }}#/login">Researcher login</a>
+  {{- end }}
 </nav>
 
