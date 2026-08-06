@@ -39,11 +39,14 @@
 
     {{- /* Claim note. Gated on the ORCID iD because the portal's sign-in broker
            rejects any iD that isn't already in people.orcid — offering the link
-           to someone without one on file is a guaranteed dead end. */ -}}
+           to someone without one on file is a guaranteed dead end.
+           Links to /login, not /app/profile: every login lands on the Welcome
+           pack, so promising a destination the router will not honour would be
+           false advertising. */ -}}
     {{ with site.Params.portal_url }}
       {{ if $person.orcid }}
         <aside class="claim-note">
-          <p>Are you {{ $name }}? <a href="{{ . }}#/app/profile">Sign in with your ORCID iD</a> to update this profile, manage your selected publications, and file support requests.</p>
+          <p>Are you {{ $name }}? <a href="{{ . }}#/login">Sign in with your ORCID iD</a> to manage this profile, your selected publications, and support requests.</p>
         </aside>
       {{ else }}
         <aside class="claim-note claim-note--muted">

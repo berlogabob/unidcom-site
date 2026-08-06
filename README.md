@@ -2,9 +2,15 @@
 
 Public website for UNIDCOM/IADE. Hugo static site, generated from the UNIDCOM research
 database — the same Supabase project the [Unidcom-IADE](https://github.com/berlogabob/Unidcom-IADE)
-Flutter admin app curates.
+researcher portal curates.
 
-**Live:** https://berlogabob.github.io/unidcom-site/ — currently a **preview build**
+This repository is the **public face**; the portal is where researchers sign in with ORCID to
+confirm their profile, manage selected publications and file support requests. Everything
+there except the login screen and the Welcome pack needs a session. The site links into it
+from the nav, the footer, every person page, and `/researchers/`.
+
+**Live:** https://berlogabob.github.io/unidcom-site/ — publishing approved records and
+indexable since 6 August 2026. Preview builds are still available on demand
 (see [Preview mode](#preview-mode)).
 
 Intended to replace the WordPress site at [unidcom-iade.pt](https://www.unidcom-iade.pt/).
@@ -38,19 +44,33 @@ edited in this repo.**
 
 | To change | Edit | Appears after |
 |---|---|---|
-| A researcher's name, bio, photo, ORCID, roles | **Flutter admin app** → Supabase | next sync |
-| A project's title, dates, funding, members | **Flutter admin app** → Supabase | next sync |
-| A publication, or who authored it | **Flutter admin app** → Supabase | next sync |
-| Clusters, labs, objectives | **Flutter admin app** → Supabase | next sync |
+| A researcher's name, bio, photo, ORCID, roles | **Researcher portal** → Supabase | next sync |
+| A project's title, dates, funding, members | **Researcher portal** → Supabase | next sync |
+| A publication, or who authored it | **Researcher portal** → Supabase | next sync |
+| Clusters, labs, objectives | **Researcher portal** → Supabase | next sync |
 | An event / conference / DRIW page | `content/events/*.md` **here** | next push |
 | About, Vision & Mission, Ethics, Contact, Opportunities | `content/*.md` **here** | next push |
 | Section intro text (e.g. the blurb above the people list) | `content/<section>/_index.md` | next push |
 | Navigation menu | `hugo.toml` → `[[menu.main]]` | next push |
+| Where the portal lives (login / Welcome pack links) | `hugo.toml` → `params.portal_url` | next push |
+| The "For researchers" page | `content/researchers.md` **here** | next push |
 | Colours, type, spacing | `themes/unidcom/assets/css/tokens.css` | next push |
 
 Events are Markdown rather than database rows because there is no `events` table — the old
 site's Agenda, Conferences and DRIW pages have no home in Supabase. If events become
 frequent enough to hurt, that is the signal to add the table.
+
+### Links into the portal
+
+`params.portal_url` is the single place the portal's host is written down. Templates append
+the route (`#/login`, `#/app/welcome/start`); content files use the shortcode instead, e.g.
+`[Welcome pack]({{< portal "/app/welcome/start" >}})`. Menu entries can't carry these — Hugo
+pipes `.URL` through `relURL`, which mangles an absolute URL — so the nav link is written
+out longhand in `partials/nav.html`.
+
+Person pages show a sign-in invitation **only when the person has an ORCID iD on file**
+(26 of 183 today). The portal's sign-in broker rejects any iD not already in `people.orcid`,
+so the other 157 get a "contact the office" note instead of a link that cannot work.
 
 ### Adding an event
 
@@ -85,8 +105,12 @@ Manually, from the repo:
 
 ```sh
 export SUPABASE_URL=…  SUPABASE_SERVICE_KEY=…
-uv run --project scripts scripts/sync.py --preview
+uv run --project scripts scripts/sync.py
 ```
+
+The publishable (anon) key works here too: RLS now exposes exactly the approved, publicly
+visible set, so the anon role sees precisely what the approval gates select anyway. A service
+key is only needed for `--preview`, which has to read unapproved rows.
 
 Useful flags:
 
@@ -96,10 +120,10 @@ Useful flags:
 --self-check   # run the built-in tests, no database access
 ```
 
-It prints a one-line summary you can sanity-check against the admin app:
+It prints a one-line summary you can sanity-check against the portal:
 
 ```
-people 184  projects 25  publications 76  clusters 5  labs 5  objectives 12
+people 183  projects 25  publications 76  clusters 5  labs 5  objectives 12
 ```
 
 Or trigger the workflow from GitHub: **Actions → Sync content from Supabase → Run workflow**.
@@ -113,7 +137,7 @@ the site" question is one of these.
 
 ### Gate 1 — approval
 
-Respects the curation state set in the admin app:
+Respects the curation state set in the portal:
 
 - people: `profile_status = 'approved'` **and** `public_visibility = true`
 - projects: `approval_status = 'approved'` **and** `public_visibility = true`
@@ -134,16 +158,22 @@ on.
   `outputs` rows, 76 qualify; the other 285 are activity records, not publications.
 
 Both allowlists are **fail-closed** — a category nobody has seen before is excluded, not
-included. If a legitimately public category is added in the admin app, add it to
+included. If a legitimately public category is added in the portal, add it to
 `PROJECT_CATEGORIES` or `PUBLICATION_MACRO_TYPES` in `scripts/sync.py`.
 
 ### Field whitelists
 
-Row-level security on the Supabase project is currently open for the review period, so
-**`scripts/sync.py` — not the database — is the privacy boundary.** Every record is built by
-explicit `pick()`, and a write-time assertion fails the run if a record carries a key outside
-its declared whitelist. `email`, `legal_name`, `auth_user_id`, `notes`, `total_budget` and
-`risk` are never even fetched.
+There are two independent privacy boundaries, and they are not the same filter.
+
+Row-level security decides which **rows** an unauthenticated caller may read at all — since
+`20260805120000_approval_visibility.sql`, only approved and publicly visible ones. On top of
+that, **`scripts/sync.py` decides which fields ever leave the database.** Every record is
+built by explicit `pick()`, and a write-time assertion fails the run if a record carries a key
+outside its declared whitelist. `email`, `legal_name`, `auth_user_id`, `notes`, `total_budget`
+and `risk` are never even fetched.
+
+The whitelist matters independently of RLS: the nightly workflow authenticates with the
+service key, which bypasses row-level security entirely.
 
 Adding a field to the site means adding it in three places in `sync.py`: the `SELECTS` query,
 the `WHITELISTS` set, and the template that renders it.
@@ -152,10 +182,11 @@ the `WHITELISTS` set, and the template that renders it.
 
 ## Preview mode
 
-Nothing in the database is approved yet, so the site runs with `--preview`: the approval gate
-is off and the whole site is marked not-for-indexing.
+The live site is **not** in preview mode. Preview exists for rehearsing content that has not
+been approved yet — it bypasses the approval gate and marks the whole site not-for-indexing.
 
-When `data/generated/_meta.json` has `"preview": true`:
+Run one with `--preview` locally, or by ticking *preview* on the workflow input. When
+`data/generated/_meta.json` has `"preview": true`:
 
 - every page emits `<meta name="robots" content="noindex, nofollow">`
 - `robots.txt` emits `Disallow: /`
@@ -164,8 +195,13 @@ When `data/generated/_meta.json` has `"preview": true`:
 `noindex` keeps the site out of search engines. It does **not** make the site private — the
 pages are on the public internet and anyone with the URL can read them.
 
-**To go live properly**, set `preview: false` on the workflow input (or drop `--preview`
-locally), and confirm the counts don't collapse to near-zero — that means curation isn't done.
+⚠️ **Do not commit a preview build.** The site is live: pushing `preview: true` republishes
+unapproved records and re-`noindex`es a site that search engines have already begun crawling.
+The nightly sync publishes only approved records, which is what you want by default.
+
+**Going live was done on 6 August 2026** — the approval gate cost exactly one profile
+(184 → 183 people, projects and publications unchanged). If you ever re-run it, confirm the
+counts don't collapse to near-zero; that would mean curation isn't done.
 
 ---
 
@@ -215,7 +251,7 @@ CSS loads in order: `tokens → base → typography → layout → components`. 
 
 There is no `slug` column in the database. Slugs are derived in `sync.py` from
 `preferred_name` / `acronym` / `code`, deduplicated deterministically, and written into the
-committed JSON — so **renaming a person in the admin app shows up as a URL change in a diff**
+committed JSON — so **renaming a person in the portal shows up as a URL change in a diff**
 rather than silently breaking links. Old WordPress URLs redirect via Hugo `aliases`.
 
 ---
@@ -243,13 +279,13 @@ domain and an apex cutover are mutually exclusive.
 
 ## Known gaps
 
-- **Photos and bios.** 0 of 184 people have a photo and 1 has a bio in the database, so
-  person pages fall back to initials. The old WordPress site has both, at
-  `/centre/people/{slug}/`; migrating them into Supabase is unstarted.
+- **Photos and bios.** 105 of 183 people have a photo and 112 have a bio; the rest fall back
+  to initials. The remainder are mostly collaborators and external affiliates neither
+  institution ever published a page for — 42 of the 46 integrated researchers do have one.
 - **Portuguese labels on an English site.** Real data, not a bug: `funding: "Outro"`, author
   roles like `"Único autor"`, objective names like `"UNID.2: Inter e transdisciplinaridade"`.
   The recurring ones want a label map in the theme; the objective names want editing in the
-  admin app.
+  portal.
 - **No per-publication pages.** Publications are bibliography entries linking out to their
   DOI. Add detail pages when there is an abstract or PDF to put on them.
 - **No search.** Deferred until the filters prove insufficient.

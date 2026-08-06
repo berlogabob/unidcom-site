@@ -1,13 +1,16 @@
 {{- /* Overrides Hugo's built-in alias stub so old-URL redirects inherit the
        preview noindex too — without this they are the only indexable pages
-       in a preview build. */ -}}
+       in a preview build. Gated on the flag rather than unconditional: these
+       aliases are the redirects from the old WordPress URLs, so on a live
+       build "nofollow" would stop crawlers following them to the canonical
+       page and the site would inherit none of the old one's link equity. */ -}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ .Permalink }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
-    <meta name="robots" content="noindex, nofollow">
+    {{ if hugo.Data.generated._meta.preview }}<meta name="robots" content="noindex, nofollow">{{ end }}
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
   </head>
   <body>

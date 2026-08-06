@@ -4,7 +4,7 @@ Three demos showing one pipeline: **ORCID → admin app → database → website
 
 | | |
 |---|---|
-| Admin app | https://berlogabob.github.io/Unidcom-IADE/ |
+| Researcher portal | https://berlogabob.github.io/Unidcom-IADE/ (sign in first — everything but the Welcome pack needs a session) |
 | Website | https://berlogabob.github.io/unidcom-site/ |
 | Actions | https://github.com/berlogabob/unidcom-site/actions |
 | ORCID | https://orcid.org/0009-0009-8585-0074 |
@@ -21,9 +21,9 @@ Three demos showing one pipeline: **ORCID → admin app → database → website
 | Supabase secrets + sync workflow | ✅ proven end to end |
 | Database backup | ✅ `Unidcom-IADE/scripts/out/` |
 
-Site state: **105 of 184 portraits**, 112 biographies, 8 real events, 25 projects, 76
-publications. Preview banner reads "Preview — work in progress"; `noindex` and
-`robots.txt Disallow: /` are both on.
+Site state: **105 of 183 portraits**, 112 biographies, 8 real events, 25 projects, 76
+publications. The site went **live on 6 August**: the preview banner is gone, `robots.txt`
+reads `Allow: /` with a sitemap, and only approved records are published.
 
 **One gap to consider closing first:** Rui Ramos, Executive Direction, has no photo — the most
 visible blank on the site. So do you, on the profile you are about to demo.
@@ -34,13 +34,13 @@ visible blank on the site. So do you, on the profile you are about to demo.
 
 Run these before you present. Each should pass without thinking about it.
 
-- [ ] Admin app loads and you are signed in.
-- [ ] Website loads.
-- [ ] Actions tab open in a third browser tab, ready to click.
-- [ ] Terminal open at `~/Documents/GitHub/unidcom-site` — the fallback.
-- [ ] The new campus address is on your clipboard.
-- [ ] Andrey's bio in the admin app is still the **old** text (so tomorrow's change shows).
-- [ ] ORCID biography visibility is **Public** — if it is not, the app cannot read it.
+- [x] Admin app loads and you are signed in.
+- [x] Website loads.
+- [x] Actions tab open in a third browser tab, ready to click.
+- [x] Terminal open at `~/Documents/GitHub/unidcom-site` — the fallback.
+- [x] The new campus address is on your clipboard.
+- [x] Andrey's bio in the admin app is still the **old** text (so tomorrow's change shows).
+- [x] ORCID biography visibility is **Public** — if it is not, the app cannot read it.
 
 ```sh
 # Confirms what the app will see. Should print the OLD bio right now.
@@ -142,7 +142,10 @@ not Public.
 
 > *"The website is static — it doesn't talk to the database. It's rebuilt from it."*
 
-**Actions → Sync content from Supabase → Run workflow** (leave *preview* ticked) → **Run**.
+**Actions → Sync content from Supabase → Run workflow** (leave *preview* **unticked**) → **Run**.
+
+> The site went live on 6 August. Ticking *preview* republishes unapproved records and puts
+> `noindex` back on the whole site — do not tick it during a demo.
 
 Leave it running and go straight to step 5. It commits the changed data, which automatically
 triggers the deploy.
@@ -152,7 +155,7 @@ triggers the deploy.
 ```sh
 cd ~/Documents/GitHub/unidcom-site
 set -a && . ~/Documents/GitHub/Unidcom-IADE/scripts/.env && set +a
-uv run --project scripts scripts/sync.py --preview
+uv run --project scripts scripts/sync.py
 git add -A && git commit -m "Sync content from Supabase" && git push
 ```
 
@@ -265,8 +268,8 @@ you having to explain what a CDN is.
 ## Questions you are likely to get
 
 **Why do some people have no photo?**
-105 of 184 have one: 51 recovered from the old UNIDCOM site, 54 from the official IADE staff
-directory. The remaining 79 are almost all collaborators and external affiliates that neither
+105 of 183 have one: 51 recovered from the old UNIDCOM site, 54 from the official IADE staff
+directory. The remaining 78 are almost all collaborators and external affiliates that neither
 institution ever published a page for — **42 of your 46 integrated researchers do have a
 photo.** The rest get added through the admin app, or by asking people directly.
 
@@ -279,9 +282,12 @@ Yes — DRIW '21 through 2024, the International Congress on Past and Present Sl
 Workshop with Leonel Moura, European Researchers' Night and Italian Design Day. Text and
 artwork came from the old site; the dates come from the source pages.
 
-**What is the "Preview — work in progress" banner?**
-The site is generated from data that is still being curated, so it carries the banner and is
-deliberately excluded from search engines until the content is approved.
+**Is everything in the database on the site?**
+No — only what has been approved. The sync publishes a person once their profile is approved
+and publicly visible, and a publication once its record is approved; 183 people, 25 projects
+and 76 publications qualify today. Unapproved records simply do not appear. Until 6 August the
+site ran in preview mode, which bypassed that gate and carried a "Preview — work in progress"
+banner with `noindex`; that mode still exists as an opt-in for rehearsals.
 
 **Is the old site still running?**
 Yes. This replaces it when the content is signed off. Old URLs already redirect — the
