@@ -67,7 +67,10 @@ SELECTS = {
     "clusters": "id,code,name,concern",
     "labs": "id,code,name,overview",
     "objectives": "id,code,name,description",
-    "person_roles": "person_id,kind,label,year",
+    # status is fetched only to gate on it — it is stripped before write, see
+    # the person_roles loop. The service key bypasses RLS, so pr_read's
+    # "status = 'approved'" gate never applies to this query.
+    "person_roles": "person_id,kind,label,year,status",
     "output_authors": "output_id,person_id,role,author_position",
     "project_members": "project_id,person_id,role",
     "lab_members": "lab_id,person_id,is_coordinator",
@@ -247,6 +250,14 @@ def build(raw: Mapping[str, list[Row]], preview: bool) -> dict[str, list[Row]]:
     objectives_by_id = {row["id"]: row for row in objectives}
 
     for join in raw["person_roles"]:
+        # A researcher can type any role onto their own profile; the
+        # protect_person_roles trigger forces it to 'pending' precisely so an
+        # admin sees it first. Without this check the nightly run published it
+        # anyway — someone could put "Director of UNIDCOM" on the institutional
+        # website overnight. This is the only place the approval workflow was
+        # bypassed.
+        if join.get("status") != "approved":
+            continue
         person = people_by_id.get(join.get("person_id"))
         if person:
             person["roles"].append(pick(join, ("kind", "label", "year")))
@@ -416,6 +427,21 @@ def write_json(path: Path, value: Any) -> None:
         handle.write("\n")
 
 
+# Fixtures for the self-check: an empty raw payload with every key build()
+# reads, and one person who passes the publish gate.
+_EMPTY_RAW: dict[str, list[Row]] = {
+    "people": [], "projects": [], "outputs": [], "clusters": [], "labs": [],
+    "objectives": [], "person_roles": [], "output_authors": [],
+    "project_members": [], "lab_members": [], "project_clusters": [],
+    "project_labs": [], "project_objectives": [], "objective_clusters": [],
+    "lab_objectives": [],
+}
+_SELF_CHECK_PERSON: Row = {
+    "id": "p1", "preferred_name": "Test Person", "merged_into": None,
+    "profile_status": "approved", "public_visibility": True,
+}
+
+
 def self_check() -> None:
     assert slugify("João, D'Ávila!") == "joao-d-avila"
     assert slugify("!!!", "123456789") == "12345678"
@@ -435,7 +461,49 @@ def self_check() -> None:
         {"approval_status": "approved", "public_visibility": True, "category": "Operação"},
         preview=True,
     )
+
+    # An unapproved role must never reach the site — see the person_roles loop.
+    assert build(
+        {**_EMPTY_RAW, "people": [_SELF_CHECK_PERSON], "person_roles": [
+            {"person_id": "p1", "kind": "role", "label": "Director", "year": 2026,
+             "status": "pending"},
+        ]},
+        preview=True,
+    )["people"][0]["roles"] == []
+    assert build(
+        {**_EMPTY_RAW, "people": [_SELF_CHECK_PERSON], "person_roles": [
+            {"person_id": "p1", "kind": "role", "label": "Researcher", "year": 2026,
+             "status": "approved"},
+        ]},
+        preview=True,
+    )["people"][0]["roles"] == [{"kind": "role", "label": "Researcher", "year": 2026}]
+
+    # Collapse guard: growth is fine, a >20% drop is not.
+    assert check_no_collapse({"people": 183}, {"people": 184}) == []
+    assert check_no_collapse({"people": 300}, {"people": 184}) == []
+    assert check_no_collapse({"people": 10}, {"people": 184}) == ["people: 184 -> 10"]
+    assert check_no_collapse({"people": 0}, {"people": 184}) == ["people: 184 -> 0"]
+    assert check_no_collapse({"people": 5}, {}) == []
+
     print("self-check passed")
+
+
+def check_no_collapse(
+    counts: Mapping[str, int], previous: Mapping[str, int], tolerance: float = 0.2
+) -> list[str]:
+    """Entity counts that fell by more than `tolerance` since the last run.
+
+    The nightly sync commits and deploys without a human in the loop, so a
+    change that silently empties an entity — a bad approval sweep, a renamed
+    column, a partial fetch — would publish a near-empty site and nobody would
+    know until a researcher noticed their page was gone. Growth is never
+    suspicious; only collapse is.
+    """
+    return [
+        f"{name}: {previous[name]} -> {count}"
+        for name, count in sorted(counts.items())
+        if (was := previous.get(name, 0)) and count < was * (1 - tolerance)
+    ]
 
 
 def main() -> None:
@@ -443,6 +511,11 @@ def main() -> None:
     parser.add_argument("--preview", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--self-check", action="store_true")
+    parser.add_argument(
+        "--allow-collapse",
+        action="store_true",
+        help="write even if an entity count dropped >20%% (use after a deliberate purge)",
+    )
     parser.add_argument("--out", default="data/generated")
     args = parser.parse_args()
 
@@ -467,6 +540,22 @@ def main() -> None:
     if not out.is_absolute():
         out = REPO_ROOT / out
     out.mkdir(parents=True, exist_ok=True)
+
+    meta_path = out / "_meta.json"
+    if meta_path.exists() and not args.allow_collapse:
+        previous = json.loads(meta_path.read_text()).get("counts", {})
+        # Preview and production select different sets, so comparing across a
+        # mode switch is meaningless — the 2026-08-06 go-live legitimately
+        # dropped one person.
+        if previous and json.loads(meta_path.read_text()).get("preview") == args.preview:
+            collapsed = check_no_collapse(counts, previous)
+            if collapsed:
+                raise SystemExit(
+                    "refusing to write: entity counts collapsed since the last run\n  "
+                    + "\n  ".join(collapsed)
+                    + "\nRe-run with --allow-collapse if this is a deliberate purge."
+                )
+
     for entity, records in entities.items():
         assert_whitelist(entity, records, WHITELISTS[entity])
         write_json(out / f"{entity}.json", records)

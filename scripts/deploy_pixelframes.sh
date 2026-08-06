@@ -13,8 +13,8 @@
 set -eu
 
 : "${FTP_PASS:?set FTP_PASS (e.g. FTP_PASS='...' $0)}"
+: "${FTP_USER:?set FTP_USER}"
 FTP_HOST="${FTP_HOST:-pixelframe2027.unidcom-iade.pt}"
-FTP_USER="${FTP_USER:-Senses2021pro_user}"
 FTP_DIR="${FTP_DIR:-/}"
 
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
@@ -29,8 +29,16 @@ hugo --source "$SRC" --minify --gc --cleanDestinationDir
 [ -f "$SRC/public/index.html" ] || { echo "build produced no index.html" >&2; exit 1; }
 
 echo "Mirroring $SRC/public/ -> $FTP_USER@$FTP_HOST:$FTP_DIR"
+# TLS is mandatory and verified. Previously this set `ssl:verify-certificate no`
+# with no ssl-force, so lftp would fall back to plaintext FTP and send USER/PASS
+# in the clear — and even over TLS would accept any certificate, so an active
+# MITM could take a credential that has --delete rights over the document root
+# of a live UNIDCOM domain. If the host cannot do FTPS, that is a reason to move
+# to SFTP, not to turn verification off.
 lftp -u "$FTP_USER,$FTP_PASS" "$FTP_HOST" -e "
-  set ssl:verify-certificate no;
+  set ftp:ssl-force true;
+  set ftp:ssl-protect-data true;
+  set ssl:verify-certificate yes;
   mirror --reverse --delete --verbose --exclude-glob .git* '$SRC/public/' '$FTP_DIR';
   bye
 "

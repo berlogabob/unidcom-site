@@ -293,7 +293,7 @@ FTP mirror, by hand:
 
 ```sh
 hugo --source pixelframes --minify --gc
-FTP_PASS='…' ./scripts/deploy_pixelframes.sh
+FTP_USER='…' FTP_PASS='…' ./scripts/deploy_pixelframes.sh
 ```
 
 It is a separate host (`pixelframe2027.unidcom-iade.pt`) precisely because GitHub Pages allows
