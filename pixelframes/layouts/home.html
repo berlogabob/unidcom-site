@@ -1,0 +1,96 @@
+{{ define "main" }}
+  {{/* Section headings are full-span and every content row adds up to exactly
+       four columns, so sections start at column 1 and the grid never strands a
+       heading mid-row or leaves an empty black slot. Padding comes from
+       .cell-body / .cell > a, never from .cell itself — every cell needs one. */}}
+  <div class="lattice home-lattice">
+
+    <section class="home-opening">
+      <img src="{{ "img/unidcom-logo.png" | relURL }}" alt="UNIDCOM/IADE" width="992" height="187">
+      <div>
+        <p class="eyebrow">Conference · {{ .Params.dates }}</p>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Params.statement }}</p>
+        <p class="meta">{{ .Params.venue }}</p>
+        {{- with .Params.cta_url }}
+          <p><a class="eyebrow status--live" href="{{ . }}">{{ $.Params.cta_label }}</a></p>
+        {{- else }}
+          {{/* ponytail: no registration URL yet, so render a badge rather than a dead link. */}}
+          <p class="eyebrow status--live">{{ .Params.cta_label }}</p>
+        {{- end }}
+      </div>
+    </section>
+
+    <header class="lattice-heading full-span" id="about"><h2>About</h2></header>
+    <section class="cell full-span">
+      <div class="cell-body">
+        <div class="prose">{{ .Content }}</div>
+      </div>
+    </section>
+
+    <header class="lattice-heading full-span" id="hosts"><h2>Hosts</h2></header>
+    {{- range .Params.hosts }}
+      {{/* Same markup shape as the theme's person-cell.html, but the href is an
+           absolute URL to the main site — relURL would resolve against this
+           conference domain and 404. */}}
+      {{- $parts := split .name " " -}}
+      {{- $initials := substr (index $parts 0) 0 1 -}}
+      {{- if gt (len $parts) 1 }}{{ $initials = printf "%s%s" $initials (substr (index $parts (sub (len $parts) 1)) 0 1) }}{{ end -}}
+      <article class="cell person-cell">
+        <a href="{{ printf "%s%s/" site.Params.profile_base .slug }}">
+          <div class="cell-media{{ if not .photo_url }} portrait--placeholder display{{ end }}">
+            {{- with .photo_url }}
+              <img src="{{ . }}" alt="Portrait of {{ $.Title }} host" width="640" height="640" loading="lazy" decoding="async">
+            {{- else }}
+              <span aria-hidden="true">{{ $initials | upper }}</span>
+            {{- end }}
+          </div>
+          <p class="eyebrow">{{ .role }}</p>
+          <h3 class="cell-title">{{ .name }}</h3>
+        </a>
+      </article>
+    {{- end }}
+    <section class="cell">
+      <div class="cell-body">
+        <p class="eyebrow">Guest speakers</p>
+        <p class="display cell-title">To be announced</p>
+      </div>
+    </section>
+
+    <header class="lattice-heading full-span" id="programme"><h2>Programme</h2></header>
+    {{- range .Params.programme }}
+      <article class="cell">
+        <div class="cell-body">
+          <p class="eyebrow">{{ .day }}</p>
+          <ul class="link-list cell-title">
+            {{- range .items }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      </article>
+    {{- end }}
+    <section class="cell">
+      <div class="cell-body">
+        <p class="eyebrow">Full programme</p>
+        <p class="display cell-title">Published after the call for papers closes</p>
+      </div>
+    </section>
+
+    <header class="lattice-heading full-span" id="dates"><h2>Key dates &amp; venue</h2></header>
+    <section class="cell span-2">
+      <div class="cell-body">
+        <p class="eyebrow">Key dates</p>
+        {{ partial "meta-list.html" .Params.key_dates }}
+      </div>
+    </section>
+    <section class="cell span-2" id="venue">
+      <div class="cell-body">
+        <p class="eyebrow">Venue</p>
+        <p class="cell-title">{{ site.Params.address }}</p>
+        {{ with .Params.map_url }}<p><a href="{{ . }}">Open in Maps</a></p>{{ end }}
+      </div>
+    </section>
+
+  </div>
+  {{/* ponytail: no "Organised by" cell here — the footer and the header link
+       already carry the UNIDCOM/IADE credit. */}}
+{{ end }}
