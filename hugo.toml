@@ -20,6 +20,10 @@ removePathAccents = true
   description = "UNIDCOM/IADE — Unidade de Investigação em Design e Comunicação. Research unit in design and communication."
   email = "unidcom@iade.pt"
   address = "Av. D. Carlos I, 4, 1200-649 Lisboa, Portugal"
+  # The researcher portal (RIMS): sign-in, profile editing, support requests.
+  # Separate repo, separate host — menu URLs go through relURL, so links to it
+  # are written out longhand in the templates rather than as menu entries.
+  portal_url = "https://berlogabob.github.io/Unidcom-IADE/"
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -53,3 +57,7 @@ removePathAccents = true
   name = "About"
   url = "/about/"
   weight = 60
+[[menu.main]]
+  name = "For researchers"
+  url = "/researchers/"
+  weight = 70

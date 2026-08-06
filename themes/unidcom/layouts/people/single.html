@@ -37,6 +37,24 @@
     {{- end -}}
     {{ partial "meta-list.html" $identifiers }}
 
+    {{- /* Claim note. Gated on the ORCID iD because the portal's sign-in broker
+           rejects any iD that isn't already in people.orcid — offering the link
+           to someone without one on file is a guaranteed dead end.
+           Links to /login, not /app/profile: every login lands on the Welcome
+           pack, so promising a destination the router will not honour would be
+           false advertising. */ -}}
+    {{ with site.Params.portal_url }}
+      {{ if $person.orcid }}
+        <aside class="claim-note">
+          <p>Are you {{ $name }}? <a href="{{ . }}#/login">Sign in with your ORCID iD</a> to manage this profile, your selected publications, and support requests.</p>
+        </aside>
+      {{ else }}
+        <aside class="claim-note claim-note--muted">
+          <p>Are you {{ $name }}? Portal sign-in needs an ORCID iD on file — contact <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a> to register yours and claim this profile.</p>
+        </aside>
+      {{ end }}
+    {{ end }}
+
     {{ with $person.bio }}
       <section class="section-block">
         <h2>Biography</h2>

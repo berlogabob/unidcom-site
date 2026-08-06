@@ -33,6 +33,12 @@
   }
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +48,22 @@
   list-style: none;
 }
 
+/* Sign-in to the researcher portal. Deliberately outside .nav-list: menu
+   entries are piped through relURL, which mangles an absolute URL, and this
+   one leaves the site. Boxed so it reads as the one action in the header. */
+.nav-login {
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-login:hover,
+.nav-login:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .nav-list a {
   text-decoration: none;
 }
@@ -49,6 +71,27 @@
 .nav-list a:hover,
 .nav-list a[aria-current="page"] {
   text-decoration: underline;
+}
+
+/* "Are you this person?" — the way into the portal from a profile page. */
+.claim-note {
+  max-width: var(--measure);
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 2px solid var(--ink);
+  background: var(--wash);
+}
+
+.claim-note p {
+  margin: 0;
+  font-size: var(--fs-2);
+}
+
+/* No iD on file means no sign-in, so this variant is information, not an
+   invitation — recede it. */
+.claim-note--muted {
+  border-left-color: var(--muted);
+  color: var(--muted);
 }
 
 .nav-toggle {
@@ -336,11 +379,17 @@
   }
 
   .js .site-nav.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .nav-list {
     flex-direction: column;
+  }
+
+  .nav-login {
+    text-align: center;
   }
 
   .bibliography-year {
