@@ -42,13 +42,17 @@ jobs:
           # on the entity files alone and put _meta.json back when they are unchanged.
           # generated_at then reads as "content last changed", which is what the
           # footer colophon should say anyway.
-          if [ -z "$(git status --porcelain -- data/generated ':(exclude)data/generated/_meta.json')" ]; then
+          # assets/img/people too: portraits are vendored into the repo by
+          # vendor_photos(), so a new or removed photo is a content change like
+          # any other. Byte-compared before writing, so an unchanged photo does
+          # not show up here.
+          if [ -z "$(git status --porcelain -- data/generated assets/img/people ':(exclude)data/generated/_meta.json')" ]; then
             git checkout -- data/generated/_meta.json
             echo 'No content changes.'
             exit 0
           fi
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data/generated
+          git add data/generated assets/img/people
           git commit -m 'Sync content from Supabase'
           git push

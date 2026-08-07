@@ -6,6 +6,7 @@ import os
 import re
 import sys
 import unicodedata
+from urllib.parse import urlparse
 from collections import defaultdict
 from collections.abc import Iterable, Mapping, Sequence
 from datetime import datetime, timezone
@@ -22,7 +23,7 @@ PUBLICATION_MACRO_TYPES = frozenset({"Artigos em revistas", "Livros"})
 WHITELISTS = {
     "people": frozenset(
         {
-            "id", "slug", "preferred_name", "bio", "photo_url", "membership_type",
+            "id", "slug", "preferred_name", "bio", "photo", "membership_type",
             "status", "orcid", "ciencia_id", "phd", "integration_year", "roles",
             "publications", "projects", "labs",
         }
@@ -202,9 +203,15 @@ def build(raw: Mapping[str, list[Row]], preview: bool) -> dict[str, list[Row]]:
 
     people = []
     for row in people_rows:
-        record = pick(row, WHITELISTS["people"] - {"slug", "roles", "publications", "projects", "labs"})
+        record = pick(
+            row,
+            WHITELISTS["people"] - {"slug", "roles", "publications", "projects", "labs", "photo"},
+        )
         record.update(
-            slug=person_slugs[row["id"]], roles=[], publications=[], projects=[], labs=[]
+            slug=person_slugs[row["id"]], roles=[], publications=[], projects=[], labs=[],
+            # Carries the Storage URL until vendor_photos() replaces it with a
+            # repo-relative asset path. The URL itself never reaches the site.
+            photo=row.get("photo_url") or "",
         )
         people.append(record)
 
@@ -421,6 +428,66 @@ def fetch_all(url: str, key: str) -> dict[str, list[Row]]:
     return result
 
 
+PHOTO_DIR = "assets/img/people"
+
+
+def vendor_photos(people: list[Row], out_dir: Path) -> tuple[int, int]:
+    """Download each portrait into the repo and rewrite `photo` to a local path.
+
+    The site used to render Supabase Storage URLs directly. Three problems with
+    that, and this fixes all three:
+
+    * The bucket is public, so a photograph was readable regardless of
+      profile_status — the approval gate simply did not apply to it, and the
+      filename is the person's UUID.
+    * The originals are unprocessed, so a 640px card cell could pull a
+      multi-megabyte file, 105 of them on /people/.
+    * "The site never talks to the database" was only true of the pages. The
+      faces still needed Supabase to be up.
+
+    Returns (fetched, skipped). Bytes are compared before writing so an
+    unchanged photo produces no git churn on the nightly run.
+    """
+    import httpx
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    keep: set[str] = set()
+    fetched = skipped = 0
+
+    with httpx.Client(timeout=30, follow_redirects=True) as http:
+        for person in people:
+            url = (person.get("photo") or "").strip()
+            if not url.startswith("http"):
+                continue
+            suffix = Path(urlparse(url).path).suffix.lower() or ".jpg"
+            if suffix not in {".jpg", ".jpeg", ".png", ".webp"}:
+                suffix = ".jpg"
+            name = f"{person['slug']}{suffix}"
+            target = out_dir / name
+            try:
+                body = http.get(url).content
+            except Exception as exc:  # noqa: BLE001 - one bad photo must not fail the sync
+                print(f"  photo failed for {person['slug']}: {exc}")
+                person["photo"] = ""
+                continue
+            if not target.exists() or target.read_bytes() != body:
+                target.write_bytes(body)
+                fetched += 1
+            else:
+                skipped += 1
+            keep.add(name)
+            person["photo"] = f"img/people/{name}"
+
+    # Someone who left, or whose photo was removed, should not leave a file
+    # behind — the repo is public.
+    for existing in out_dir.iterdir():
+        if existing.is_file() and existing.name not in keep:
+            existing.unlink()
+            print(f"  removed stale photo {existing.name}")
+
+    return fetched, skipped
+
+
 def write_json(path: Path, value: Any) -> None:
     with path.open("w", encoding="utf-8") as handle:
         json.dump(value, handle, indent=2, ensure_ascii=False, sort_keys=True)
@@ -555,6 +622,9 @@ def main() -> None:
                     + "\n  ".join(collapsed)
                     + "\nRe-run with --allow-collapse if this is a deliberate purge."
                 )
+
+    fetched, skipped = vendor_photos(entities["people"], REPO_ROOT / PHOTO_DIR)
+    print(f"photos: {fetched} written, {skipped} unchanged")
 
     for entity, records in entities.items():
         assert_whitelist(entity, records, WHITELISTS[entity])

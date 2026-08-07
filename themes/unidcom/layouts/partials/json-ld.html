@@ -20,7 +20,15 @@
     "url" .Permalink
   -}}
   {{- with $person.bio }}{{ $data = merge $data (dict "description" (. | plainify)) }}{{ end -}}
-  {{- with $person.photo_url }}{{ $data = merge $data (dict "image" .) }}{{ end -}}
+  {{- /* Absolute, and pointing at our own processed asset rather than the
+         Supabase Storage original — structured data is consumed off-site. */ -}}
+  {{- with $person.photo }}
+    {{- with resources.Get . }}
+      {{- with .Fill "640x640 Center webp" }}
+        {{- $data = merge $data (dict "image" .Permalink) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   {{- $sameAs := slice -}}
   {{- with $person.orcid -}}
     {{- $url := . -}}

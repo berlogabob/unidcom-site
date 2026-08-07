@@ -7,9 +7,15 @@
   {{- if gt (len $parts) 1 }}{{ $initials = printf "%s%s" $initials (substr (index $parts (sub (len $parts) 1)) 0 1) }}{{ end -}}
   <article>
     <header class="page-head person-head">
-      <div class="person-portrait cell-media{{ if not $person.photo_url }} portrait--placeholder display{{ end }}">
-        {{- with $person.photo_url }}
-          <img src="{{ . }}" alt="Portrait of {{ $name }}" width="640" height="640" decoding="async">
+      {{- /* Photos are vendored into assets/ by scripts/sync.py and processed
+             here, so the page needs neither Supabase nor a full-size original.
+             $portrait is empty when the person has no photo OR the asset is
+             missing, and both fall back to initials. */ -}}
+      {{- $portrait := "" -}}
+      {{- with $person.photo }}{{ with resources.Get . }}{{ $portrait = .Fill "640x640 Center webp" }}{{ end }}{{ end -}}
+      <div class="person-portrait cell-media{{ if not $portrait }} portrait--placeholder display{{ end }}">
+        {{- with $portrait }}
+          <img src="{{ .RelPermalink }}" alt="Portrait of {{ $name }}" width="{{ .Width }}" height="{{ .Height }}" decoding="async">
         {{- else }}
           <span aria-hidden="true">{{ $initials | upper }}</span>
         {{- end }}

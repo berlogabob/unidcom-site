@@ -11,9 +11,11 @@
   data-search="{{ $name }} {{ delimit $roles " " }}"
   data-membership="{{ $person.membership_type | default "" | lower }}">
   <a href="{{ printf "people/%s/" $person.slug | relURL }}">
-    <div class="cell-media{{ if not $person.photo_url }} portrait--placeholder display{{ end }}">
-      {{- with $person.photo_url }}
-        <img src="{{ . }}" alt="Portrait of {{ $name }}" width="640" height="640" loading="lazy" decoding="async">
+    {{- $portrait := "" -}}
+    {{- with $person.photo }}{{ with resources.Get . }}{{ $portrait = .Fill "320x320 Center webp" }}{{ end }}{{ end -}}
+    <div class="cell-media{{ if not $portrait }} portrait--placeholder display{{ end }}">
+      {{- with $portrait }}
+        <img src="{{ .RelPermalink }}" alt="Portrait of {{ $name }}" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async">
       {{- else }}
         <span aria-hidden="true">{{ $initials | upper }}</span>
       {{- end }}
