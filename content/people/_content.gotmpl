@@ -1,7 +1,17 @@
+{{/* Old WordPress URLs -> the person's page here. Built once from the frozen
+     export (scripts/out/wp_profiles_review.json in the portal repo) and
+     committed as data/wp_aliases.json; the old site is gone, so the map does
+     not change. Without these, every inbound link, citation and bookmark to a
+     researcher's page on unidcom-iade.pt 404s after cutover — and slugs did
+     move, e.g. amadeu-quelhas-martins -> amadeu-martins. */}}
+{{ $aliases := hugo.Data.wp_aliases | default dict }}
 {{ with hugo.Data.generated.people }}
   {{ range . }}
     {{ $title := default .name .preferred_name }}
     {{ $page := dict "kind" "page" "path" .slug "title" $title "params" . }}
+    {{ with index $aliases .slug }}
+      {{ $page = merge $page (dict "aliases" .) }}
+    {{ end }}
     {{ $.AddPage $page }}
   {{ end }}
 {{ end }}
