@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write   # to dispatch deploy.yml — see the note at the bottom
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
@@ -56,3 +57,14 @@ jobs:
           git add data/generated assets/img/people
           git commit -m 'Sync content from Supabase'
           git push
+
+          # A push made with GITHUB_TOKEN does NOT trigger other workflows —
+          # GitHub suppresses it to prevent recursion. This file and the README
+          # both used to claim the commit "automatically triggers the deploy";
+          # it never did. Five nightly sync commits landed on main between
+          # 2026-07-28 and 2026-08-07 and not one of them deployed, so the site
+          # only ever updated when a human happened to push afterwards.
+          # Dispatching explicitly is allowed with actions: write.
+          gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

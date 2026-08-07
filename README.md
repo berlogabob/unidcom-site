@@ -104,7 +104,14 @@ by year below.
 
 ## Refreshing content from the database
 
-Automatic: `.github/workflows/sync.yml` runs nightly at 04:00 UTC and commits any changes.
+Automatic: `.github/workflows/sync.yml` runs nightly at 04:00 UTC, commits any
+changes, and then **explicitly dispatches** `deploy.yml`.
+
+That last step is not decoration. A push made with `GITHUB_TOKEN` does not
+trigger other workflows — GitHub suppresses it to prevent recursion — so the
+sync commit never deployed on its own. Between 2026-07-28 and 2026-08-07 five
+nightly sync commits landed on `main` and none of them published; the site only
+updated when a human happened to push afterwards. Fixed 2026-08-07.
 
 Manually, from the repo:
 

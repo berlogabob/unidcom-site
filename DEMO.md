@@ -150,8 +150,9 @@ not Public.
 > The site went live on 6 August. Ticking *preview* republishes unapproved records and puts
 > `noindex` back on the whole site — do not tick it during a demo.
 
-Leave it running and go straight to step 5. It commits the changed data, which automatically
-triggers the deploy.
+Leave it running and go straight to step 5. It commits the changed data and then dispatches
+the deploy, so watch for **two** runs in the Actions tab — the sync, then the deploy. Together
+they take about three minutes.
 
 **Fallback, if the workflow errors:**
 
