@@ -8,7 +8,7 @@
 
 baseURL = "https://pixelframe2027.unidcom-iade.pt/"
 locale = "en-gb"
-title = "PixelFrames 2027"
+title = "PixelFrame 2027"
 theme = "unidcom"
 themesDir = "../themes"
 enableRobotsTXT = true
@@ -17,12 +17,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "PixelFrames 2027 — [one-line conference description TBD]. Organised by UNIDCOM/IADE, Lisbon."
-  email = "unidcom@iade.pt"
-  address = "IADE, Universidade Europeia — Av. D. Carlos I, 4, 1200-649 Lisboa, Portugal"
-  # ponytail: one place to change when the main site moves to a custom domain.
-  main_site = "https://berlogabob.github.io/unidcom-site/"
-  profile_base = "https://berlogabob.github.io/unidcom-site/people/"
+  description = "PixelFrame — International Conference in Animation, Videogames and Visual Narratives. Lisbon, 5-6 May 2027."
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -1,96 +1,56 @@
 {{ define "main" }}
-  {{/* Section headings are full-span and every content row adds up to exactly
-       four columns, so sections start at column 1 and the grid never strands a
-       heading mid-row or leaves an empty black slot. Padding comes from
-       .cell-body / .cell > a, never from .cell itself — every cell needs one. */}}
-  <div class="lattice home-lattice">
+  {{/* Poster hero: the artwork (red band, pixel logo, street photo, flying
+       characters, "keynotes/masterclasses") is one composite image rendered
+       from CARTAZ.psd with the red-band text layers hidden. The three text
+       blocks below are live HTML positioned in image coordinates and rotated
+       -14.05deg, exactly as in the PSD. Sizes/positions use cqw so they track
+       the image at any viewport width. */}}
+  <section class="poster" aria-label="PixelFrame 2027 poster">
+    <img class="poster-art" src="{{ "img/hero.jpg" | relURL }}"
+         alt="{{ .Params.poster_alt }}" width="1800" height="2191" fetchpriority="high">
+    <h1 class="poster-text tagline">{{ range .Params.tagline_lines }}{{ . }}<br>{{ end }}</h1>
+    <p class="poster-text where-when">{{ range .Params.datePlace_lines }}{{ . }}<br>{{ end }}</p>
+    <p class="poster-text call">{{ range .Params.call_lines }}{{ . }}<br>{{ end }}</p>
+  </section>
 
-    <section class="home-opening">
-      <img src="{{ "img/unidcom-logo.png" | relURL }}" alt="UNIDCOM/IADE" width="992" height="187">
-      <div>
-        <p class="eyebrow">Conference · {{ .Params.dates }}</p>
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Params.statement }}</p>
-        <p class="meta">{{ .Params.venue }}</p>
-        {{- with .Params.cta_url }}
-          <p><a class="eyebrow status--live" href="{{ . }}">{{ $.Params.cta_label }}</a></p>
-        {{- else }}
-          {{/* ponytail: no registration URL yet, so render a badge rather than a dead link. */}}
-          <p class="eyebrow status--live">{{ .Params.cta_label }}</p>
-        {{- end }}
-      </div>
-    </section>
-
-    <header class="lattice-heading full-span" id="about"><h2>About</h2></header>
-    <section class="cell full-span">
-      <div class="cell-body">
-        <div class="prose">{{ .Content }}</div>
-      </div>
-    </section>
-
-    <header class="lattice-heading full-span" id="hosts"><h2>Hosts</h2></header>
-    {{- range .Params.hosts }}
-      {{/* Same markup shape as the theme's person-cell.html, but the href is an
-           absolute URL to the main site — relURL would resolve against this
-           conference domain and 404. */}}
-      {{- $parts := split .name " " -}}
-      {{- $initials := substr (index $parts 0) 0 1 -}}
-      {{- if gt (len $parts) 1 }}{{ $initials = printf "%s%s" $initials (substr (index $parts (sub (len $parts) 1)) 0 1) }}{{ end -}}
-      <article class="cell person-cell">
-        <a href="{{ printf "%s%s/" site.Params.profile_base .slug }}">
-          <div class="cell-media{{ if not .photo_url }} portrait--placeholder display{{ end }}">
-            {{- with .photo_url }}
-              <img src="{{ . }}" alt="Portrait of {{ $.Title }} host" width="640" height="640" loading="lazy" decoding="async">
-            {{- else }}
-              <span aria-hidden="true">{{ $initials | upper }}</span>
-            {{- end }}
-          </div>
-          <p class="eyebrow">{{ .role }}</p>
-          <h3 class="cell-title">{{ .name }}</h3>
-        </a>
-      </article>
-    {{- end }}
-    <section class="cell">
-      <div class="cell-body">
-        <p class="eyebrow">Guest speakers</p>
-        <p class="display cell-title">To be announced</p>
-      </div>
-    </section>
-
-    <header class="lattice-heading full-span" id="programme"><h2>Programme</h2></header>
-    {{- range .Params.programme }}
-      <article class="cell">
-        <div class="cell-body">
-          <p class="eyebrow">{{ .day }}</p>
-          <ul class="link-list cell-title">
-            {{- range .items }}<li>{{ . }}</li>{{ end }}
-          </ul>
-        </div>
-      </article>
-    {{- end }}
-    <section class="cell">
-      <div class="cell-body">
-        <p class="eyebrow">Full programme</p>
-        <p class="display cell-title">Published after the call for papers closes</p>
-      </div>
-    </section>
-
-    <header class="lattice-heading full-span" id="dates"><h2>Key dates &amp; venue</h2></header>
-    <section class="cell span-2">
-      <div class="cell-body">
-        <p class="eyebrow">Key dates</p>
-        {{ partial "meta-list.html" .Params.key_dates }}
-      </div>
-    </section>
-    <section class="cell span-2" id="venue">
-      <div class="cell-body">
-        <p class="eyebrow">Venue</p>
-        <p class="cell-title">{{ site.Params.address }}</p>
-        {{ with .Params.map_url }}<p><a href="{{ . }}">Open in Maps</a></p>{{ end }}
-      </div>
-    </section>
-
-  </div>
-  {{/* ponytail: no "Organised by" cell here — the footer and the header link
-       already carry the UNIDCOM/IADE credit. */}}
+  <footer class="poster-footer">
+    <div class="footer-grid">
+      <section>
+        <h2>Contact us</h2>
+        {{ range .Params.contacts }}
+          <h3>{{ .label }}</h3>
+          <p><a href="mailto:{{ .email }}">{{ .email }}</a></p>
+        {{ end }}
+      </section>
+      {{ range .Params.addresses }}
+        <section>
+          <h3>{{ .label }}</h3>
+          <p>{{ range .lines }}{{ . }}<br>{{ end }}</p>
+        </section>
+      {{ end }}
+      <section class="connect">
+        <h2>Connect with us</h2>
+        {{/* ponytail: icons only, no hrefs — the poster ships no social URLs.
+             Wrap in <a> once the accounts exist. */}}
+        <p class="social">
+          <svg viewBox="0 0 24 24" role="img" aria-label="Instagram"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.15 3.23-1.66 4.77-4.92 4.92-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.1 15.64 2.1 15.26 2.1 12s0-3.6.08-4.86C2.33 3.91 3.84 2.42 7.1 2.27 8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-2.4.1-3.12.83-3.23 3.23-.07 1.24-.07 1.6-.07 4.7s0 3.46.07 4.7c.1 2.4.82 3.12 3.23 3.23 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c2.4-.1 3.12-.83 3.23-3.23.07-1.24.07-1.6.07-4.7s0-3.46-.07-4.7c-.1-2.4-.83-3.12-3.23-3.23-1.24-.07-1.6-.07-4.74-.07zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm5.15-3.2a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+          <svg viewBox="0 0 24 24" role="img" aria-label="Facebook"><path fill="currentColor" d="M13.5 21.9v-8.4h2.8l.42-3.26H13.5V8.16c0-.94.26-1.59 1.62-1.59h1.72v-2.9c-.3-.04-1.32-.13-2.5-.13-2.48 0-4.18 1.51-4.18 4.3v2.4H7.35v3.26h2.8v8.4z"/></svg>
+        </p>
+      </section>
+    </div>
+    <div class="footer-grid logos">
+      <section>
+        <h2>Organisation</h2>
+        <img src="{{ "img/logos-organisation.jpg" | relURL }}" alt="IPCA, Escola Superior de Design, ID+ Research Institute for Design Media and Culture, CECS" width="700" height="166" loading="lazy">
+      </section>
+      <section>
+        <h2>Sponsors</h2>
+        <img src="{{ "img/logos-sponsors.jpg" | relURL }}" alt="Santander; FCT — Fundação para a Ciência e a Tecnologia" width="700" height="171" loading="lazy">
+      </section>
+      <section>
+        <h2>Partners</h2>
+        <img src="{{ "img/logos-partners.jpg" | relURL }}" alt="Município de Barcelos, Theatro Gil Vicente, Digital Decor, SUBA — the growth agency" width="900" height="175" loading="lazy">
+      </section>
+    </div>
+  </footer>
 {{ end }}

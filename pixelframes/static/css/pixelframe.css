@@ -1,0 +1,158 @@
+/* PixelFrame 2027 landing page.
+   Palette and metrics sampled from RAW_pixel/CARTAZ.psd / Poster_main.jpg:
+   red #de0000, footer black #161616, all display text rotated -14.05deg.
+   Fonts: URW DIN SemiCond — licensed family shipped with the design files. */
+
+@font-face {
+  font-family: "URW DIN SemiCond";
+  src: url("../fonts/urwdin-semicond-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "URW DIN SemiCond";
+  src: url("../fonts/urwdin-semicond-demi.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "URW DIN SemiCond";
+  src: url("../fonts/urwdin-semicond-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "URW DIN SemiCond";
+  src: url("../fonts/urwdin-semicond-black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #161616;
+  color: #fff;
+  font-family: "URW DIN SemiCond", "Arial Narrow", sans-serif;
+}
+
+/* ---- Poster hero ------------------------------------------------------- */
+
+.poster {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  background: #de0000;
+}
+
+.poster-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Positions/sizes are the PSD text-layer metrics converted to percentages of
+   the 3288x4003 canvas; cqw font sizes keep them glued to the artwork.
+   The PSD text transform tilts the baseline -14.05deg while keeping stems
+   vertical (x-basis rotated, y-basis untouched) — hence matrix(), not
+   rotate(). All display text is URW DIN SemiCond Black. */
+.poster-text {
+  position: absolute;
+  transform: matrix(0.9832, -0.2461, 0, 1, 0, 0);
+  transform-origin: left top;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: 900;
+}
+
+.tagline {
+  left: 40.18%;
+  top: 6.96%;
+  font-size: 3.89cqw;
+  line-height: 0.973;
+}
+
+/* Right-aligned in the PSD (Justification 1) — anchor the right edge and
+   shear around it so the staircase of LISBON / 5-6 MAY / 2027 matches. */
+.where-when {
+  right: 10.2%;
+  top: 1.82%;
+  font-size: 7.96cqw;
+  line-height: 0.951;
+  text-align: right;
+  transform-origin: right top;
+}
+
+.call {
+  left: 79.08%;
+  top: 23.53%;
+  font-size: 4.75cqw;
+  line-height: 0.988;
+}
+
+/* ---- Footer ------------------------------------------------------------ */
+
+.poster-footer {
+  background: #161616;
+  padding: 4rem clamp(1rem, 4vw, 5rem) 3rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.1fr 1.1fr 0.9fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-grid.logos {
+  grid-template-columns: 1.3fr 1.1fr 1.4fr;
+  margin-top: 4rem;
+  align-items: start;
+}
+
+.poster-footer h2 {
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.poster-footer h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.2rem 0 0.2rem;
+}
+
+/* Address columns have no h2 — keep their h3 level with the contact column's
+   first entry (h2 1.15rem * 1.2 line + 1.5rem margin ≈ 2.9rem). */
+.footer-grid > section > h3:first-child { margin-top: 2.9rem; }
+
+.poster-footer a {
+  color: #fff;
+  text-underline-offset: 3px;
+}
+
+.social { margin-top: 2.9rem; display: flex; gap: 1.4rem; }
+.social svg { width: 26px; height: 26px; }
+
+/* min-width:0 lets 1fr tracks shrink below the logo images' max-width on
+   narrow screens — without it the grid blows out and widens the page. */
+.footer-grid > section { min-width: 0; }
+
+.footer-grid.logos img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .footer-grid, .footer-grid.logos { grid-template-columns: 1fr; gap: 0.5rem; }
+  .footer-grid > section > h3:first-child { margin-top: 1.2rem; }
+  .social { margin-top: 1.2rem; }
+  .footer-grid.logos section { margin-top: 2rem; }
+}

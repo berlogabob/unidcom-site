@@ -1,0 +1,19 @@
+{{/* Standalone skeleton for the PixelFrame landing page. Overrides the unidcom
+     theme's baseof so none of the research-site chrome (header, nav, lattice
+     CSS) leaks into the poster design. */}}
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.Title }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="stylesheet" href="{{ "css/pixelframe.css" | relURL }}">
+  <link rel="preload" href="{{ "fonts/urwdin-semicond-black.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/urwdin-semicond-bold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
