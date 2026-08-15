@@ -25,6 +25,15 @@ jobs:
           extended: true
       # data/generated/ is committed, so the build needs no database credentials.
       - run: hugo --minify --gc
+      # Test copy of the PixelFrame conference site under /pixelframe/. The
+      # real deploy is the FTP script to pixelframe2027.unidcom-iade.pt; this
+      # preview builds with params.preview=true so it carries a noindex meta
+      # and never competes with the real domain in search.
+      - run: >
+          HUGO_PARAMS_preview=true
+          hugo --source pixelframes --minify --gc
+          --baseURL "https://berlogabob.github.io/unidcom-site/pixelframe/"
+          --destination "$GITHUB_WORKSPACE/public/pixelframe"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
