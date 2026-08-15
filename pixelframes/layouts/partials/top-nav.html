@@ -3,9 +3,12 @@
 <nav class="top-nav" aria-label="Main navigation">
   {{- $page := . }}
   {{- range site.Params.nav }}
-    {{- $href := .url | relURL }}
+    {{- /* relURL treats a leading-slash path as host-relative, which drops the
+           baseURL subpath on the Pages preview — so trim it first. */}}
+    {{- $url := strings.TrimPrefix "/" .url | relURL }}
+    {{- $href := $url }}
     {{- if and $page.IsHome .anchor }}{{ $href = printf "#%s" .anchor }}{{ end }}
-    {{- $active := or (and $page.IsHome (eq .url "/")) (eq $page.RelPermalink (.url | relURL)) }}
+    {{- $active := or (and $page.IsHome (eq .url "/")) (eq $page.RelPermalink $url) }}
     <a {{ if $active }}class="active" {{ end }}href="{{ $href }}">{{ .label }}</a>
   {{- end }}
 </nav>
