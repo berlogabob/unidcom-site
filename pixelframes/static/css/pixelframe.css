@@ -372,3 +372,23 @@ p + p { margin-top: 1.18cqw; }
 /* The home + squares are links now. */
 a.plus { display: block; }
 a.plus:hover { background: #f00; }
+
+/* ---- Full-screen poster page -------------------------------------------- */
+/* The poster always fits the viewport height (no scroll): width is capped by
+   both the viewport width and the width that makes the 3288:4003 artwork
+   exactly viewport-tall. The inner .poster keeps container-type, so all the
+   cqw-based text overlay scales with whatever size wins. */
+
+.poster-viewport {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #161616;
+}
+
+.poster-viewport .poster {
+  width: min(100vw, calc(100dvh * 3288 / 4003));
+}
