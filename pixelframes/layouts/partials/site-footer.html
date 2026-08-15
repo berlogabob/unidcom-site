@@ -1,0 +1,42 @@
+{{/* Black footer from the poster/site design; shared by the home page and
+     the /poster/ page. Content comes from the calling page's front matter. */}}
+<footer class="poster-footer">
+  <div class="footer-grid">
+    <section>
+      <h2>Contact us</h2>
+      {{ range .Params.contacts }}
+        <h3>{{ .label }}</h3>
+        <p><a href="mailto:{{ .email }}">{{ .email }}</a></p>
+      {{ end }}
+    </section>
+    {{ range .Params.addresses }}
+      <section>
+        <h3>{{ .label }}</h3>
+        <p>{{ range .lines }}{{ . }}<br>{{ end }}</p>
+      </section>
+    {{ end }}
+    <section class="connect">
+      <h2>Connect with us</h2>
+      {{/* ponytail: icons only, no hrefs — the design ships no social URLs.
+           Wrap in <a> once the accounts exist. */}}
+      <p class="social">
+        <svg viewBox="0 0 24 24" role="img" aria-label="Instagram"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.15 3.23-1.66 4.77-4.92 4.92-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.1 15.64 2.1 15.26 2.1 12s0-3.6.08-4.86C2.33 3.91 3.84 2.42 7.1 2.27 8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-2.4.1-3.12.83-3.23 3.23-.07 1.24-.07 1.6-.07 4.7s0 3.46.07 4.7c.1 2.4.82 3.12 3.23 3.23 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c2.4-.1 3.12-.83 3.23-3.23.07-1.24.07-1.6.07-4.7s0-3.46-.07-4.7c-.1-2.4-.83-3.12-3.23-3.23-1.24-.07-1.6-.07-4.74-.07zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm5.15-3.2a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+        <svg viewBox="0 0 24 24" role="img" aria-label="Facebook"><path fill="currentColor" d="M13.5 21.9v-8.4h2.8l.42-3.26H13.5V8.16c0-.94.26-1.59 1.62-1.59h1.72v-2.9c-.3-.04-1.32-.13-2.5-.13-2.48 0-4.18 1.51-4.18 4.3v2.4H7.35v3.26h2.8v8.4z"/></svg>
+      </p>
+    </section>
+  </div>
+  <div class="footer-grid logos">
+    <section>
+      <h2>Organisation</h2>
+      <img src="{{ "img/logos-organisation.jpg" | relURL }}" alt="IPCA, Escola Superior de Design, ID+ Research Institute for Design Media and Culture, CECS" width="700" height="166" loading="lazy">
+    </section>
+    <section>
+      <h2>Sponsors</h2>
+      <img src="{{ "img/logos-sponsors.jpg" | relURL }}" alt="Santander; FCT — Fundação para a Ciência e a Tecnologia" width="700" height="171" loading="lazy">
+    </section>
+    <section>
+      <h2>Partners</h2>
+      <img src="{{ "img/logos-partners.jpg" | relURL }}" alt="Município de Barcelos, Theatro Gil Vicente, Digital Decor, SUBA — the growth agency" width="900" height="175" loading="lazy">
+    </section>
+  </div>
+</footer>

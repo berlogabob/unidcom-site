@@ -156,3 +156,175 @@ body {
   .social { margin-top: 1.2rem; }
   .footer-grid.logos section { margin-top: 2rem; }
 }
+
+/* ---- Site page (SITE_V1.psd) ------------------------------------------- */
+/* Canvas: 4000px wide; band image is the 4000x1700 top crop. Positions are
+   PSD metrics as percentages, font sizes in cqw. Band red is #ff0000 here
+   (the poster uses #de0000 — they differ in the source files too). */
+
+.band {
+  position: relative;
+  background: #f00;
+}
+
+.band-canvas {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+}
+
+.band-art { display: block; width: 100%; height: auto; }
+
+.top-nav {
+  position: absolute;
+  z-index: 1;
+  left: 43.95%;
+  top: 4.94cqw; /* 84/1700 of band height = 4.94% of width * 1700/4000 */
+  display: flex;
+  width: 45.1cqw;
+  justify-content: space-between;
+  font-size: 0.885cqw;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* nav is a sibling of .band-canvas, so cqw resolves against .band; give the
+   band its own containment for that. */
+.band { container-type: inline-size; }
+.top-nav { top: 2.1cqw; }
+
+.top-nav a, .top-nav span { color: #fff; text-decoration: none; }
+.top-nav a.active { border-bottom: 0.16cqw solid #fff; padding-bottom: 0.5cqw; }
+.top-nav a:hover { border-bottom: 0.16cqw solid #fff; padding-bottom: 0.5cqw; }
+
+.band-text {
+  position: absolute;
+  transform: matrix(0.9832, -0.2461, 0, 1, 0, 0);
+  transform-origin: left top;
+  text-transform: uppercase;
+  color: #f3f3f3;
+  white-space: nowrap;
+  font-weight: 900;
+}
+
+.band-tagline {
+  left: 38.93%;
+  top: 24.14%;
+  font-size: 3.17cqw;
+  line-height: 0.973;
+}
+
+.band-when {
+  right: 19.7%;
+  top: 14.85%;
+  font-size: 6.14cqw;
+  line-height: 0.951;
+  text-align: right;
+  transform-origin: right top;
+  text-shadow: 0.25cqw 0.45cqw 0 #000;
+}
+
+.band-open {
+  right: 35.72%;
+  top: 54.82%;
+  font-size: 3.665cqw;
+  line-height: 0.988;
+  text-align: right;
+  transform-origin: right top;
+}
+
+/* ---- Content sections --------------------------------------------------- */
+
+.site-main {
+  background: #fff;
+  color: #000;
+  container-type: inline-size;
+  padding-bottom: 6cqw;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 10.85% 35.3% 1fr 35.2% 10.9%;
+}
+
+.row-body { grid-column: 2; }
+
+.row-media {
+  grid-column: 4;
+  width: 100%;
+  height: auto;
+  align-self: start;
+}
+
+#about { padding-top: 3.4cqw; }
+#call-for-papers { padding-top: 7.75cqw; }
+#registration { padding-top: 5.7cqw; }
+
+.red-box {
+  display: inline-flex;
+  align-items: center;
+  background: #f00;
+  color: #fff;
+  font-size: 4.13cqw;
+  font-weight: 900;
+  height: 6.08cqw;
+  padding: 0 1.5cqw 0 1.18cqw;
+}
+
+.site-main p {
+  font-size: 1.18cqw;
+  line-height: 1.05;
+  text-align: justify;
+}
+
+.lead { margin-top: 2.98cqw; }
+.lead + p { margin-top: 1.18cqw; }
+p + p { margin-top: 1.18cqw; }
+
+.dates { margin-top: 2.9cqw; text-align: left !important; }
+
+.plus {
+  position: relative;
+  width: 2.83cqw;
+  height: 2.83cqw;
+  background: #000;
+  margin-top: 1.4cqw;
+}
+.plus::before, .plus::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  translate: -50% -50%;
+  background: #fff;
+  width: 55%; height: 18%;
+}
+.plus::after { width: 18%; height: 55%; }
+
+/* The flying man overlaps the call-for-papers section above, per the design. */
+.man {
+  grid-column: 4 / 6;
+  width: 36.2cqw;
+  margin-left: 6.8cqw;
+  margin-top: -9.7cqw;
+}
+
+@media (max-width: 720px) {
+  .top-nav {
+    position: static;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+  .top-nav a.active, .top-nav a:hover { border-bottom-width: 2px; padding-bottom: 2px; }
+
+  .row { display: block; padding: 0 1rem; }
+  #about, #call-for-papers, #registration { padding-top: 2rem; }
+  .site-main { padding-bottom: 2rem; }
+  .site-main p { font-size: 0.95rem; line-height: 1.35; }
+  .red-box { font-size: 1.5rem; height: auto; padding: 0.4rem 1rem; }
+  .lead, .dates { margin-top: 1rem; }
+  .plus { width: 28px; height: 28px; margin-top: 1rem; }
+  .row-media { width: 100%; margin-top: 1.5rem; }
+  .man { width: 70%; margin: 1rem 0 0 auto; display: block; }
+}

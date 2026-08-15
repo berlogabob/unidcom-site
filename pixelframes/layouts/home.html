@@ -1,56 +1,65 @@
 {{ define "main" }}
-  {{/* Poster hero: the artwork (red band, pixel logo, street photo, flying
-       characters, "keynotes/masterclasses") is one composite image rendered
-       from CARTAZ.psd with the red-band text layers hidden. The three text
-       blocks below are live HTML positioned in image coordinates and rotated
-       -14.05deg, exactly as in the PSD. Sizes/positions use cqw so they track
-       the image at any viewport width. */}}
-  <section class="poster" aria-label="PixelFrame 2027 poster">
-    <img class="poster-art" src="{{ "img/hero.jpg" | relURL }}"
-         alt="{{ .Params.poster_alt }}" width="1800" height="2191" fetchpriority="high">
-    <h1 class="poster-text tagline">{{ range .Params.tagline_lines }}{{ . }}<br>{{ end }}</h1>
-    <p class="poster-text where-when">{{ range .Params.datePlace_lines }}{{ . }}<br>{{ end }}</p>
-    <p class="poster-text call">{{ range .Params.call_lines }}{{ . }}<br>{{ end }}</p>
-  </section>
+  {{/* Full site page rebuilt from RAW_pixel/SITE_V1.psd. The red band is a
+       composite of the PSD with its text layers hidden (band.jpg); the nav
+       and the three text blocks are live HTML positioned with the PSD's own
+       metrics (see .band-* rules). Sections below are normal flow. */}}
+  <header class="band" id="top">
+    <nav class="top-nav" aria-label="Main navigation">
+      {{- range .Params.nav }}
+        {{- if .href }}
+          <a {{ if .active }}class="active" {{ end }}href="{{ .href }}">{{ .label }}</a>
+        {{- else }}
+          {{/* ponytail: no page for this item yet — same look, not a dead link. */}}
+          <span>{{ .label }}</span>
+        {{- end }}
+      {{- end }}
+    </nav>
+    <div class="band-canvas">
+      <img class="band-art" src="{{ "img/band.jpg" | relURL }}" alt="{{ .Params.band_alt }}"
+           width="1800" height="765" fetchpriority="high">
+      <h1 class="band-text band-tagline">{{ range .Params.tagline_lines }}{{ . }}<br>{{ end }}</h1>
+      <p class="band-text band-when">{{ range .Params.when_lines }}{{ . }}<br>{{ end }}</p>
+      <p class="band-text band-open">{{ range .Params.open_lines }}{{ . }}<br>{{ end }}</p>
+    </div>
+  </header>
 
-  <footer class="poster-footer">
-    <div class="footer-grid">
-      <section>
-        <h2>Contact us</h2>
-        {{ range .Params.contacts }}
-          <h3>{{ .label }}</h3>
-          <p><a href="mailto:{{ .email }}">{{ .email }}</a></p>
-        {{ end }}
-      </section>
-      {{ range .Params.addresses }}
-        <section>
-          <h3>{{ .label }}</h3>
-          <p>{{ range .lines }}{{ . }}<br>{{ end }}</p>
-        </section>
-      {{ end }}
-      <section class="connect">
-        <h2>Connect with us</h2>
-        {{/* ponytail: icons only, no hrefs — the poster ships no social URLs.
-             Wrap in <a> once the accounts exist. */}}
-        <p class="social">
-          <svg viewBox="0 0 24 24" role="img" aria-label="Instagram"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.15 3.23-1.66 4.77-4.92 4.92-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.1 15.64 2.1 15.26 2.1 12s0-3.6.08-4.86C2.33 3.91 3.84 2.42 7.1 2.27 8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-2.4.1-3.12.83-3.23 3.23-.07 1.24-.07 1.6-.07 4.7s0 3.46.07 4.7c.1 2.4.82 3.12 3.23 3.23 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c2.4-.1 3.12-.83 3.23-3.23.07-1.24.07-1.6.07-4.7s0-3.46-.07-4.7c-.1-2.4-.83-3.12-3.23-3.23-1.24-.07-1.6-.07-4.74-.07zm0 3.06a4.94 4.94 0 1 1 0 9.88 4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm5.15-3.2a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
-          <svg viewBox="0 0 24 24" role="img" aria-label="Facebook"><path fill="currentColor" d="M13.5 21.9v-8.4h2.8l.42-3.26H13.5V8.16c0-.94.26-1.59 1.62-1.59h1.72v-2.9c-.3-.04-1.32-.13-2.5-.13-2.48 0-4.18 1.51-4.18 4.3v2.4H7.35v3.26h2.8v8.4z"/></svg>
+  <main class="site-main">
+    <section class="row" id="about">
+      <div class="row-body">
+        <h2 class="red-box">About us</h2>
+        <p class="lead"><strong>{{ .Params.about.subhead_bold }}</strong><br>{{ .Params.about.subhead }}</p>
+        {{ range .Params.about.paragraphs }}<p>{{ . }}</p>{{ end }}
+        <div class="plus" aria-hidden="true"></div>
+      </div>
+      <img class="row-media" src="{{ "img/about-campus.jpg" | relURL }}"
+           alt="IADE Oriente Green Campus building, Lisbon" width="1000" height="1175" loading="lazy">
+    </section>
+
+    <section class="row" id="call-for-papers">
+      <div class="row-body">
+        <h2 class="red-box">Call for papers</h2>
+        <p class="dates">
+          {{- range .Params.call_dates }}
+            <strong>{{ .label }}</strong> {{ .value }}<br>
+          {{- end }}
         </p>
-      </section>
-    </div>
-    <div class="footer-grid logos">
-      <section>
-        <h2>Organisation</h2>
-        <img src="{{ "img/logos-organisation.jpg" | relURL }}" alt="IPCA, Escola Superior de Design, ID+ Research Institute for Design Media and Culture, CECS" width="700" height="166" loading="lazy">
-      </section>
-      <section>
-        <h2>Sponsors</h2>
-        <img src="{{ "img/logos-sponsors.jpg" | relURL }}" alt="Santander; FCT — Fundação para a Ciência e a Tecnologia" width="700" height="171" loading="lazy">
-      </section>
-      <section>
-        <h2>Partners</h2>
-        <img src="{{ "img/logos-partners.jpg" | relURL }}" alt="Município de Barcelos, Theatro Gil Vicente, Digital Decor, SUBA — the growth agency" width="900" height="175" loading="lazy">
-      </section>
-    </div>
-  </footer>
+        <div class="plus" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="row" id="registration">
+      <div class="row-body">
+        <h2 class="red-box">Registration</h2>
+        <p class="dates">
+          {{- range .Params.reg_dates }}
+            {{- if .bold }}<strong>{{ .label }} {{ .value }}</strong>{{ else }}<strong>{{ .label }}</strong> {{ .value }}{{ end }}<br>
+          {{- end }}
+        </p>
+      </div>
+      <img class="row-media man" src="{{ "img/flying-man.webp" | relURL }}"
+           alt="Illustrated man in a blue suit flying with a pixel jetpack" width="900" height="703" loading="lazy">
+    </section>
+  </main>
+
+  {{ partial "site-footer.html" . }}
 {{ end }}

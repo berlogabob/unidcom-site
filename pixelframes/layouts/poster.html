@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{/* Poster page: the artwork (red band, pixel logo, street photo, flying
+       characters, "keynotes/masterclasses") is one composite image rendered
+       from CARTAZ.psd with the red-band text layers hidden. The three text
+       blocks below are live HTML using the PSD's own metrics — see the
+       .poster-text rules in pixelframe.css. */}}
+  <section class="poster" aria-label="PixelFrame 2027 poster">
+    <img class="poster-art" src="{{ "img/hero.jpg" | relURL }}"
+         alt="{{ .Params.poster_alt }}" width="1800" height="2191" fetchpriority="high">
+    <h1 class="poster-text tagline">{{ range .Params.tagline_lines }}{{ . }}<br>{{ end }}</h1>
+    <p class="poster-text where-when">{{ range .Params.datePlace_lines }}{{ . }}<br>{{ end }}</p>
+    <p class="poster-text call">{{ range .Params.call_lines }}{{ . }}<br>{{ end }}</p>
+  </section>
+  {{ partial "site-footer.html" . }}
+{{ end }}
