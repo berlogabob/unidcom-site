@@ -21,3 +21,30 @@ disableKinds = ["taxonomy", "term"]
 
 [markup.goldmark.renderer]
   unsafe = true
+
+# Site nav. On the home page items with an anchor scroll to their section;
+# items without one (and every item on subpages) navigate to `url`.
+[[params.nav]]
+  label = "Home"
+  anchor = "top"
+  url = "/"
+[[params.nav]]
+  label = "About us"
+  anchor = "about"
+  url = "/about/"
+[[params.nav]]
+  label = "Call for papers"
+  anchor = "call-for-papers"
+  url = "/call-for-papers/"
+[[params.nav]]
+  label = "Keynotes/Masterclasses"
+  anchor = ""
+  url = "/keynotes-masterclasses/"
+[[params.nav]]
+  label = "Registration"
+  anchor = "registration"
+  url = "/registration/"
+[[params.nav]]
+  label = "Publications"
+  anchor = ""
+  url = "/publications/"

@@ -6,21 +6,6 @@ title: "PixelFrame 2027"
 # and the header says 5-6 May while the date lists say 6-7 May.
 band_alt: "PixelFrame — red header with the pixel-art logo and an illustrated woman flying with a pixel jetpack."
 
-nav:
-  - label: "Home"
-    href: "#top"
-    active: true
-  - label: "About us"
-    href: "#about"
-  - label: "Call for papers"
-    href: "#call-for-papers"
-  - label: "Keynotes/Masterclasses"
-    href: ""
-  - label: "Registration"
-    href: "#registration"
-  - label: "Publications"
-    href: ""
-
 tagline_lines:
   - "Internacional"
   - "Conference"

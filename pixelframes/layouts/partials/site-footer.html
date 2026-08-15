@@ -1,15 +1,15 @@
-{{/* Black footer from the poster/site design; shared by the home page and
-     the /poster/ page. Content comes from the calling page's front matter. */}}
+{{/* Black footer from the poster/site design; shared by every page.
+     Contacts/addresses live once, in the home page's front matter. */}}
 <footer class="poster-footer">
   <div class="footer-grid">
     <section>
       <h2>Contact us</h2>
-      {{ range .Params.contacts }}
+      {{ range site.Home.Params.contacts }}
         <h3>{{ .label }}</h3>
         <p><a href="mailto:{{ .email }}">{{ .email }}</a></p>
       {{ end }}
     </section>
-    {{ range .Params.addresses }}
+    {{ range site.Home.Params.addresses }}
       <section>
         <h3>{{ .label }}</h3>
         <p>{{ range .lines }}{{ . }}<br>{{ end }}</p>

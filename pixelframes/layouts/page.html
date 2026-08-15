@@ -1,0 +1,12 @@
+{{/* Subpages for the nav items: slim red header, red-box title, prose body.
+     The full band artwork stays home-only. */}}
+{{ define "main" }}
+  <header class="page-header">
+    {{ partial "top-nav.html" . }}
+  </header>
+  <main class="page-main">
+    <h1 class="red-box">{{ .Title }}</h1>
+    <div class="prose">{{ .Content }}</div>
+  </main>
+  {{ partial "site-footer.html" . }}
+{{ end }}

@@ -22,20 +22,6 @@ call_lines:
   - "Call for"
   - "Papers"
 
-contacts:
-  - label: "Secretariat"
-    email: "digicom@ipca.pt"
-  - label: "Registration and Payment Process Support"
-    email: "sa_esd@ipca.pt"
-
-addresses:
-  - label: "ESD - IPCA"
-    lines:
-      - "Escola Superior de Design Campus"
-      - "do IPCA Lugar do Aldão 4750-810"
-      - "Vila Frescainha S. Martinho BCL"
-  - label: "Teatro Gil Vicente"
-    lines:
-      - "Largo Dr. Martins Lima 1 4750-251"
-      - "Barcelos"
+# Footer contacts/addresses come from the home page's front matter
+# via the site-footer partial.
 ---

@@ -8,3 +8,4 @@ pixelframes-2027-site.zip
 .venv/
 __pycache__/
 .env
+pixelframes/RAW_pixel/

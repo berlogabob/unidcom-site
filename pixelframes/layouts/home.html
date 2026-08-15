@@ -4,16 +4,7 @@
        and the three text blocks are live HTML positioned with the PSD's own
        metrics (see .band-* rules). Sections below are normal flow. */}}
   <header class="band" id="top">
-    <nav class="top-nav" aria-label="Main navigation">
-      {{- range .Params.nav }}
-        {{- if .href }}
-          <a {{ if .active }}class="active" {{ end }}href="{{ .href }}">{{ .label }}</a>
-        {{- else }}
-          {{/* ponytail: no page for this item yet — same look, not a dead link. */}}
-          <span>{{ .label }}</span>
-        {{- end }}
-      {{- end }}
-    </nav>
+    {{ partial "top-nav.html" . }}
     <div class="band-canvas">
       <img class="band-art" src="{{ "img/band.jpg" | relURL }}" alt="{{ .Params.band_alt }}"
            width="1800" height="765" fetchpriority="high">
@@ -29,7 +20,7 @@
         <h2 class="red-box">About us</h2>
         <p class="lead"><strong>{{ .Params.about.subhead_bold }}</strong><br>{{ .Params.about.subhead }}</p>
         {{ range .Params.about.paragraphs }}<p>{{ . }}</p>{{ end }}
-        <div class="plus" aria-hidden="true"></div>
+        <a class="plus" href="{{ "about/" | relURL }}" aria-label="More about the conference"></a>
       </div>
       <img class="row-media" src="{{ "img/about-campus.jpg" | relURL }}"
            alt="IADE Oriente Green Campus building, Lisbon" width="1000" height="1175" loading="lazy">
@@ -43,7 +34,7 @@
             <strong>{{ .label }}</strong> {{ .value }}<br>
           {{- end }}
         </p>
-        <div class="plus" aria-hidden="true"></div>
+        <a class="plus" href="{{ "call-for-papers/" | relURL }}" aria-label="Call for papers — full information"></a>
       </div>
     </section>
 
@@ -55,6 +46,9 @@
             {{- if .bold }}<strong>{{ .label }} {{ .value }}</strong>{{ else }}<strong>{{ .label }}</strong> {{ .value }}{{ end }}<br>
           {{- end }}
         </p>
+        {{/* Not in the PSD (its + here was hidden) — added so the full
+             registration page is reachable from the section. */}}
+        <a class="plus" href="{{ "registration/" | relURL }}" aria-label="Registration — full information"></a>
       </div>
       <img class="row-media man" src="{{ "img/flying-man.webp" | relURL }}"
            alt="Illustrated man in a blue suit flying with a pixel jetpack" width="900" height="703" loading="lazy">

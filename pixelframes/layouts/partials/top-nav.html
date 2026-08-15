@@ -1,0 +1,11 @@
+{{/* Site nav from site.Params.nav. Home keeps its scroll-to-section anchors;
+     everywhere else (and for items without a section) links go to the page. */}}
+<nav class="top-nav" aria-label="Main navigation">
+  {{- $page := . }}
+  {{- range site.Params.nav }}
+    {{- $href := .url | relURL }}
+    {{- if and $page.IsHome .anchor }}{{ $href = printf "#%s" .anchor }}{{ end }}
+    {{- $active := or (and $page.IsHome (eq .url "/")) (eq $page.RelPermalink (.url | relURL)) }}
+    <a {{ if $active }}class="active" {{ end }}href="{{ $href }}">{{ .label }}</a>
+  {{- end }}
+</nav>
