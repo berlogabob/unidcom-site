@@ -3,8 +3,8 @@
        composite of the PSD with its text layers hidden (band.jpg); the nav
        and the three text blocks are live HTML positioned with the PSD's own
        metrics (see .band-* rules). Sections below are normal flow. */}}
+  {{ partial "top-nav.html" . }}
   <header class="band" id="top">
-    {{ partial "top-nav.html" . }}
     <div class="band-canvas">
       <img class="band-art" src="{{ "img/band.jpg" | relURL }}" alt="{{ .Params.band_alt }}"
            width="1800" height="765" fetchpriority="high">
@@ -15,19 +15,21 @@
   </header>
 
   <main class="site-main">
-    <section class="row" id="about">
-      <div class="row-body">
-        <h2 class="red-box">About us</h2>
-        <p class="lead"><strong>{{ .Params.about.subhead_bold }}</strong><br>{{ .Params.about.subhead }}</p>
-        {{ range .Params.about.paragraphs }}<p>{{ . }}</p>{{ end }}
-        <a class="plus" href="{{ "about/" | relURL }}" aria-label="More about the conference"></a>
+    <section class="section" id="about">
+      <div class="container section-grid has-media">
+        <div class="section-body">
+          <h2 class="red-box">About us</h2>
+          <p class="lead"><strong>{{ .Params.about.subhead_bold }}</strong><br>{{ .Params.about.subhead }}</p>
+          {{ range .Params.about.paragraphs }}<p>{{ . }}</p>{{ end }}
+          <a class="plus" href="{{ "about/" | relURL }}" aria-label="More about the conference"></a>
+        </div>
+        <img class="row-media" src="{{ "img/about-campus.jpg" | relURL }}"
+             alt="IADE Oriente Green Campus building, Lisbon" width="1000" height="1175" loading="lazy">
       </div>
-      <img class="row-media" src="{{ "img/about-campus.jpg" | relURL }}"
-           alt="IADE Oriente Green Campus building, Lisbon" width="1000" height="1175" loading="lazy">
     </section>
 
-    <section class="row" id="call-for-papers">
-      <div class="row-body">
+    <section class="section" id="call-for-papers">
+      <div class="container">
         <h2 class="red-box">Call for papers</h2>
         <p class="dates">
           {{- range .Params.call_dates }}
@@ -38,20 +40,22 @@
       </div>
     </section>
 
-    <section class="row" id="registration">
-      <div class="row-body">
-        <h2 class="red-box">Registration</h2>
-        <p class="dates">
-          {{- range .Params.reg_dates }}
-            {{- if .bold }}<strong>{{ .label }} {{ .value }}</strong>{{ else }}<strong>{{ .label }}</strong> {{ .value }}{{ end }}<br>
-          {{- end }}
-        </p>
-        {{/* Not in the PSD (its + here was hidden) — added so the full
-             registration page is reachable from the section. */}}
-        <a class="plus" href="{{ "registration/" | relURL }}" aria-label="Registration — full information"></a>
+    <section class="section" id="registration">
+      <div class="container section-grid has-media">
+        <div class="section-body">
+          <h2 class="red-box">Registration</h2>
+          <p class="dates">
+            {{- range .Params.reg_dates }}
+              {{- if .bold }}<strong>{{ .label }} {{ .value }}</strong>{{ else }}<strong>{{ .label }}</strong> {{ .value }}{{ end }}<br>
+            {{- end }}
+          </p>
+          {{/* Not in the PSD (its + here was hidden) — added so the full
+               registration page is reachable from the section. */}}
+          <a class="plus" href="{{ "registration/" | relURL }}" aria-label="Registration — full information"></a>
+        </div>
+        <img class="row-media man" src="{{ "img/flying-man.webp" | relURL }}"
+             alt="Illustrated man in a blue suit flying with a pixel jetpack" width="900" height="703" loading="lazy">
       </div>
-      <img class="row-media man" src="{{ "img/flying-man.webp" | relURL }}"
-           alt="Illustrated man in a blue suit flying with a pixel jetpack" width="900" height="703" loading="lazy">
     </section>
   </main>
 

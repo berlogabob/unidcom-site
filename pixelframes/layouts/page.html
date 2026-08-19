@@ -1,12 +1,12 @@
-{{/* Subpages for the nav items: slim red header, red-box title, prose body.
-     The full band artwork stays home-only. */}}
+{{/* Subpages for the nav items: sticky nav, red hero strip with the title,
+     prose body. The full band artwork stays home-only. */}}
 {{ define "main" }}
-  <header class="page-header">
-    {{ partial "top-nav.html" . }}
+  {{ partial "top-nav.html" . }}
+  <header class="page-hero">
+    <div class="container"><h1>{{ .Title }}</h1></div>
   </header>
   <main class="page-main">
-    <h1 class="red-box">{{ .Title }}</h1>
-    <div class="prose">{{ .Content }}</div>
+    <div class="container prose">{{ .Content }}</div>
   </main>
   {{ partial "site-footer.html" . }}
 {{ end }}

@@ -28,6 +28,26 @@
   font-display: swap;
 }
 
+:root {
+  --red: #f00;           /* site band red */
+  --red-poster: #de0000; /* poster artwork red — differs in the source PSDs too */
+  --ink: #161616;
+  --paper: #f3f3f3;
+  --nav-h: 3.5rem;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: clamp(2.5rem, 6vw, 5rem);
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --measure: 72rem;
+  --text-body: clamp(1rem, 0.93rem + 0.35vw, 1.125rem);
+  --text-title: clamp(1.7rem, 1.2rem + 2.5vw, 2.6rem);
+  --leading-body: 1.55;
+}
+
+/* Anchor jumps must clear the sticky nav. */
+html { scroll-padding-top: var(--nav-h); scroll-behavior: smooth; }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -175,27 +195,31 @@ body {
 
 .band-art { display: block; width: 100%; height: auto; }
 
+/* One nav for every page: a solid red bar pinned to the top of the viewport.
+   It sits first in the page flow (outside .band / .page-hero), so sticky
+   behaves like fixed without body-padding compensation. */
 .top-nav {
-  position: absolute;
-  z-index: 1;
-  left: 43.95%;
-  top: 4.94cqw; /* 84/1700 of band height = 4.94% of width * 1700/4000 */
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
-  width: 45.1cqw;
-  justify-content: space-between;
-  font-size: 0.885cqw;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 2rem;
+  min-height: var(--nav-h);
+  padding: 0.5rem var(--gutter);
+  background: var(--red);
+  font-size: 0.85rem;
   font-weight: 900;
   text-transform: uppercase;
   white-space: nowrap;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.15); /* reads as a bar once over white content */
 }
-/* nav is a sibling of .band-canvas, so cqw resolves against .band; give the
-   band its own containment for that. */
-.band { container-type: inline-size; }
-.top-nav { top: 2.1cqw; }
 
 .top-nav a, .top-nav span { color: #fff; text-decoration: none; }
-.top-nav a.active { border-bottom: 0.16cqw solid #fff; padding-bottom: 0.5cqw; }
-.top-nav a:hover { border-bottom: 0.16cqw solid #fff; padding-bottom: 0.5cqw; }
+/* Transparent border keeps hover from reflowing the row. */
+.top-nav a { padding-bottom: 3px; border-bottom: 2px solid transparent; }
+.top-nav a.active, .top-nav a:hover { border-bottom-color: #fff; }
 
 .band-text {
   position: absolute;
@@ -235,60 +259,55 @@ body {
 
 /* ---- Content sections --------------------------------------------------- */
 
+.container {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
 .site-main {
   background: #fff;
   color: #000;
-  container-type: inline-size;
-  padding-bottom: 6cqw;
+  padding-block: var(--space-3) var(--space-4);
 }
 
-.row {
+.section { padding-block: var(--space-3); }
+
+.section-grid {
   display: grid;
-  grid-template-columns: 10.85% 35.3% 1fr 35.2% 10.9%;
+  gap: var(--space-3);
+  align-items: start;
 }
+.section-grid.has-media { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
 
-.row-body { grid-column: 2; }
-
-.row-media {
-  grid-column: 4;
-  width: 100%;
-  height: auto;
-  align-self: start;
-}
-
-#about { padding-top: 3.4cqw; }
-#call-for-papers { padding-top: 7.75cqw; }
-#registration { padding-top: 5.7cqw; }
+.row-media { width: 100%; height: auto; }
 
 .red-box {
   display: inline-flex;
   align-items: center;
-  background: #f00;
+  background: var(--red);
   color: #fff;
-  font-size: 4.13cqw;
+  font-size: var(--text-title);
   font-weight: 900;
-  height: 6.08cqw;
-  padding: 0 1.5cqw 0 1.18cqw;
+  padding: 0.35rem 1.4rem 0.45rem 1rem;
 }
 
 .site-main p {
-  font-size: 1.18cqw;
-  line-height: 1.05;
-  text-align: justify;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  max-width: 62ch;
 }
 
-.lead { margin-top: 2.98cqw; }
-.lead + p { margin-top: 1.18cqw; }
-p + p { margin-top: 1.18cqw; }
-
-.dates { margin-top: 2.9cqw; text-align: left !important; }
+.lead, .dates { margin-top: var(--space-3); }
+.lead + p, p + p { margin-top: var(--space-2); }
 
 .plus {
   position: relative;
-  width: 2.83cqw;
-  height: 2.83cqw;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #000;
-  margin-top: 1.4cqw;
+  margin-top: var(--space-2);
 }
 .plus::before, .plus::after {
   content: "";
@@ -299,79 +318,51 @@ p + p { margin-top: 1.18cqw; }
   width: 55%; height: 18%;
 }
 .plus::after { width: 18%; height: 55%; }
+a.plus:hover { background: var(--red); }
 
-/* The flying man overlaps the call-for-papers section above, per the design. */
-.man {
-  grid-column: 4 / 6;
-  width: 36.2cqw;
-  margin-left: 6.8cqw;
-  margin-top: -9.7cqw;
-}
+/* The flying man overlaps the section above, per the design. */
+.man { margin-top: calc(-1 * clamp(2rem, 8vw, 6rem)); }
 
 @media (max-width: 720px) {
-  .top-nav {
-    position: static;
-    flex-wrap: wrap;
-    gap: 0.4rem 1rem;
-    padding: 0.8rem 1rem;
-    font-size: 0.8rem;
-  }
-  .top-nav a.active, .top-nav a:hover { border-bottom-width: 2px; padding-bottom: 2px; }
+  :root { --nav-h: 6rem; } /* wrapped two-row bar */
 
-  .row { display: block; padding: 0 1rem; }
-  #about, #call-for-papers, #registration { padding-top: 2rem; }
-  .site-main { padding-bottom: 2rem; }
-  .site-main p { font-size: 0.95rem; line-height: 1.35; }
-  .red-box { font-size: 1.5rem; height: auto; padding: 0.4rem 1rem; }
-  .lead, .dates { margin-top: 1rem; }
-  .plus { width: 28px; height: 28px; margin-top: 1rem; }
-  .row-media { width: 100%; margin-top: 1.5rem; }
-  .man { width: 70%; margin: 1rem 0 0 auto; display: block; }
+  .section-grid.has-media { grid-template-columns: 1fr; }
+  .man { margin-top: 0; width: 70%; margin-left: auto; }
 }
 
 /* ---- Subpages (nav-item pages) ------------------------------------------ */
 
-.page-header { background: #f00; }
-
-/* Static readable nav on subpages at every width. */
-.page-header .top-nav {
-  position: static;
-  width: auto;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  padding: 1.1rem clamp(1rem, 4vw, 5rem);
-  font-size: 0.85rem;
+.page-hero {
+  background: var(--red);
+  padding: var(--space-3) 0 var(--space-4);
 }
-.page-header .top-nav a.active,
-.page-header .top-nav a:hover { border-bottom-width: 2px; padding-bottom: 3px; }
+.page-hero h1 {
+  font-size: var(--text-title);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+}
 
 .page-main {
   background: #fff;
   color: #000;
-  padding: 3rem clamp(1rem, 4vw, 5rem) 5rem;
+  padding-block: var(--space-4);
 }
 
-/* Fixed rem sizing here — the cqw scaling is for the poster/band pages. */
-.page-main .red-box {
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-  height: auto;
-  padding: 0.45rem 1.6rem 0.55rem 1.2rem;
+.prose { max-width: 56rem; }
+.prose p {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
 }
-
-.page-main .prose {
-  margin-top: 2.2rem;
-  max-width: 56rem;
+.prose p + p { margin-top: var(--space-2); }
+.prose h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: var(--space-3) 0 var(--space-2);
 }
-.page-main .prose p {
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-.page-main .prose p + p { margin-top: 1rem; }
-
-/* The home + squares are links now. */
-a.plus { display: block; }
-a.plus:hover { background: #f00; }
+.prose ul, .prose ol { margin: var(--space-2) 0 0 1.2rem; }
+.prose a { color: var(--red); }
 
 /* ---- Full-screen poster page -------------------------------------------- */
 /* The poster always fits the viewport height (no scroll): width is capped by
