@@ -205,6 +205,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.25rem 2rem;
   min-height: var(--nav-h);
   padding: 0.5rem var(--gutter);
