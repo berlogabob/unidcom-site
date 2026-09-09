@@ -9,3 +9,7 @@ pixelframes-2027-site.zip
 __pycache__/
 .env
 pixelframes/RAW_pixel/
+
+# Session transcripts and researcher raw data — never commit
+/20??-??-??-*.txt
+RAW_DATA/
