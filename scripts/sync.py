@@ -63,7 +63,7 @@ SELECTS = {
     ),
     "outputs": (
         "id,title,reporting_year,type,macro_type,doi,url,full_reference,"
-        "approval_status,merged_into"
+        "approval_status,website_status,merged_into"
     ),
     "clusters": "id,code,name,concern",
     "labs": "id,code,name,overview",
@@ -133,10 +133,17 @@ def person_passes(row: Mapping[str, Any], preview: bool) -> bool:
 
 
 def publication_passes(row: Mapping[str, Any], preview: bool) -> bool:
-    approved = preview or row.get("approval_status") == "approved"
+    # Since 2026-09-12 publication is a state of its own (outputs.website_status,
+    # Rui: "approved does not necessarily mean published"). Approval is still
+    # required — an admin cannot publish an unapproved row — but no longer
+    # sufficient.
+    published = preview or (
+        row.get("approval_status") == "approved"
+        and row.get("website_status") == "published"
+    )
     return (
         row.get("merged_into") is None
-        and approved
+        and published
         and row.get("macro_type") in PUBLICATION_MACRO_TYPES
     )
 
