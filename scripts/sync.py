@@ -123,23 +123,21 @@ def project_passes(row: Mapping[str, Any], preview: bool) -> bool:
 
 
 def person_passes(row: Mapping[str, Any], preview: bool) -> bool:
+    # Since 2026-09-29 (Rui, 25 Sep) approval is review state only; the admin's
+    # publish decision for a person is public_visibility.
     return row.get("merged_into") is None and (
-        preview
-        or (
-            row.get("profile_status") == "approved"
-            and row.get("public_visibility") is True
-        )
+        preview or row.get("public_visibility") is True
     )
 
 
 def publication_passes(row: Mapping[str, Any], preview: bool) -> bool:
     # Since 2026-09-12 publication is a state of its own (outputs.website_status,
-    # Rui: "approved does not necessarily mean published"). Approval is still
-    # required — an admin cannot publish an unapproved row — but no longer
-    # sufficient.
+    # Rui: "approved does not necessarily mean published"). Since 2026-09-29
+    # imported rows sit in to_validate and a researcher's resubmission is
+    # pending; neither takes a published row off the site. Only a rejection does.
     published = preview or (
-        row.get("approval_status") == "approved"
-        and row.get("website_status") == "published"
+        row.get("website_status") == "published"
+        and row.get("approval_status") != "rejected"
     )
     return (
         row.get("merged_into") is None
@@ -551,6 +549,19 @@ def self_check() -> None:
         ]},
         preview=True,
     )["people"][0]["roles"] == [{"kind": "role", "label": "Researcher", "year": 2026}]
+
+    # 2026-09-29: approval is review state; publish flags decide the site.
+    pub = {"merged_into": None, "macro_type": next(iter(PUBLICATION_MACRO_TYPES)),
+           "website_status": "published"}
+    for state in ("to_validate", "pending", "approved"):
+        assert publication_passes({**pub, "approval_status": state}, preview=False)
+    assert not publication_passes({**pub, "approval_status": "rejected"}, preview=False)
+    assert not publication_passes(
+        {**pub, "approval_status": "approved", "website_status": "not_published"},
+        preview=False,
+    )
+    assert person_passes({"profile_status": "to_validate", "public_visibility": True}, False)
+    assert not person_passes({"profile_status": "approved", "public_visibility": False}, False)
 
     # Collapse guard: growth is fine, a >20% drop is not.
     assert check_no_collapse({"people": 183}, {"people": 184}) == []
