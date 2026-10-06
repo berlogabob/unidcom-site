@@ -1,0 +1,72 @@
+{{ $pixelframe := .Site.Data.pixelframe }}
+<section id="top" class="hero hero-cover">
+  {{ with resources.Get "img/capa-principal.png" }}{{ $c := .Resize "2000x webp" }}<img class="hero-cover-image" src="{{ $c.RelPermalink }}" alt="PIXELFRAME, International Conference, 5-6 May 2027, Lisbon" width="{{ $c.Width }}" height="{{ $c.Height }}" fetchpriority="high">{{ end }}
+  <div class="hero-cover-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-copy">
+    <p class="eyebrow">International conference · {{ $pixelframe.dates }}</p>
+    <h1>{{ $pixelframe.title }}<br><i>in motion.</i></h1>
+    <p class="hero-lead">{{ $pixelframe.tagline }}</p>
+    <div class="hero-actions">
+      <a class="button button-dark" href="#submit">Call for papers <span>↗</span></a>
+      <a class="text-link" href="#about">Discover PIXELFRAME <span>↓</span></a>
+    </div>
+  </div>
+  <div class="hero-stamp"><span>PF</span><small>01 / 01</small></div>
+</section>
+
+<section id="about" class="intro section-grid">
+  <div class="section-label">01 / About</div>
+  <div class="intro-content">
+    <p class="kicker">Pixel + frame</p>
+    <h2>Where digital creation meets visual storytelling.</h2>
+    <p>PIXELFRAME is an international conference that brings together researchers, academics, students, industry professionals, artists and practitioners from around the world. The conference explores the intersections between animation, video games and visual narratives, creating a platform for the exchange of knowledge, creative practices and emerging research.</p>
+    <p>The conference features keynote lectures, scientific paper presentations, panel discussions, workshops and masterclasses that encourage dialogue between academia and industry. Participants will explore how animation, video games and visual narratives continue to shape cinema, digital media and interactive experiences.</p>
+    <p>By promoting interdisciplinary collaboration, PIXELFRAME encourages the exchange of ideas between researchers, professionals and students. The conference aims to strengthen international networks while supporting innovative approaches to animation, game design, visual storytelling and digital media.</p>
+    <p>The name PIXELFRAME represents the convergence of digital technology and visual storytelling. It reflects the relationship between the pixel, the foundation of digital creation, and the frame, the essential element of cinematic and narrative expression, bringing together creativity, design and technology within a single concept.</p>
+    <a class="text-link" href="#programme">See the conference format <span>↗</span></a>
+  </div>
+  <div class="intro-note"><span class="note-number">2027</span><span>First edition<br>Lisbon, Portugal</span></div>
+</section>
+
+<section id="themes" class="themes section-grid dark-section">
+  <div class="section-label">02 / Themes</div>
+  <div class="themes-heading">
+    <p class="kicker">Three connected fields</p>
+    <h2>One conference.<br><i>Many ways forward.</i></h2>
+  </div>
+  <div class="theme-list">
+    {{ range $pixelframe.themes }}
+    <article class="theme-card">
+      <span class="theme-no">01</span>
+      <div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+        <span class="theme-tags">{{ .tags }}</span>
+      </div>
+      <span class="arrow">↗</span>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section id="programme" class="programme section-grid">
+  <div class="section-label">03 / Programme</div>
+  <div class="programme-main">
+    <h2>Coming soon.</h2>
+  </div>
+</section>
+
+<section id="keynotes" class="community section-grid">
+  <div class="section-label">04 / Keynotes</div>
+  <div class="community-main">
+    <p class="kicker">Talks, workshops & masterclasses</p>
+    <h2>Coming soon.</h2>
+    <p>The keynote speakers, workshop leaders and masterclass contributors will be announced as the programme develops.</p>
+    <div class="audiences">
+      {{ range $pixelframe.audiences }}
+      <span>01 <b>{{ . }}</b></span>
+      {{ end }}
+    </div>
+  </div>
+</section>

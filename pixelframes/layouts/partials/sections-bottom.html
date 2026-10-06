@@ -1,0 +1,84 @@
+{{ $committee := .Site.Data.pixelframe.committee }}
+{{ $submissionTypes := .Site.Data.pixelframe.submission_types }}
+{{ $funding := .Site.Data.pixelframe.funding }}
+{{ $email := .Site.Data.pixelframe.email }}
+{{ $deadline := .Site.Data.pixelframe.deadline }}
+{{ $venue := .Site.Data.pixelframe.venue }}
+{{ $dates := .Site.Data.pixelframe.dates }}
+
+<section id="committee" class="committee section-grid">
+  <div class="section-label">05 / People</div>
+  <div class="committee-main">
+    <p class="kicker">Conference organisation</p>
+    <h2>Organising committee<br><i>& reviewers.</i></h2>
+    <p>Coming soon.</p>
+    <div class="committee-grid">
+      {{ range $committee }}
+      <div>
+        <b>{{ .title }}</b>
+        <span>{{ .text }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="submit" class="submit dark-section section-grid">
+  <div class="section-label">06 / Participate</div>
+  <div class="submit-main">
+    <p class="kicker">Call for papers</p>
+    <h2>Debate. Innovate.<br><i>Connect.</i></h2>
+    <p>We welcome original research papers, practice-based projects and creative work exploring animation, games and visual narratives. Submissions may be theoretical, technical, artistic or interdisciplinary.</p>
+    <div class="deadline">
+      <span>{{ $deadline.label }}</span>
+      <strong>{{ $deadline.date }}</strong>
+    </div>
+    <div class="submission-types">
+      {{ range $submissionTypes }}
+      <div>
+        <b>{{ .title }}</b>
+        <span>{{ .text }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <div class="submit-actions">
+      <a class="button button-light" href="mailto:{{ $email }}">Ask about submission <span>↗</span></a>
+      <a class="text-link light-link" href="https://easychair.org/" target="_blank" rel="noreferrer">EasyChair registration <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit section-grid">
+  {{ $img := resources.Get "img/oriente-green-campus.jpeg" }}
+  <img class="visit-background" src="{{ $img.RelPermalink }}" alt="Oriente Green Campus" width="{{ $img.Width }}" height="{{ $img.Height }}" />
+  <div class="section-label">07 / Visit Lisbon</div>
+  <div class="visit-main">
+    <h2>A new conference<br>in a city in motion.</h2>
+    <p>PIXELFRAME takes place at Oriente Green Campus, in Lisbon. The venue sits close to the Parque das Nações, with direct connections to the airport, Oriente station and the riverfront.</p>
+    <div class="location-card">
+      <span>Lisbon, Portugal</span>
+      <strong>Oriente<br>Green Campus</strong>
+      <a href="https://maps.google.com/?q=Oriente+Green+Campus+Lisbon" target="_blank" rel="noreferrer">Open map ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="registration" class="registration section-grid">
+  <div class="section-label">08 / Registration</div>
+  <div class="registration-main">
+    <p class="kicker">Join PIXELFRAME</p>
+    <h2>Registration<br><i>opens soon.</i></h2>
+    <p>Information about registration, fees and attendance will be announced with the full conference programme.</p>
+    <a class="button button-dark" href="mailto:{{ $email }}">Contact the conference <span>↗</span></a>
+  </div>
+</section>
+
+<section class="funding" aria-label="Funding acknowledgement">
+  <span>Funding acknowledgement</span>
+  <p>This event is supported by grants 
+    {{ range $funding }}
+      <a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .label }}</a>
+      {{ if not (last 1 $funding) }} and {{ end }}
+    {{ end }}
+  </p>
+</section>

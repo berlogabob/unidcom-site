@@ -13,3 +13,6 @@ pixelframes/RAW_pixel/
 # Session transcripts and researcher raw data — never commit
 /20??-??-??-*.txt
 RAW_DATA/
+pixelframes/RAW_20261006/
+pixelframes/.pi-runs/
+pixelframes/resources/_gen/

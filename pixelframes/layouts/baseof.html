@@ -2,18 +2,60 @@
      theme's baseof so none of the research-site chrome (header, nav, lattice
      CSS) leaks into the poster design. */}}
 <!doctype html>
-<html lang="{{ site.Language.Lang }}">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ site.Params.description }}">
   {{ if site.Params.preview }}<meta name="robots" content="noindex">{{ else }}<link rel="canonical" href="{{ .Permalink }}">{{ end }}
-  <link rel="stylesheet" href="{{ "css/pixelframe.css" | relURL }}">
-  <link rel="preload" href="{{ "fonts/urwdin-semicond-black.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ "fonts/urwdin-semicond-bold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  {{ with resources.Get "css/pixelframe.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">{{ end }}
+  <link rel="preload" href="{{ "fonts/space-grotesk.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <meta property="og:title" content="{{ site.Title }}">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-  {{ block "main" . }}{{ end }}
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="PIXELFRAME home">
+      {{ with resources.Get "img/pixelframe-footer-logo.png" }}<img src="{{ .RelPermalink }}" alt="PIXELFRAME" width="{{ .Width }}" height="{{ .Height }}">{{ end }}
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav" onclick="toggleMenu(this)">Menu <span>+</span></button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      {{ range hugo.Data.pixelframe.nav }}
+        <a href="#{{ .anchor }}">{{ .label }}</a>
+      {{ end }}
+      <a class="nav-submit" href="#submit">Call for Papers</a>
+    </nav>
+    <a class="top-cta" href="https://easychair.org/" target="_blank" rel="noreferrer">Submit work <span>↗</span></a>
+    <script>
+      function toggleMenu(button) {
+        const nav = document.getElementById('site-nav');
+        const isExpanded = nav.classList.contains('expanded');
+        nav.classList.toggle('expanded', !isExpanded);
+        button.setAttribute('aria-expanded', !isExpanded);
+        button.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
+        button.textContent = isExpanded ? 'Menu +' : 'Menu \u00D7';
+        if (!isExpanded) {
+          // Close menu when a link is clicked
+          const links = nav.querySelectorAll('a');
+          links.forEach(link => {
+            link.addEventListener('click', () => {
+              nav.classList.remove('expanded');
+              button.setAttribute('aria-expanded', false);
+              button.textContent = 'Menu +';
+            });
+          });
+        }
+      }
+    </script>
+  </header>
+
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "site-footer.html" . }}
 </body>
 </html>

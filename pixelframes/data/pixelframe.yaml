@@ -1,0 +1,60 @@
+title: PIXELFRAME
+tagline: Animation, Games & Visual Narratives
+dates: 5-6 May 2027
+venue: Oriente Green Campus, Lisbon
+email: pixelframe@unidcom-iade.pt
+deadline:
+  label: Submission deadline
+  date: 1 February 2027
+nav:
+- label: About
+  anchor: about
+- label: Themes
+  anchor: themes
+- label: Programme
+  anchor: programme
+- label: Keynotes
+  anchor: keynotes
+- label: Committee
+  anchor: committee
+- label: Submit
+  anchor: submit
+- label: Visit
+  anchor: visit
+- label: Registration
+  anchor: registration
+themes:
+- title: Animation & visual creation
+  text: From concept design and illustration to 2D, 3D, stop-motion, experimental and AI-based animation.
+  tags: Character studies · Sound · Methods
+- title: Video games
+  text: Game design, interactive characters, immersive experiences and the meeting point of art and technology.
+  tags: AR/VR · Experience · AI & ML
+- title: Visual narratives
+  text: Storytelling through comics, illustrated books, motion drawing and audiovisual narrative forms.
+  tags: Comics · Manga · Narrative design
+submission_types:
+- title: Research papers
+  text: Academic and critical research
+- title: Practice-based work
+  text: Projects, processes and methods
+- title: Student contributions
+  text: Master's and PhD research
+audiences:
+- Students
+- Researchers
+- Industry
+- Independent artists
+committee:
+- title: Organising committee
+  text: Coming soon
+- title: Scientific committee
+  text: Coming soon
+- title: Reviewers
+  text: Coming soon
+funding:
+- label: UID/00711/2025
+  url: https://doi.org/10.54499/UID/00711/2025
+- label: UID/PRR/00711/2025
+  url: https://doi.org/10.54499/UID/PRR/00711/2025
+socials: []
