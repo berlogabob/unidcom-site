@@ -761,8 +761,18 @@ footer {
   display: none;
 }
 
+.hero-cover:after {
+  content: none;
+}
+
+/* Title and date are baked into the cover art; keep the real h1 for SEO/screen readers. */
 .hero-cover .hero-copy {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .hero-cover .hero-meta {
@@ -1078,8 +1088,9 @@ footer {
     margin-top: 4rem;
   }
   
-  .hero-cover {
+  .hero.hero-cover {
     min-height: 0;
+    padding: 0;
   }
   
   .hero-cover-image {
