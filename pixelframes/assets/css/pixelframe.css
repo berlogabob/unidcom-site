@@ -921,7 +921,7 @@ footer {
     margin-left: 8px;
   }
   
-  .nav.open {
+  .nav.expanded {
     display: flex;
     position: absolute;
     top: 64px;
@@ -1079,18 +1079,18 @@ footer {
   }
   
   .hero-cover {
-    min-height: calc(100vh - 64px);
+    min-height: 0;
   }
   
   .hero-cover-image {
-    object-fit: cover;
+    object-fit: contain;
   }
   
   .hero-cover .hero-meta {
     display: none;
   }
   
-  .site-header .nav.open {
+  .site-header .nav.expanded {
     background: var(--header-bg);
     gap: 1rem;
   }
@@ -1137,3 +1137,6 @@ footer {
     border-bottom: 1px solid #4b4946;
   }
 }
+.brand { flex: none; width: clamp(110px, 12vw, 170px); }
+.brand img { display: block; width: 100%; height: auto; }
+.footer-brand img { display: block; width: clamp(140px, 16vw, 220px); height: auto; }
