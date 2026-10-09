@@ -2,7 +2,9 @@ name: Sync content from Supabase
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    # Every 10 minutes: a publish in the admin reaches the site within ~15 min
+    # with no manual step. Runs with no content change commit and deploy nothing.
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       preview:
