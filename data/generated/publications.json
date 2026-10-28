@@ -1052,6 +1052,24 @@
   {
     "authors": [
       {
+        "author_position": null,
+        "name": "Antirobot-test",
+        "role": null,
+        "slug": "antirobot-test"
+      }
+    ],
+    "doi": null,
+    "full_reference": null,
+    "id": "1a54bf5d-9275-406d-8cb1-1e07e80afa71",
+    "macro_type": "Livros",
+    "title": "test",
+    "type": "Livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
         "author_position": 1,
         "name": "Rodrigo Morais",
         "role": "Co-autor",
