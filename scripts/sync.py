@@ -434,6 +434,47 @@ def fetch_all(url: str, key: str) -> dict[str, list[Row]]:
 
 
 PHOTO_DIR = "assets/img/people"
+EVENTS_DIR = "content/events"
+EVENT_PREFIX = "rims-"  # only files with this prefix are owned (and pruned) by the sync
+
+
+def event_page(row: Mapping[str, Any]) -> str:
+    """Hugo page for one published RIMS event; hand-written events keep their own files."""
+    fm = {
+        "title": row["title"],
+        "date": row.get("start_date") or str(row["created_at"])[:10],
+        "event_type": row.get("type"),
+        "venue": row.get("location"),
+        "summary": (row.get("about") or "")[:200],
+        "registration_url": row.get("registration_url") or row.get("external_link"),
+        "draft": False,
+    }
+    lines = ["---"]
+    for key, value in fm.items():
+        if value in (None, ""):
+            continue
+        lines.append(f"{key}: {str(value).lower() if key == 'draft' else value}" if key in ("date", "draft") else f"{key}: {json.dumps(value, ensure_ascii=False)}")
+    lines += ["---", "", row.get("about") or ""]
+    return "\n".join(lines) + "\n"
+
+
+def write_events(url: str, key: str, out_dir: Path) -> int:
+    from supabase import create_client
+
+    rows = create_client(url, key).table("events").select("*").eq("published", True).execute().data or []
+    out_dir.mkdir(parents=True, exist_ok=True)
+    keep = set()
+    for row in rows:
+        name = f"{EVENT_PREFIX}{slugify(row['slug'], row['id'])}.md"
+        keep.add(name)
+        path = out_dir / name
+        text = event_page(row)
+        if not path.exists() or path.read_text() != text:
+            path.write_text(text)
+    for stale in out_dir.glob(f"{EVENT_PREFIX}*.md"):
+        if stale.name not in keep:
+            stale.unlink()
+    return len(rows)
 
 
 def vendor_photos(people: list[Row], out_dir: Path) -> tuple[int, int]:
@@ -641,6 +682,7 @@ def main() -> None:
                     + "\nRe-run with --allow-collapse if this is a deliberate purge."
                 )
 
+    print(f"events: {write_events(os.environ['SUPABASE_URL'], os.environ['SUPABASE_SERVICE_KEY'], REPO_ROOT / EVENTS_DIR)} written")
     fetched, skipped = vendor_photos(entities["people"], REPO_ROOT / PHOTO_DIR)
     print(f"photos: {fetched} written, {skipped} unchanged")
 

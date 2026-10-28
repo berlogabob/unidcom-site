@@ -49,14 +49,14 @@ jobs:
           # vendor_photos(), so a new or removed photo is a content change like
           # any other. Byte-compared before writing, so an unchanged photo does
           # not show up here.
-          if [ -z "$(git status --porcelain -- data/generated assets/img/people ':(exclude)data/generated/_meta.json')" ]; then
+          if [ -z "$(git status --porcelain -- data/generated assets/img/people content/events ':(exclude)data/generated/_meta.json')" ]; then
             git checkout -- data/generated/_meta.json
             echo 'No content changes.'
             exit 0
           fi
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data/generated assets/img/people
+          git add -A data/generated assets/img/people content/events
           git commit -m 'Sync content from Supabase'
           git push
 
