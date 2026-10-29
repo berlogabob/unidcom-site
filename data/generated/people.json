@@ -386,6 +386,15 @@
     "publications": [
       {
         "author_position": null,
+        "doi": null,
+        "id": "4619da06-4336-48ee-b081-cd4fa7cc54b8",
+        "role": null,
+        "title": "No Title",
+        "url": null,
+        "year": 2025
+      },
+      {
+        "author_position": null,
         "doi": "10.1109/wf-iot.2018.8355172",
         "id": "92f007e6-c07b-410a-936a-f0bdf6e1b093",
         "role": null,

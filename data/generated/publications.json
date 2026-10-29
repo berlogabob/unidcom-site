@@ -782,6 +782,24 @@
   {
     "authors": [
       {
+        "author_position": null,
+        "name": "Andrey Dyakov",
+        "role": null,
+        "slug": "andrey-dyakov"
+      }
+    ],
+    "doi": null,
+    "full_reference": null,
+    "id": "4619da06-4336-48ee-b081-cd4fa7cc54b8",
+    "macro_type": "Livros",
+    "title": "No Title",
+    "type": "Livros",
+    "url": null,
+    "year": 2025
+  },
+  {
+    "authors": [
+      {
         "author_position": 1,
         "name": "Sofia Ponte",
         "role": "Único autor",
